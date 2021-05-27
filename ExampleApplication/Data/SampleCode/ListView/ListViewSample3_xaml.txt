@@ -1,0 +1,24 @@
+﻿<!-- XAML Code -->
+
+<CollectionViewSource x:Key="ContactCVS"
+                      Source="{Binding Contacts}">
+    <CollectionViewSource.GroupDescriptions>
+        <PropertyGroupDescription PropertyName="LastName" Converter="{StaticResource Converterr}" />
+    </CollectionViewSource.GroupDescriptions>
+</CollectionViewSource>
+                          
+<ListView ItemsSource="{Binding Source={StaticResource ContactCVS}}">
+    <ListView.GroupStyle>
+        <GroupStyle>
+            <GroupStyle.HeaderTemplate>
+                <DataTemplate>
+                    <Border AutomationProperties.Name="{Binding Name}">
+                        <TextBlock Text="{Binding Name}" Style="{DynamicResource TitleTextBlockStyle}"/>
+                    </Border>
+                </DataTemplate>
+            </GroupStyle.HeaderTemplate>
+        </GroupStyle>
+    </ListView.GroupStyle>
+</ListView>
+                    
+<!-- Data template used is same as above examples. -->

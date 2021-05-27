@@ -1,0 +1,5 @@
+﻿<TabControl Loaded="TabControl_Loaded"
+            ui:TabControlHelper.IsAddTabButtonVisible="True"
+            ui:TabControlHelper.IsCloseTabButtonVisible="True"
+            ui:TabControlHelper.AddTabButtonClick="TabControl_AddTabButtonClick"
+            ui:TabControlHelper.TabCloseRequested="TabControl_TabCloseRequested" />

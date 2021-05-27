@@ -1,0 +1,26 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:EasyWPFUI.Styles"
+                    xmlns:helpers="clr-namespace:EasyWPFUI.Controls.Helpers">
+
+    <Style x:Key="SystemFocusVisualStyle">
+        <Setter Property="helpers:ControlHelper.FocusVisualPrimaryBrush" Value="{DynamicResource SystemControlFocusVisualPrimaryBrush}" />
+        <Setter Property="helpers:ControlHelper.FocusVisualPrimaryThickness" Value="2" />
+        <Setter Property="helpers:ControlHelper.FocusVisualSecondaryBrush" Value="{DynamicResource SystemControlFocusVisualSecondaryBrush}" />
+        <Setter Property="helpers:ControlHelper.FocusVisualSecondaryThickness" Value="0" />
+        <Setter Property="helpers:ControlHelper.FocusVisualMargin" Value="0" />
+        <Setter Property="helpers:ControlHelper.IsSystemFocusVisuals" Value="True" />
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border BorderBrush="{TemplateBinding helpers:ControlHelper.FocusVisualPrimaryBrush}"
+                            BorderThickness="{TemplateBinding helpers:ControlHelper.FocusVisualPrimaryThickness}"
+                            Margin="{TemplateBinding helpers:ControlHelper.FocusVisualMargin}">
+                        <Border BorderBrush="{TemplateBinding helpers:ControlHelper.FocusVisualSecondaryBrush}"
+                                BorderThickness="{TemplateBinding helpers:ControlHelper.FocusVisualSecondaryThickness}" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

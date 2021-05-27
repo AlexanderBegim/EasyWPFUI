@@ -1,0 +1,119 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFrameworks>net48;netcoreapp3.1</TargetFrameworks>
+    <UseWPF>true</UseWPF>
+    <StartupObject></StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\file.png" />
+    <None Remove="Assets\folder.png" />
+    <None Remove="Assets\SampleMedia\butterfly.jpg" />
+    <None Remove="Assets\SampleMedia\forest.jpg" />
+    <None Remove="Assets\SampleMedia\pine.jpg" />
+    <None Remove="Assets\SampleMedia\sky.jpg" />
+    <None Remove="Assets\SampleMedia\sunset.jpg" />
+    <None Remove="Data\Contacts.txt" />
+    <None Remove="Data\mtns.csv" />
+    <None Remove="Data\SampleCode\AutoSuggestBox\AutoSuggestBoxExample1_cs.txt" />
+    <None Remove="Data\SampleCode\Buttons\SplitButton.txt" />
+    <None Remove="Data\SampleCode\Buttons\ToggleSplitButton.txt" />
+    <None Remove="Data\SampleCode\ContextMenu\ContextMenuExample1_xaml.txt" />
+    <None Remove="Data\SampleCode\ContextMenu\ContextMenuExample2_xaml.txt" />
+    <None Remove="Data\SampleCode\ContextMenu\ContextMenuExample3_xaml.txt" />
+    <None Remove="Data\SampleCode\Flyouts\FlyoutExample1_xaml.txt" />
+    <None Remove="Data\SampleCode\GridSplitter\GridSplitterExample1_xaml.txt" />
+    <None Remove="Data\SampleCode\ItemsRepeater\ItemsRepeaterExample1_xaml.txt" />
+    <None Remove="Data\SampleCode\ItemsRepeater\ItemsRepeaterExample2_cs.txt" />
+    <None Remove="Data\SampleCode\ItemsRepeater\ItemsRepeaterExample2_xaml.txt" />
+    <None Remove="Data\SampleCode\ListView\ListViewSample1_cs.txt" />
+    <None Remove="Data\SampleCode\ListView\ListViewSample1_xaml.txt" />
+    <None Remove="Data\SampleCode\ListView\ListViewSample2_xaml.txt" />
+    <None Remove="Data\SampleCode\ListView\ListViewSample3_xaml.txt" />
+    <None Remove="Data\SampleCode\Menu\MenuExample1_xaml.txt" />
+    <None Remove="Data\SampleCode\Menu\MenuExample2_xaml.txt" />
+    <None Remove="Data\SampleCode\Menu\MenuExample3_xaml.txt" />
+    <None Remove="Data\SampleCode\NavigationView\NavigationViewExample1_xaml.txt" />
+    <None Remove="Data\SampleCode\NavigationView\NavigationViewExample2_xaml.txt" />
+    <None Remove="Data\SampleCode\NavigationView\NavigationViewExample3_cs.txt" />
+    <None Remove="Data\SampleCode\NavigationView\NavigationViewExample3_xaml.txt" />
+    <None Remove="Data\SampleCode\ScrollViewer\ScrollViewerExample1_xaml.txt" />
+    <None Remove="Data\SampleCode\SplitView\SplitViewExample1_xaml.txt" />
+    <None Remove="Data\SampleCode\TabControl\TabControlExample1_xaml.txt" />
+    <None Remove="Data\SampleCode\TabControl\TabControlExample2_cs.txt" />
+    <None Remove="Data\SampleCode\TabControl\TabControlExample2_xaml.txt" />
+    <None Remove="Data\SampleCode\TabControl\TabControlExample3_xaml.txt" />
+    <None Remove="Data\SampleCode\TeachingTip\TeachingTipExample1_cs.txt" />
+    <None Remove="Data\SampleCode\TeachingTip\TeachingTipExample1_xaml.txt" />
+    <None Remove="Data\SampleCode\TeachingTip\TeachingTipExample2_cs.txt" />
+    <None Remove="Data\SampleCode\TeachingTip\TeachingTipExample2_xaml.txt" />
+    <None Remove="Data\SampleCode\TeachingTip\TeachingTipExample3_cs.txt" />
+    <None Remove="Data\SampleCode\TeachingTip\TeachingTipExample3_xaml.txt" />
+    <None Remove="Data\SampleCode\TreeView\TreeViewExample2_xaml.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EasyWPFUI\Easy WPF UI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Assets\ControlPagesIcons\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ColorCode.Core">
+      <HintPath>bin\Debug\net48\ColorCode.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\file.png" />
+    <Resource Include="Assets\folder.png" />
+    <Resource Include="Assets\SampleMedia\butterfly.jpg" />
+    <Resource Include="Assets\SampleMedia\forest.jpg" />
+    <Resource Include="Assets\SampleMedia\pine.jpg" />
+    <Resource Include="Assets\SampleMedia\sky.jpg" />
+    <Resource Include="Assets\SampleMedia\sunset.jpg" />
+    <Resource Include="Data\Contacts.txt" />
+    <Resource Include="Data\mtns.csv" />
+    <Resource Include="Data\SampleCode\AutoSuggestBox\AutoSuggestBoxExample1_cs.txt" />
+    <Resource Include="Data\SampleCode\Buttons\SplitButton.txt" />
+    <Resource Include="Data\SampleCode\Buttons\ToggleSplitButton.txt" />
+    <Resource Include="Data\SampleCode\Flyouts\FlyoutExample1_xaml.txt" />
+    <Resource Include="Data\SampleCode\GridSplitter\GridSplitterExample1_xaml.txt" />
+    <Resource Include="Data\SampleCode\ItemsRepeater\ItemsRepeaterExample1_xaml.txt" />
+    <Resource Include="Data\SampleCode\ItemsRepeater\ItemsRepeaterExample2_cs.txt" />
+    <Resource Include="Data\SampleCode\ItemsRepeater\ItemsRepeaterExample2_xaml.txt" />
+    <Resource Include="Data\SampleCode\ListView\ListViewSample3_xaml.txt" />
+    <Resource Include="Data\SampleCode\ListView\ListViewSample1_cs.txt" />
+    <Resource Include="Data\SampleCode\ListView\ListViewSample2_xaml.txt" />
+    <Resource Include="Data\SampleCode\ListView\ListViewSample1_xaml.txt" />
+    <Resource Include="Data\SampleCode\ContextMenu\ContextMenuExample1_xaml.txt" />
+    <Resource Include="Data\SampleCode\ContextMenu\ContextMenuExample2_xaml.txt" />
+    <Resource Include="Data\SampleCode\ContextMenu\ContextMenuExample3_xaml.txt" />
+    <Resource Include="Data\SampleCode\Menu\MenuExample3_xaml.txt" />
+    <Resource Include="Data\SampleCode\Menu\MenuExample2_xaml.txt" />
+    <Resource Include="Data\SampleCode\Menu\MenuExample1_xaml.txt" />
+    <Resource Include="Data\SampleCode\NavigationView\NavigationViewExample1_xaml.txt" />
+    <Resource Include="Data\SampleCode\NavigationView\NavigationViewExample2_xaml.txt" />
+    <Resource Include="Data\SampleCode\NavigationView\NavigationViewExample3_cs.txt" />
+    <Resource Include="Data\SampleCode\NavigationView\NavigationViewExample3_xaml.txt" />
+    <Resource Include="Data\SampleCode\ScrollViewer\ScrollViewerExample1_xaml.txt" />
+    <Resource Include="Data\SampleCode\SplitView\SplitViewExample1_xaml.txt" />
+    <Resource Include="Data\SampleCode\TabControl\TabControlExample1_xaml.txt" />
+    <Resource Include="Data\SampleCode\TabControl\TabControlExample2_cs.txt" />
+    <Resource Include="Data\SampleCode\TabControl\TabControlExample2_xaml.txt" />
+    <Resource Include="Data\SampleCode\TabControl\TabControlExample3_xaml.txt" />
+    <Resource Include="Data\SampleCode\TeachingTip\TeachingTipExample1_cs.txt" />
+    <Resource Include="Data\SampleCode\TeachingTip\TeachingTipExample1_xaml.txt" />
+    <Resource Include="Data\SampleCode\TeachingTip\TeachingTipExample2_cs.txt" />
+    <Resource Include="Data\SampleCode\TeachingTip\TeachingTipExample2_xaml.txt" />
+    <Resource Include="Data\SampleCode\TeachingTip\TeachingTipExample3_cs.txt" />
+    <Resource Include="Data\SampleCode\TeachingTip\TeachingTipExample3_xaml.txt" />
+    <Resource Include="Data\SampleCode\TreeView\TreeViewExample2_xaml.txt" />
+  </ItemGroup>
+
+</Project>

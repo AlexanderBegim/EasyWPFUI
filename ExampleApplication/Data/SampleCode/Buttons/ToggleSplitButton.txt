@@ -1,0 +1,8 @@
+﻿<ui:ToggleSplitButton x:Name="toggleSplitButton" VerticalAlignment="Top" Click="toggleSplitButton_Click">
+    <SymbolIcon x:Name="symbolIcon" Symbol="List"/>
+    <ui:ToggleSplitButton.Flyout>
+        <ui:Flyout Placement="Bottom">
+            <!-- flyout content -->
+        </ui:Flyout>
+    </ui:ToggleSplitButton.Flyout>
+</ui:ToggleSplitButton>

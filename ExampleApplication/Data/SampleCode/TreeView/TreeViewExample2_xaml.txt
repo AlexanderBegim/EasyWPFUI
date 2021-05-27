@@ -1,0 +1,23 @@
+﻿﻿<Page.Resources>
+    <HierarchicalDataTemplate x:Key="FolderTemplate" ItemsSource="{Binding Children}">
+        <StackPanel Orientation="Horizontal">
+            <Image Width="20" Source="/Assets/folder.png" />
+            <TextBlock Margin="0,0,10,0" />
+            <TextBlock Text="{Binding Name}" />
+        </StackPanel>
+    </HierarchicalDataTemplate>
+
+    <DataTemplate x:Key="FileTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Image Width="20" Source="/Assets/file.png" />
+            <TextBlock Margin="0,0,10,0" />
+            <TextBlock Text="{Binding Name}" />
+        </StackPanel>
+    </DataTemplate>
+
+    <local:ExplorerItemTemplateSelector x:Key="ExplorerItemTemplateSelector"
+                                        FolderTemplate="{StaticResource FolderTemplate}"
+                                        FileTemplate="{StaticResource FileTemplate}" />
+</Page.Resources>
+
+<TreeView ItemsSource="{Binding DataSource}" ItemTemplateSelector="{StaticResource ExplorerItemTemplateSelector}" />

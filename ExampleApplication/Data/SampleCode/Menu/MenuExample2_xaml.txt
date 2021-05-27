@@ -1,0 +1,19 @@
+﻿<Menu>
+    <MenuItem Header="File">
+        <MenuItem Header="New" InputGestureText="Ctrl+N" />
+        <MenuItem Header="Open..." InputGestureText="Ctrl+O" />
+        <MenuItem Header="Save" InputGestureText="Ctrl+S" />
+        <MenuItem Header="Exit" InputGestureText="Ctrl+E" />
+    </MenuItem>
+
+    <MenuItem Header="Edit">
+        <MenuItem Header="Undo" InputGestureText="Ctrl+Z" />
+        <MenuItem Header="Cut" InputGestureText="Ctrl+X" />
+        <MenuItem Header="Copy" InputGestureText="Ctrl+C" />
+        <MenuItem Header="Paste" InputGestureText="Ctrl+V" />
+    </MenuItem>
+
+    <MenuItem Header="Help">
+        <MenuItem Header="About" InputGestureText="Ctrl+I" />
+    </MenuItem>
+</Menu>

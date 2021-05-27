@@ -1,0 +1,37 @@
+﻿<TabControl>
+    <ui:TabControlHelper.TabStripHeader>
+        <TextBlock Text="TabStripHeader Content"
+                   VerticalAlignment="Center"
+                   Margin="8,6"
+                   Style="{StaticResource BaseTextBlockStyle}" />
+    </ui:TabControlHelper.TabStripHeader>
+                        
+    <ui:TabControlHelper.TabStripFooter>
+        <TextBlock Text="TabStripFooter Content"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Right"
+                   Margin="6"
+                   Style="{StaticResource BaseTextBlockStyle}" />
+    </ui:TabControlHelper.TabStripFooter>
+                        
+    <TabItem Header="Document 0">
+        <ui:TabItemHelper.Icon>
+            <ui:SymbolIcon Symbol="Document" />
+        </ui:TabItemHelper.Icon>
+        <Frame Source="/SamplePage/SamplePage1.xaml" />
+    </TabItem>
+    
+    <TabItem Header="Document 1">
+        <ui:TabItemHelper.Icon>
+            <ui:SymbolIcon Symbol="Document" />
+        </ui:TabItemHelper.Icon>
+        <Frame Source="/SamplePage/SamplePage2.xaml" />
+    </TabItem>
+    
+    <TabItem Header="Document 2">
+        <ui:TabItemHelper.Icon>
+            <ui:SymbolIcon Symbol="Document" />
+        </ui:TabItemHelper.Icon>
+        <Frame Source="/SamplePage/SamplePage3.xaml" />
+    </TabItem>
+</TabControl>

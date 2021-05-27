@@ -1,0 +1,1288 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib"
+                    xmlns:markup="clr-namespace:EasyWPFUI.Markup">
+
+    <!--
+    ******************************************************************
+    DEFAULT COMMON CONTROL PROPERTIES
+    ******************************************************************
+    -->
+
+    <!-- Focus Visual -->
+    <system:Boolean x:Key="UseSystemFocusVisuals">True</system:Boolean>
+
+    <!-- Corner Radius -->
+    <CornerRadius x:Key="ControlCornerRadius">2,2,2,2</CornerRadius>
+    <CornerRadius x:Key="OverlayCornerRadius">4,4,4,4</CornerRadius>
+
+    <!-- Fonts -->
+    <markup:StaticResource x:Key="ContentControlThemeFontFamily" ResourceKey="{x:Static SystemFonts.MessageFontFamilyKey}" />
+    <system:Double x:Key="ControlContentThemeFontSize">14</system:Double>
+    <FontFamily x:Key="SymbolThemeFontFamily">Segoe MDL2 Assets</FontFamily>
+    <system:Double x:Key="SymbolThemeFontSize">16</system:Double>
+
+    <!-- TextControl -->
+    <Thickness x:Key="TextControlBorderThemeThickness">1</Thickness>
+    <Thickness x:Key="TextControlBorderThemeThicknessFocused">2</Thickness>
+    <Thickness x:Key="TextControlThemePadding">10,6,6,5</Thickness>
+    <system:Double x:Key="TextControlThemeMinHeight">32</system:Double>
+    <system:Double x:Key="TextControlThemeMinWidth">64</system:Double>
+    <Thickness x:Key="TextBoxTopHeaderMargin">0,0,0,4</Thickness>
+
+    <!-- Flyout -->
+    <system:Double x:Key="FlyoutThemeMaxHeight">758</system:Double>
+    <system:Double x:Key="FlyoutThemeMaxWidth">456</system:Double>
+    <system:Double x:Key="FlyoutThemeMinHeight">40</system:Double>
+    <system:Double x:Key="FlyoutThemeMinWidth">96</system:Double>
+    <Thickness x:Key="FlyoutContentThemeMargin">0,0,0,0</Thickness>
+    <Thickness x:Key="FlyoutContentThemePadding">12,11,12,12</Thickness>
+
+    <!--
+    ******************************************************************
+    DEFAULT COMMON CONTROL COLORS
+    ******************************************************************
+    -->
+    <Color x:Key="SystemAltHighColor">#FF000000</Color>
+    <Color x:Key="SystemAltLowColor">#33000000</Color>
+    <Color x:Key="SystemAltMediumColor">#99000000</Color>
+    <Color x:Key="SystemAltMediumHighColor">#CC000000</Color>
+    <Color x:Key="SystemAltMediumLowColor">#66000000</Color>
+    <Color x:Key="SystemBaseHighColor">#FFFFFFFF</Color>
+    <Color x:Key="SystemBaseLowColor">#33FFFFFF</Color>
+    <Color x:Key="SystemBaseMediumColor">#99FFFFFF</Color>
+    <Color x:Key="SystemBaseMediumHighColor">#CCFFFFFF</Color>
+    <Color x:Key="SystemBaseMediumLowColor">#66FFFFFF</Color>
+    <Color x:Key="SystemChromeAltLowColor">#FFF2F2F2</Color>
+    <Color x:Key="SystemChromeBlackHighColor">#FF000000</Color>
+    <Color x:Key="SystemChromeBlackLowColor">#33000000</Color>
+    <Color x:Key="SystemChromeBlackMediumLowColor">#66000000</Color>
+    <Color x:Key="SystemChromeBlackMediumColor">#CC000000</Color>
+    <Color x:Key="SystemChromeDisabledHighColor">#FF333333</Color>
+    <Color x:Key="SystemChromeDisabledLowColor">#FF858585</Color>
+    <Color x:Key="SystemChromeHighColor">#FF767676</Color>
+    <Color x:Key="SystemChromeLowColor">#FF171717</Color>
+    <Color x:Key="SystemChromeMediumColor">#FF1F1F1F</Color>
+    <Color x:Key="SystemChromeMediumLowColor">#FF2B2B2B</Color>
+    <Color x:Key="SystemChromeWhiteColor">#FFFFFFFF</Color>
+    <Color x:Key="SystemChromeGrayColor">#FF767676</Color>
+    <Color x:Key="SystemListLowColor">#19FFFFFF</Color>
+    <Color x:Key="SystemListMediumColor">#33FFFFFF</Color>
+    <Color x:Key="SystemErrorTextColor">#FFF000</Color>
+
+    <SolidColorBrush x:Key="SystemAccentColorBrush" Color="{StaticResource SystemAccentColor}" />
+    <SolidColorBrush x:Key="SystemAccentColorDark1Brush" Color="{StaticResource SystemAccentColorDark1}" />
+    <SolidColorBrush x:Key="SystemAccentColorDark2Brush" Color="{StaticResource SystemAccentColorDark2}" />
+    <SolidColorBrush x:Key="SystemAccentColorDark3Brush" Color="{StaticResource SystemAccentColorDark3}" />
+    <SolidColorBrush x:Key="SystemAccentColorLight1Brush" Color="{StaticResource SystemAccentColorLight1}" />
+    <SolidColorBrush x:Key="SystemAccentColorLight2Brush" Color="{StaticResource SystemAccentColorLight2}" />
+    <SolidColorBrush x:Key="SystemAccentColorLight3Brush" Color="{StaticResource SystemAccentColorLight3}" />
+
+    <SolidColorBrush x:Key="SystemControlBackgroundAccentBrush" Color="{StaticResource SystemAccentColor}" />
+    <SolidColorBrush x:Key="SystemControlBackgroundAltHighBrush" Color="{StaticResource SystemAltHighColor}" />
+    <SolidColorBrush x:Key="SystemControlBackgroundAltMediumHighBrush" Color="{StaticResource SystemAltMediumHighColor}" />
+    <SolidColorBrush x:Key="SystemControlBackgroundAltMediumBrush" Color="{StaticResource SystemAltMediumColor}" />
+    <SolidColorBrush x:Key="SystemControlBackgroundAltMediumLowBrush" Color="{StaticResource SystemAltMediumLowColor}" />
+    <SolidColorBrush x:Key="SystemControlBackgroundBaseHighBrush" Color="{StaticResource SystemBaseHighColor}" />
+    <SolidColorBrush x:Key="SystemControlBackgroundBaseLowBrush" Color="{StaticResource SystemBaseLowColor}" />
+    <SolidColorBrush x:Key="SystemControlBackgroundBaseMediumBrush" Color="{StaticResource SystemBaseMediumColor}" />
+    <SolidColorBrush x:Key="SystemControlBackgroundBaseMediumHighBrush" Color="{StaticResource SystemBaseMediumHighColor}" />
+    <SolidColorBrush x:Key="SystemControlBackgroundBaseMediumLowBrush" Color="{StaticResource SystemBaseMediumLowColor}" />
+    <SolidColorBrush x:Key="SystemControlBackgroundChromeBlackHighBrush" Color="{StaticResource SystemChromeBlackHighColor}" />
+    <SolidColorBrush x:Key="SystemControlBackgroundChromeBlackMediumBrush" Color="{StaticResource SystemChromeBlackMediumColor}" />
+    <SolidColorBrush x:Key="SystemControlBackgroundChromeBlackLowBrush" Color="{StaticResource SystemChromeBlackLowColor}" />
+    <SolidColorBrush x:Key="SystemControlBackgroundChromeBlackMediumLowBrush" Color="{StaticResource SystemChromeBlackMediumLowColor}" />
+    <SolidColorBrush x:Key="SystemControlBackgroundChromeMediumBrush" Color="{StaticResource SystemChromeMediumColor}" />
+    <SolidColorBrush x:Key="SystemControlBackgroundChromeMediumLowBrush" Color="{StaticResource SystemChromeMediumLowColor}" />
+    <SolidColorBrush x:Key="SystemControlBackgroundChromeWhiteBrush" Color="{StaticResource SystemChromeWhiteColor}" />
+    <SolidColorBrush x:Key="SystemControlBackgroundListLowBrush" Color="{StaticResource SystemListLowColor}" />
+    <SolidColorBrush x:Key="SystemControlBackgroundListMediumBrush" Color="{StaticResource SystemListMediumColor}" />
+    <SolidColorBrush x:Key="SystemControlDisabledAccentBrush" Color="{StaticResource SystemAccentColor}" />
+    <SolidColorBrush x:Key="SystemControlDisabledBaseHighBrush" Color="{StaticResource SystemBaseHighColor}" />
+    <SolidColorBrush x:Key="SystemControlDisabledBaseLowBrush" Color="{StaticResource SystemBaseLowColor}" />
+    <SolidColorBrush x:Key="SystemControlDisabledBaseMediumLowBrush" Color="{StaticResource SystemBaseMediumLowColor}" />
+    <SolidColorBrush x:Key="SystemControlDisabledChromeDisabledHighBrush" Color="{StaticResource SystemChromeDisabledHighColor}" />
+    <SolidColorBrush x:Key="SystemControlDisabledChromeDisabledLowBrush" Color="{StaticResource SystemChromeDisabledLowColor}" />
+    <SolidColorBrush x:Key="SystemControlDisabledChromeHighBrush" Color="{StaticResource SystemChromeHighColor}" />
+    <SolidColorBrush x:Key="SystemControlDisabledChromeMediumLowBrush" Color="{StaticResource SystemChromeMediumLowColor}" />
+    <SolidColorBrush x:Key="SystemControlDisabledListMediumBrush" Color="{StaticResource SystemListMediumColor}" />
+    <SolidColorBrush x:Key="SystemControlDisabledTransparentBrush" Color="Transparent" />
+    <SolidColorBrush x:Key="SystemControlFocusVisualPrimaryBrush" Color="{StaticResource SystemBaseHighColor}" />
+    <SolidColorBrush x:Key="SystemControlFocusVisualSecondaryBrush" Color="{StaticResource SystemAltMediumColor}" />
+    <SolidColorBrush x:Key="SystemControlRevealFocusVisualBrush" Color="{StaticResource SystemAccentColor}" />
+    <SolidColorBrush x:Key="SystemControlForegroundAccentBrush" Color="{StaticResource SystemAccentColor}" />
+    <SolidColorBrush x:Key="SystemControlForegroundAltHighBrush" Color="{StaticResource SystemAltHighColor}" />
+    <SolidColorBrush x:Key="SystemControlForegroundAltMediumHighBrush" Color="{StaticResource SystemAltMediumHighColor}" />
+    <SolidColorBrush x:Key="SystemControlForegroundBaseHighBrush" Color="{StaticResource SystemBaseHighColor}" />
+    <SolidColorBrush x:Key="SystemControlForegroundBaseLowBrush" Color="{StaticResource SystemBaseLowColor}" />
+    <SolidColorBrush x:Key="SystemControlForegroundBaseMediumBrush" Color="{StaticResource SystemBaseMediumColor}" />
+    <SolidColorBrush x:Key="SystemControlForegroundBaseMediumHighBrush" Color="{StaticResource SystemBaseMediumHighColor}" />
+    <SolidColorBrush x:Key="SystemControlForegroundBaseMediumLowBrush" Color="{StaticResource SystemBaseMediumLowColor}" />
+    <SolidColorBrush x:Key="SystemControlForegroundChromeBlackHighBrush" Color="{StaticResource SystemChromeBlackHighColor}" />
+    <SolidColorBrush x:Key="SystemControlForegroundChromeHighBrush" Color="{StaticResource SystemChromeHighColor}" />
+    <SolidColorBrush x:Key="SystemControlForegroundChromeMediumBrush" Color="{StaticResource SystemChromeMediumColor}" />
+    <SolidColorBrush x:Key="SystemControlForegroundChromeWhiteBrush" Color="{StaticResource SystemChromeWhiteColor}" />
+    <SolidColorBrush x:Key="SystemControlForegroundChromeDisabledLowBrush" Color="{StaticResource SystemChromeDisabledLowColor}" />
+    <SolidColorBrush x:Key="SystemControlForegroundChromeGrayBrush" Color="{StaticResource SystemChromeGrayColor}" />
+    <SolidColorBrush x:Key="SystemControlForegroundListLowBrush" Color="{StaticResource SystemListLowColor}" />
+    <SolidColorBrush x:Key="SystemControlForegroundListMediumBrush" Color="{StaticResource SystemListMediumColor}" />
+    <SolidColorBrush x:Key="SystemControlForegroundTransparentBrush" Color="Transparent" />
+    <SolidColorBrush x:Key="SystemControlForegroundChromeBlackMediumBrush" Color="{StaticResource SystemChromeBlackMediumColor}" />
+    <SolidColorBrush x:Key="SystemControlForegroundChromeBlackMediumLowBrush" Color="{StaticResource SystemChromeBlackMediumLowColor}" />
+    <SolidColorBrush x:Key="SystemControlHighlightAccentBrush" Color="{StaticResource SystemAccentColor}" />
+    <SolidColorBrush x:Key="SystemControlHighlightAltAccentBrush" Color="{StaticResource SystemAccentColor}" />
+    <SolidColorBrush x:Key="SystemControlHighlightAltAltHighBrush" Color="{StaticResource SystemAltHighColor}" />
+    <SolidColorBrush x:Key="SystemControlHighlightAltBaseHighBrush" Color="{StaticResource SystemBaseHighColor}" />
+    <SolidColorBrush x:Key="SystemControlHighlightAltBaseLowBrush" Color="{StaticResource SystemBaseLowColor}" />
+    <SolidColorBrush x:Key="SystemControlHighlightAltBaseMediumBrush" Color="{StaticResource SystemBaseMediumColor}" />
+    <SolidColorBrush x:Key="SystemControlHighlightAltBaseMediumHighBrush" Color="{StaticResource SystemBaseMediumHighColor}" />
+    <SolidColorBrush x:Key="SystemControlHighlightAltAltMediumHighBrush" Color="{StaticResource SystemAltMediumHighColor}" />
+    <SolidColorBrush x:Key="SystemControlHighlightAltBaseMediumLowBrush" Color="{StaticResource SystemBaseMediumLowColor}" />
+    <SolidColorBrush x:Key="SystemControlHighlightAltListAccentHighBrush" Color="{StaticResource SystemAccentColor}" Opacity="0.9" />
+    <SolidColorBrush x:Key="SystemControlHighlightAltListAccentLowBrush" Color="{StaticResource SystemAccentColor}" Opacity="0.6" />
+    <SolidColorBrush x:Key="SystemControlHighlightAltListAccentMediumBrush" Color="{StaticResource SystemAccentColor}" Opacity="0.8" />
+    <SolidColorBrush x:Key="SystemControlHighlightAltChromeWhiteBrush" Color="{StaticResource SystemChromeWhiteColor}" />
+    <SolidColorBrush x:Key="SystemControlHighlightAltTransparentBrush" Color="Transparent" />
+    <SolidColorBrush x:Key="SystemControlHighlightBaseHighBrush" Color="{StaticResource SystemBaseHighColor}" />
+    <SolidColorBrush x:Key="SystemControlHighlightBaseLowBrush" Color="{StaticResource SystemBaseLowColor}" />
+    <SolidColorBrush x:Key="SystemControlHighlightBaseMediumBrush" Color="{StaticResource SystemBaseMediumColor}" />
+    <SolidColorBrush x:Key="SystemControlHighlightBaseMediumHighBrush" Color="{StaticResource SystemBaseMediumHighColor}" />
+    <SolidColorBrush x:Key="SystemControlHighlightBaseMediumLowBrush" Color="{StaticResource SystemBaseMediumLowColor}" />
+    <SolidColorBrush x:Key="SystemControlHighlightChromeAltLowBrush" Color="{StaticResource SystemChromeAltLowColor}" />
+    <SolidColorBrush x:Key="SystemControlHighlightChromeHighBrush" Color="{StaticResource SystemChromeHighColor}" />
+    <SolidColorBrush x:Key="SystemControlHighlightListAccentHighBrush" Color="{StaticResource SystemAccentColor}" Opacity="0.9" />
+    <SolidColorBrush x:Key="SystemControlHighlightListAccentLowBrush" Color="{StaticResource SystemAccentColor}" Opacity="0.6" />
+    <SolidColorBrush x:Key="SystemControlHighlightListAccentMediumBrush" Color="{StaticResource SystemAccentColor}" Opacity="0.8" />
+    <SolidColorBrush x:Key="SystemControlHighlightListMediumBrush" Color="{StaticResource SystemListMediumColor}" />
+    <SolidColorBrush x:Key="SystemControlHighlightListLowBrush" Color="{StaticResource SystemListLowColor}" />
+    <SolidColorBrush x:Key="SystemControlHighlightChromeWhiteBrush" Color="{StaticResource SystemChromeWhiteColor}" />
+    <SolidColorBrush x:Key="SystemControlHighlightTransparentBrush" Color="Transparent" />
+    <SolidColorBrush x:Key="SystemControlHyperlinkTextBrush" Color="{StaticResource SystemAccentColor}" />
+    <SolidColorBrush x:Key="SystemControlHyperlinkBaseHighBrush" Color="{StaticResource SystemBaseHighColor}" />
+    <SolidColorBrush x:Key="SystemControlHyperlinkBaseMediumBrush" Color="{StaticResource SystemBaseMediumColor}" />
+    <SolidColorBrush x:Key="SystemControlHyperlinkBaseMediumHighBrush" Color="{StaticResource SystemBaseMediumHighColor}" />
+    <SolidColorBrush x:Key="SystemControlPageBackgroundAltMediumBrush" Color="{StaticResource SystemAltMediumColor}" />
+    <SolidColorBrush x:Key="SystemControlPageBackgroundAltHighBrush" Color="{StaticResource SystemAltHighColor}" />
+    <SolidColorBrush x:Key="SystemControlPageBackgroundMediumAltMediumBrush" Color="{StaticResource SystemAltMediumColor}" />
+    <SolidColorBrush x:Key="SystemControlPageBackgroundBaseLowBrush" Color="{StaticResource SystemBaseLowColor}" />
+    <SolidColorBrush x:Key="SystemControlPageBackgroundBaseMediumBrush" Color="{StaticResource SystemBaseMediumColor}" />
+    <SolidColorBrush x:Key="SystemControlPageBackgroundListLowBrush" Color="{StaticResource SystemListLowColor}" />
+    <SolidColorBrush x:Key="SystemControlPageBackgroundChromeLowBrush" Color="{StaticResource SystemChromeLowColor}" />
+    <SolidColorBrush x:Key="SystemControlPageBackgroundChromeMediumLowBrush" Color="{StaticResource SystemChromeMediumLowColor}" />
+    <SolidColorBrush x:Key="SystemControlPageBackgroundTransparentBrush" Color="Transparent" />
+    <SolidColorBrush x:Key="SystemControlPageTextBaseHighBrush" Color="{StaticResource SystemBaseHighColor}" />
+    <SolidColorBrush x:Key="SystemControlPageTextBaseMediumBrush" Color="{StaticResource SystemBaseMediumColor}" />
+    <SolidColorBrush x:Key="SystemControlPageTextChromeBlackMediumLowBrush" Color="{StaticResource SystemChromeBlackMediumLowColor}" />
+    <SolidColorBrush x:Key="SystemControlTransparentBrush" Color="Transparent" />
+    <SolidColorBrush x:Key="SystemControlErrorTextForegroundBrush" Color="{StaticResource SystemErrorTextColor}" />
+    <SolidColorBrush x:Key="SystemControlTransientBorderBrush" Color="#000000" Opacity="0.36" />
+    <!--<AcrylicBrush x:Key="SystemControlTransientBackgroundBrush" BackgroundSource="HostBackdrop" TintColor="{StaticResource SystemChromeAltHighColor}" TintOpacity="0.8" FallbackColor="{StaticResource SystemChromeMediumLowColor}" />-->
+    <markup:StaticResource x:Key="SystemControlDescriptionTextForegroundBrush" ResourceKey="SystemControlPageTextBaseMediumBrush" />
+    <system:Boolean x:Key="IsApplicationFocusVisualKindReveal">False</system:Boolean> 
+
+    <!-- WPF Default Colors Override -->
+    <!--<SolidColorBrush x:Key="{x:Static SystemColors.WindowBrushKey}" Color="{StaticResource SystemAltHighColor}" />
+    <SolidColorBrush x:Key="{x:Static SystemColors.ControlTextBrushKey}" Color="{StaticResource SystemBaseHighColor}" />-->
+
+    <!--
+    Acrylic Brushes
+    Source File: AcrylicBrush_rs1_StaticResources.xaml
+    -->
+    <Color x:Key="SystemChromeMediumHighColor">#FF323232</Color>
+    <Color x:Key="SystemChromeAltMediumHighColor">#CC1F1F1F</Color>
+    <Color x:Key="SystemChromeAltHighColor">#FF1C1C1C</Color>
+
+    <SolidColorBrush x:Key="SystemControlAcrylicWindowBrush" Color="{StaticResource SystemChromeMediumColor}"/>
+    <SolidColorBrush x:Key="SystemControlAcrylicElementBrush" Color="{StaticResource SystemChromeMediumColor}"/>
+    <SolidColorBrush x:Key="SystemControlAccentAcrylicWindowAccentMediumHighBrush" Color="{StaticResource SystemAccentColor}"/>
+    <SolidColorBrush x:Key="SystemControlAccentAcrylicElementAccentMediumHighBrush" Color="{StaticResource SystemAccentColor}"/>
+    <SolidColorBrush x:Key="SystemControlAccentDark1AcrylicWindowAccentDark1Brush" Color="{StaticResource SystemAccentColorDark1}" />
+    <SolidColorBrush x:Key="SystemControlAccentDark1AcrylicElementAccentDark1Brush" Color="{StaticResource SystemAccentColorDark1}" />
+    <SolidColorBrush x:Key="SystemControlAccentDark2AcrylicWindowAccentDark2MediumHighBrush" Color="{StaticResource SystemAccentColorDark2}" />
+    <SolidColorBrush x:Key="SystemControlAccentDark2AcrylicElementAccentDark2MediumHighBrush" Color="{StaticResource SystemAccentColorDark2}" />
+    <SolidColorBrush x:Key="SystemControlAcrylicWindowMediumHighBrush" Color="{StaticResource SystemChromeMediumColor}"/>
+    <SolidColorBrush x:Key="SystemControlAcrylicElementMediumHighBrush" Color="{StaticResource SystemChromeMediumColor}" />
+    <SolidColorBrush x:Key="SystemControlChromeMediumLowAcrylicWindowMediumBrush" Color="{StaticResource SystemChromeMediumLowColor}"/>
+    <SolidColorBrush x:Key="SystemControlChromeMediumLowAcrylicElementMediumBrush" Color="{StaticResource SystemChromeMediumLowColor}" />
+    <SolidColorBrush x:Key="SystemControlBaseHighAcrylicWindowBrush" Color="{StaticResource SystemBaseHighColor}" />
+    <SolidColorBrush x:Key="SystemControlBaseHighAcrylicElementBrush" Color="{StaticResource SystemBaseHighColor}" />
+    <SolidColorBrush x:Key="SystemControlBaseHighAcrylicWindowMediumHighBrush" Color="{StaticResource SystemBaseHighColor}" />
+    <SolidColorBrush x:Key="SystemControlBaseHighAcrylicElementMediumHighBrush" Color="{StaticResource SystemBaseHighColor}" />
+    <SolidColorBrush x:Key="SystemControlBaseHighAcrylicWindowMediumBrush" Color="{StaticResource SystemBaseHighColor}" />
+    <SolidColorBrush x:Key="SystemControlBaseHighAcrylicElementMediumBrush" Color="{StaticResource SystemBaseHighColor}" />
+    <SolidColorBrush x:Key="SystemControlChromeLowAcrylicWindowBrush" Color="{StaticResource SystemChromeLowColor}" />
+    <SolidColorBrush x:Key="SystemControlChromeLowAcrylicElementBrush" Color="{StaticResource SystemChromeLowColor}" />
+    <SolidColorBrush x:Key="SystemControlChromeMediumAcrylicWindowMediumBrush" Color="{StaticResource SystemChromeMediumColor}" />
+    <SolidColorBrush x:Key="SystemControlChromeMediumAcrylicElementMediumBrush" Color="{StaticResource SystemChromeMediumColor}" />
+    <SolidColorBrush x:Key="SystemControlChromeHighAcrylicWindowMediumBrush" Color="{StaticResource SystemChromeHighColor}" />
+    <SolidColorBrush x:Key="SystemControlChromeHighAcrylicElementMediumBrush" Color="{StaticResource SystemChromeHighColor}" />
+    <SolidColorBrush x:Key="SystemControlBaseLowAcrylicWindowBrush" Color="{StaticResource SystemBaseLowColor}" />
+    <SolidColorBrush x:Key="SystemControlBaseLowAcrylicElementBrush" Color="{StaticResource SystemBaseLowColor}" />
+    <SolidColorBrush x:Key="SystemControlBaseMediumLowAcrylicWindowMediumBrush" Color="{StaticResource SystemBaseMediumLowColor}" />
+    <SolidColorBrush x:Key="SystemControlBaseMediumLowAcrylicElementMediumBrush" Color="{StaticResource SystemBaseMediumLowColor}" />
+    <SolidColorBrush x:Key="SystemControlAltLowAcrylicWindowBrush" Color="{StaticResource SystemAltLowColor}" />
+    <SolidColorBrush x:Key="SystemControlAltLowAcrylicElementBrush" Color="{StaticResource SystemAltLowColor}" />
+    <SolidColorBrush x:Key="SystemControlAltMediumLowAcrylicWindowMediumBrush" Color="{StaticResource SystemAltMediumLowColor}" />
+    <SolidColorBrush x:Key="SystemControlAltMediumLowAcrylicElementMediumBrush" Color="{StaticResource SystemAltMediumLowColor}" />
+    <SolidColorBrush x:Key="SystemControlAltHighAcrylicWindowBrush" Color="{StaticResource SystemAltHighColor}" />
+    <SolidColorBrush x:Key="SystemControlAltHighAcrylicElementBrush" Color="{StaticResource SystemAltHighColor}" />
+    <!--<SolidColorBrush x:Key="SystemControlTransientBorderBrush" Color="#000000" Opacity="0.36" />-->
+    <SolidColorBrush x:Key="AcrylicBackgroundFillColorDefaultBrush" Color="{StaticResource SystemChromeMediumLowColor}" />
+    <SolidColorBrush x:Key="AcrylicInAppFillColorDefaultBrush" Color="{StaticResource SystemChromeMediumLowColor}" />
+    <SolidColorBrush x:Key="AcrylicBackgroundFillColorDefaultInverseBrush" Color="#F2F2F2" />
+    <SolidColorBrush x:Key="AcrylicBackgroundFillColorBaseBrush" Color="{StaticResource SystemChromeMediumLowColor}" />
+    <SolidColorBrush x:Key="SystemControlDefaultBrighteningBrush" Color="#FFFFFF" Opacity="0.0419"/>
+
+    <!--
+    Reveal Colors And Brushes
+    Source File: RevealBrush_rs1_StaticResources.xaml
+    -->
+    <!-- These values are copied from generic.xaml and adjusted by 5% -->
+    <Color x:Key="SystemRevealAltHighColor">#F2000000</Color>
+    <Color x:Key="SystemRevealAltLowColor">#30000000</Color>
+    <Color x:Key="SystemRevealAltMediumColor">#91000000</Color>
+    <Color x:Key="SystemRevealAltMediumHighColor">#C2000000</Color>
+    <Color x:Key="SystemRevealAltMediumLowColor">#61000000</Color>
+    <Color x:Key="SystemRevealBaseHighColor">#F2FFFFFF</Color>
+    <Color x:Key="SystemRevealBaseLowColor">#30FFFFFF</Color>
+    <Color x:Key="SystemRevealBaseMediumColor">#91FFFFFF</Color>
+    <Color x:Key="SystemRevealBaseMediumHighColor">#C2FFFFFF</Color>
+    <Color x:Key="SystemRevealBaseMediumLowColor">#61FFFFFF</Color>
+    <Color x:Key="SystemRevealChromeAltLowColor">#F2F9F9F9</Color>
+    <Color x:Key="SystemRevealChromeBlackHighColor">#F2000000</Color>
+    <Color x:Key="SystemRevealChromeBlackLowColor">#30000000</Color>
+    <Color x:Key="SystemRevealChromeBlackMediumLowColor">#61000000</Color>
+    <Color x:Key="SystemRevealChromeBlackMediumColor">#C2000000</Color>
+    <Color x:Key="SystemRevealChromeHighColor">#F2767676</Color>
+    <Color x:Key="SystemRevealChromeLowColor">#F21F1F1F</Color>
+    <Color x:Key="SystemRevealChromeMediumColor">#F2393939</Color>
+    <Color x:Key="SystemRevealChromeMediumLowColor">#F22B2B2B</Color>
+    <Color x:Key="SystemRevealChromeWhiteColor">#F2FFFFFF</Color>
+    <Color x:Key="SystemRevealChromeGrayColor">#F2767676</Color>
+    <Color x:Key="SystemRevealListLowColor">#18FFFFFF</Color>
+    <Color x:Key="SystemRevealListMediumColor">#30FFFFFF</Color>
+
+    <!-- Background Brushes -->
+    <SolidColorBrush x:Key="SystemControlBackgroundBaseLowRevealBackgroundBrush" Color="{StaticResource SystemBaseLowColor}" />
+    <SolidColorBrush x:Key="SystemControlTransparentRevealBackgroundBrush" Color="Transparent" />
+    <SolidColorBrush x:Key="SystemControlBackgroundAltHighRevealBackgroundBrush" Color="{StaticResource SystemAltHighColor}" />
+    <SolidColorBrush x:Key="SystemControlHighlightAccentRevealBackgroundBrush" Color="{StaticResource SystemAccentColor}" />
+    <SolidColorBrush x:Key="SystemControlHighlightAccent3RevealBackgroundBrush" Color="{StaticResource SystemAccentColor}" Opacity="0.6" />
+    <SolidColorBrush x:Key="SystemControlHighlightAccent2RevealBackgroundBrush" Color="{StaticResource SystemAccentColor}" Opacity="0.8" />
+    <SolidColorBrush x:Key="SystemControlHighlightListMediumRevealBackgroundBrush" Color="{StaticResource SystemListMediumColor}" />
+    <SolidColorBrush x:Key="SystemControlHighlightListLowRevealBackgroundBrush" Color="{StaticResource SystemListLowColor}" />
+    <SolidColorBrush x:Key="SystemControlBackgroundBaseMediumLowRevealBaseLowBackgroundBrush" Color="{StaticResource SystemBaseMediumLowColor}"/>
+    <SolidColorBrush x:Key="SystemControlHighlightBaseMediumLowRevealAccentBackgroundBrush" Color="{StaticResource SystemBaseMediumLowColor}"/>
+    <SolidColorBrush x:Key="SystemControlHighlightListMediumRevealListLowBackgroundBrush" Color="{StaticResource SystemListMediumColor}"/>
+    <SolidColorBrush x:Key="SystemControlHighlightAccent3RevealAccent2BackgroundBrush" Color="{StaticResource SystemAccentColor}" Opacity="0.6"/>
+
+    <!-- Border Brushes -->
+    <SolidColorBrush x:Key="SystemControlBackgroundAccentRevealBorderBrush" Color="{StaticResource SystemAccentColor}" />
+    <SolidColorBrush x:Key="SystemControlBackgroundBaseHighRevealBorderBrush" Color="{StaticResource SystemBaseHighColor}" />
+    <SolidColorBrush x:Key="SystemControlBackgroundBaseLowRevealBorderBrush" Color="{StaticResource SystemBaseLowColor}" />
+    <SolidColorBrush x:Key="SystemControlBackgroundBaseMediumRevealBorderBrush" Color="{StaticResource SystemBaseMediumColor}" />
+    <SolidColorBrush x:Key="SystemControlBackgroundBaseMediumHighRevealBorderBrush" Color="{StaticResource SystemBaseMediumHighColor}" />
+    <SolidColorBrush x:Key="SystemControlBackgroundBaseMediumLowRevealBorderBrush" Color="{StaticResource SystemBaseMediumLowColor}" />
+    <SolidColorBrush x:Key="SystemControlBackgroundChromeBlackHighRevealBorderBrush" Color="{StaticResource SystemChromeBlackHighColor}" />
+    <SolidColorBrush x:Key="SystemControlBackgroundChromeBlackMediumRevealChromeBorderBrush" Color="{StaticResource SystemChromeBlackMediumColor}" />
+    <SolidColorBrush x:Key="SystemControlBackgroundChromeMediumRevealBorderBrush" Color="{StaticResource SystemChromeMediumColor}" />
+    <SolidColorBrush x:Key="SystemControlBackgroundChromeMediumLowRevealBorderBrush" Color="{StaticResource SystemChromeMediumLowColor}" />
+    <SolidColorBrush x:Key="SystemControlBackgroundChromeWhiteRevealBorderBrush" Color="{StaticResource SystemChromeWhiteColor}" />
+    <SolidColorBrush x:Key="SystemControlTransparentRevealListLowBorderBrush" Color="Transparent" />
+    <SolidColorBrush x:Key="SystemControlBackgroundListLowRevealBorderBrush" Color="{StaticResource SystemListLowColor}" />
+    <SolidColorBrush x:Key="SystemControlBackgroundListMediumRevealBorderBrush" Color="{StaticResource SystemListMediumColor}" />
+    <SolidColorBrush x:Key="SystemControlTransparentRevealBorderBrush" Color="Transparent" />
+    <SolidColorBrush x:Key="SystemControlForegroundRevealTransparentBorderBrush" Color="Transparent" />
+    <SolidColorBrush x:Key="SystemControlBackgroundTransparentRevealBorderBrush" Color="Transparent" />
+    <SolidColorBrush x:Key="SystemControlHighlightTransparentRevealBorderBrush" Color="Transparent" />
+    <SolidColorBrush x:Key="SystemControlHighlightAltTransparentRevealBorderBrush" Color="Transparent" />
+    <SolidColorBrush x:Key="SystemControlHighlightAccentRevealBorderBrush" Color="{StaticResource SystemAccentColor}" />
+    <SolidColorBrush x:Key="SystemControlHighlightBaseHighRevealBorderBrush" Color="{StaticResource SystemBaseHighColor}" />
+    <SolidColorBrush x:Key="SystemControlHighlightBaseLowRevealBorderBrush" Color="{StaticResource SystemBaseLowColor}" />
+    <SolidColorBrush x:Key="SystemControlHighlightBaseMediumRevealBorderBrush" Color="{StaticResource SystemBaseMediumColor}" />
+    <SolidColorBrush x:Key="SystemControlHighlightBaseMediumHighRevealBorderBrush" Color="{StaticResource SystemBaseMediumHighColor}" />
+    <SolidColorBrush x:Key="SystemControlHighlightBaseMediumLowRevealBorderBrush" Color="{StaticResource SystemBaseMediumLowColor}" />
+    <SolidColorBrush x:Key="ListViewItemRevealBorderBrush" Color="Transparent" />
+    <SolidColorBrush x:Key="ListViewItemRevealBorderBrushPointerOver" Color="Transparent" />
+    <SolidColorBrush x:Key="ListViewItemRevealBorderBrushPressed" Color="Transparent" />
+    <SolidColorBrush x:Key="GridViewItemRevealBorderBrush" Color="Transparent" />
+
+    <!--
+    Source File: Common_themeresources.xaml
+    -->
+    <SolidColorBrush x:Key="SystemControlHighlightListAccentVeryHighBrush" Color="{StaticResource SystemAccentColor}" Opacity="0.9" />
+    <SolidColorBrush x:Key="SystemControlHighlightListAccentMediumLowBrush" Color="{StaticResource SystemAccentColor}" Opacity="0.75" />
+
+    <!-- Resources for Modern Window -->
+    <system:Double x:Key="ModernWindowTitleBarHeight">30</system:Double>
+    <system:Double x:Key="ModernWindowTitleBarFontSize">12</system:Double>
+    <markup:StaticResource x:Key="ModernWindowBackground" ResourceKey="SystemControlPageBackgroundAltHighBrush" />
+    <markup:StaticResource x:Key="ModernWindowForeground" ResourceKey="SystemControlPageTextBaseHighBrush" />
+    <markup:StaticResource x:Key="ModernWindowBorderBrush" ResourceKey="SystemControlBackgroundAccentBrush" />
+    <markup:StaticResource x:Key="ModernWindowBorderBrushInactive" ResourceKey="SystemAccentColorDark1Brush" />
+    <markup:StaticResource x:Key="ModernWindowTitleBarBackground" ResourceKey="SystemControlPageBackgroundAltHighBrush" />
+    <markup:StaticResource x:Key="ModernWindowTitleBarBackgroundInactive" ResourceKey="SystemControlPageBackgroundAltHighBrush" />
+    <markup:StaticResource x:Key="ModernWindowTitleBarForeground" ResourceKey="SystemControlPageTextBaseHighBrush" />
+    <markup:StaticResource x:Key="ModernWindowTitleBarForegroundInactive" ResourceKey="SystemControlPageTextBaseHighBrush" />
+    <markup:StaticResource x:Key="ModernWindowTitleBarButtonBackground" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ModernWindowTitleBarButtonBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowBrush" />
+    <markup:StaticResource x:Key="ModernWindowTitleBarButtonBackgroundPressed" ResourceKey="SystemControlHighlightListMediumBrush" />
+    <markup:StaticResource x:Key="ModernWindowTitleBarButtonBackgroundDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <SolidColorBrush x:Key="ModernWindowTitleBarCloseButtonBackgroundPointerOver" Color="#DC3832" />
+    <SolidColorBrush x:Key="ModernWindowTitleBarCloseButtonForegroundPointerOver" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="ModernWindowTitleBarCloseButtonBackgroundPressed" Color="#FA7878" />
+    <SolidColorBrush x:Key="ModernWindowTitleBarCloseButtonForegroundPressed" Color="#FFFFFF" />
+    
+    <!-- Resources for Button -->
+    <markup:StaticResource x:Key="AccentButtonBackground" ResourceKey="SystemControlBackgroundAccentBrush" />
+    <markup:StaticResource x:Key="AccentButtonBackgroundPointerOver" ResourceKey="SystemAccentColorLight1Brush" />
+    <markup:StaticResource x:Key="AccentButtonBackgroundPressed" ResourceKey="SystemAccentColorDark1Brush" />
+    <markup:StaticResource x:Key="AccentButtonBackgroundDisabled" ResourceKey="SystemControlBackgroundBaseLowBrush" />
+    <markup:StaticResource x:Key="AccentButtonForeground" ResourceKey="SystemControlBackgroundChromeWhiteBrush" />
+    <markup:StaticResource x:Key="AccentButtonForegroundPointerOver" ResourceKey="SystemControlBackgroundChromeWhiteBrush" />
+    <markup:StaticResource x:Key="AccentButtonForegroundPressed" ResourceKey="SystemControlBackgroundChromeWhiteBrush" />
+    <markup:StaticResource x:Key="AccentButtonForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="AccentButtonBorderBrush" ResourceKey="SystemControlForegroundTransparentBrush" />
+    <markup:StaticResource x:Key="AccentButtonBorderBrushPointerOver" ResourceKey="SystemControlForegroundTransparentBrush" />
+    <markup:StaticResource x:Key="AccentButtonBorderBrushPressed" ResourceKey="SystemControlHighlightTransparentBrush" />
+    <markup:StaticResource x:Key="AccentButtonBorderBrushDisabled" ResourceKey="SystemControlDisabledTransparentBrush" />
+    
+    <Thickness x:Key="ButtonBorderThemeThickness">1</Thickness>
+    
+    <markup:StaticResource x:Key="ButtonBackground" ResourceKey="SystemControlBackgroundBaseLowBrush" />
+    <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{StaticResource SystemBaseHighColor}" Opacity="0.1" />
+    <markup:StaticResource x:Key="ButtonBackgroundPressed" ResourceKey="SystemControlBackgroundBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="ButtonBackgroundDisabled" ResourceKey="SystemControlBackgroundBaseLowBrush" />
+    <markup:StaticResource x:Key="ButtonForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="ButtonForegroundPointerOver" ResourceKey="SystemControlHighlightBaseHighBrush" />
+    <markup:StaticResource x:Key="ButtonForegroundPressed" ResourceKey="SystemControlHighlightBaseHighBrush" />
+    <markup:StaticResource x:Key="ButtonForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="ButtonBorderBrush" ResourceKey="SystemControlForegroundTransparentBrush" />
+    <markup:StaticResource x:Key="ButtonBorderBrushPointerOver" ResourceKey="SystemControlForegroundTransparentBrush" />
+    <markup:StaticResource x:Key="ButtonBorderBrushPressed" ResourceKey="SystemControlHighlightTransparentBrush" />
+    <markup:StaticResource x:Key="ButtonBorderBrushDisabled" ResourceKey="SystemControlDisabledTransparentBrush" />
+    
+    <!-- Resources for Calendar -->
+    <markup:StaticResource x:Key="CalendarViewFocusBorderBrush" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="CalendarViewSelectedHoverBorderBrush" ResourceKey="SystemControlHighlightListAccentMediumBrush" />
+    <markup:StaticResource x:Key="CalendarViewSelectedPressedBorderBrush" ResourceKey="SystemControlHighlightListAccentHighBrush" />
+    <markup:StaticResource x:Key="CalendarViewSelectedBorderBrush" ResourceKey="SystemControlHighlightAccentBrush" />
+    <markup:StaticResource x:Key="CalendarViewHoverBorderBrush" ResourceKey="SystemControlHighlightBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="CalendarViewPressedBorderBrush" ResourceKey="SystemControlHighlightBaseMediumBrush" />
+    <markup:StaticResource x:Key="CalendarViewTodayForeground" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
+    <markup:StaticResource x:Key="CalendarViewBlackoutForeground" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="CalendarViewSelectedForeground" ResourceKey="SystemControlHighlightBaseHighBrush" />
+    <markup:StaticResource x:Key="CalendarViewPressedForeground" ResourceKey="SystemControlHighlightBaseHighBrush" />
+    <markup:StaticResource x:Key="CalendarViewOutOfScopeForeground" ResourceKey="SystemControlHyperlinkBaseHighBrush" />
+    <markup:StaticResource x:Key="CalendarViewCalendarItemForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="CalendarViewOutOfScopeBackground" ResourceKey="SystemControlDisabledChromeMediumLowBrush" />
+    <markup:StaticResource x:Key="CalendarViewCalendarItemBackground" ResourceKey="SystemControlBackgroundAltHighBrush" />
+    <markup:StaticResource x:Key="CalendarViewForeground" ResourceKey="SystemControlHyperlinkBaseMediumHighBrush" />
+    <markup:StaticResource x:Key="CalendarViewBackground" ResourceKey="SystemControlBackgroundAltHighBrush" />
+    <markup:StaticResource x:Key="CalendarViewBorderBrush" ResourceKey="SystemControlForegroundChromeMediumBrush" />
+    <markup:StaticResource x:Key="CalendarViewWeekDayForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="CalendarViewNavigationButtonBackground" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="CalendarViewNavigationButtonForegroundPointerOver" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="CalendarViewNavigationButtonForegroundPressed" ResourceKey="SystemControlForegroundBaseMediumBrush" />
+    <markup:StaticResource x:Key="CalendarViewNavigationButtonForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="CalendarViewCalendarItemRevealBackground" ResourceKey="SystemControlTransparentRevealBackgroundBrush" />
+    <markup:StaticResource x:Key="CalendarViewCalendarItemRevealBorderBrush" ResourceKey="SystemControlTransparentRevealBorderBrush" />
+    <markup:StaticResource x:Key="CalendarViewNavigationButtonBorderBrushPointerOver" ResourceKey="SystemControlHighlightTransparentBrush" />
+    <markup:StaticResource x:Key="CalendarViewNavigationButtonBorderBrush" ResourceKey="SystemControlTransparentBrush" />
+
+    <!-- Resources for CalendarDatePicker -->
+    <Thickness x:Key="CalendarDatePickerBorderThemeThickness">1</Thickness>
+    <markup:StaticResource x:Key="CalendarDatePickerForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="CalendarDatePickerForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="CalendarDatePickerCalendarGlyphForeground" ResourceKey="SystemControlForegroundBaseMediumHighBrush" />
+    <markup:StaticResource x:Key="CalendarDatePickerCalendarGlyphForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="CalendarDatePickerTextForeground" ResourceKey="SystemControlForegroundBaseMediumBrush" />
+    <markup:StaticResource x:Key="CalendarDatePickerTextForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="CalendarDatePickerTextForegroundSelected" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="CalendarDatePickerHeaderForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="CalendarDatePickerBackground" ResourceKey="SystemControlBackgroundAltMediumLowBrush" />
+    <markup:StaticResource x:Key="CalendarDatePickerBackgroundPointerOver" ResourceKey="SystemControlPageBackgroundAltMediumBrush" />
+    <markup:StaticResource x:Key="CalendarDatePickerBackgroundPressed" ResourceKey="SystemControlBackgroundBaseLowBrush" />
+    <markup:StaticResource x:Key="CalendarDatePickerBackgroundDisabled" ResourceKey="SystemControlBackgroundBaseLowBrush" />
+    <markup:StaticResource x:Key="CalendarDatePickerBackgroundFocused" ResourceKey="SystemControlHighlightListAccentLowBrush" />
+    <markup:StaticResource x:Key="CalendarDatePickerBorderBrush" ResourceKey="SystemControlForegroundBaseMediumBrush" />
+    <markup:StaticResource x:Key="CalendarDatePickerBorderBrushPointerOver" ResourceKey="SystemControlHighlightBaseMediumHighBrush" />
+    <markup:StaticResource x:Key="CalendarDatePickerBorderBrushPressed" ResourceKey="SystemControlHighlightBaseMediumBrush" />
+    <markup:StaticResource x:Key="CalendarDatePickerBorderBrushDisabled" ResourceKey="SystemControlDisabledBaseLowBrush" />
+    <markup:StaticResource x:Key="CalendarDatePickerLightDismissOverlayBackground" ResourceKey="SystemControlPageBackgroundMediumAltMediumBrush" />
+
+    <!-- Resources for Expander -->
+    <markup:StaticResource x:Key="ExpanderHeaderBackground" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ExpanderHeaderForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="ExpanderChevronBackground" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ExpanderChevronForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+
+    <!-- Resources for ListBox -->
+    <Thickness x:Key="ListBoxBorderThemeThickness">0</Thickness>
+
+    <!-- Resources for ListViewHeaderItem -->
+    <markup:StaticResource x:Key="ListViewHeaderItemBackground" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ListViewHeaderItemDividerStroke" ResourceKey="SystemControlForegroundBaseLowBrush" />
+
+    <!-- Resources for ListView -->
+    <system:Double x:Key="ListViewItemContentOffsetX">-40.5</system:Double>
+    <system:Double x:Key="ListViewItemDisabledThemeOpacity">0.55</system:Double>
+    <system:Double x:Key="ListViewItemDragThemeOpacity">0.80</system:Double>
+    <system:Double x:Key="ListViewItemReorderThemeOpacity">0.80</system:Double>
+    <system:Double x:Key="ListViewItemReorderTargetThemeOpacity">0.50</system:Double>
+    <system:Double x:Key="ListViewItemReorderTargetThemeScale">0.95</system:Double>
+    <system:Double x:Key="ListViewItemReorderHintThemeOffset">10.0</system:Double>
+    <system:Double x:Key="ListViewItemSelectedBorderThemeThickness">4</system:Double>
+    <system:Double x:Key="ListViewItemMinWidth">88</system:Double>
+    <system:Double x:Key="ListViewItemMinHeight">40</system:Double>
+    <Thickness x:Key="ListViewItemCompactSelectedBorderThemeThickness">4</Thickness>
+    <markup:StaticResource x:Key="ListViewItemBackground" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ListViewItemBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowBrush" />
+    <markup:StaticResource x:Key="ListViewItemBackgroundPressed" ResourceKey="SystemControlHighlightListMediumBrush" />
+    <markup:StaticResource x:Key="ListViewItemBackgroundSelected" ResourceKey="SystemControlHighlightListAccentMediumLowBrush" />
+    <markup:StaticResource x:Key="ListViewItemBackgroundSelectedPointerOver" ResourceKey="SystemControlHighlightListAccentLowBrush" />
+    <markup:StaticResource x:Key="ListViewItemBackgroundSelectedPressed" ResourceKey="SystemControlHighlightListAccentVeryHighBrush" />
+    <markup:StaticResource x:Key="ListViewItemForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="ListViewItemForegroundPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="ListViewItemForegroundSelected" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="ListViewItemFocusVisualPrimaryBrush" ResourceKey="SystemControlFocusVisualPrimaryBrush" />
+    <markup:StaticResource x:Key="ListViewItemFocusVisualSecondaryBrush" ResourceKey="SystemControlFocusVisualSecondaryBrush" />
+    <markup:StaticResource x:Key="ListViewItemFocusBorderBrush" ResourceKey="SystemControlForegroundAltHighBrush" />
+    <markup:StaticResource x:Key="ListViewItemFocusSecondaryBorderBrush" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="ListViewItemCheckBrush" ResourceKey="SystemControlForegroundBaseMediumHighBrush" />
+    <markup:StaticResource x:Key="ListViewItemCheckBoxBrush" ResourceKey="SystemControlForegroundBaseMediumHighBrush" />
+    <markup:StaticResource x:Key="ListViewItemDragBackground" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ListViewItemDragForeground" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
+    <markup:StaticResource x:Key="ListViewItemPlaceholderBackground" ResourceKey="SystemControlDisabledChromeDisabledHighBrush" />
+
+    <!-- Resources for CheckBox -->
+    <system:Double x:Key="CheckBoxBorderThemeThickness">1</system:Double>
+    <system:Double x:Key="CheckBoxCheckedStrokeThickness">0</system:Double>
+    <markup:StaticResource x:Key="CheckBoxForegroundUnchecked" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="CheckBoxForegroundUncheckedPointerOver" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="CheckBoxForegroundUncheckedPressed" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="CheckBoxForegroundUncheckedDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="CheckBoxForegroundChecked" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="CheckBoxForegroundCheckedPointerOver" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="CheckBoxForegroundCheckedPressed" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="CheckBoxForegroundCheckedDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="CheckBoxForegroundIndeterminate" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="CheckBoxForegroundIndeterminatePointerOver" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="CheckBoxForegroundIndeterminatePressed" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="CheckBoxForegroundIndeterminateDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="CheckBoxBackgroundUnchecked" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="CheckBoxBackgroundUncheckedPointerOver" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="CheckBoxBackgroundUncheckedPressed" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="CheckBoxBackgroundUncheckedDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="CheckBoxBackgroundChecked" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="CheckBoxBackgroundCheckedPointerOver" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="CheckBoxBackgroundCheckedPressed" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="CheckBoxBackgroundCheckedDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="CheckBoxBackgroundIndeterminate" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="CheckBoxBackgroundIndeterminatePointerOver" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="CheckBoxBackgroundIndeterminatePressed" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="CheckBoxBackgroundIndeterminateDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="CheckBoxBorderBrushUnchecked" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="CheckBoxBorderBrushUncheckedPointerOver" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="CheckBoxBorderBrushUncheckedPressed" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="CheckBoxBorderBrushUncheckedDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="CheckBoxBorderBrushChecked" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="CheckBoxBorderBrushCheckedPointerOver" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="CheckBoxBorderBrushCheckedPressed" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="CheckBoxBorderBrushCheckedDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="CheckBoxBorderBrushIndeterminate" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="CheckBoxBorderBrushIndeterminatePointerOver" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="CheckBoxBorderBrushIndeterminatePressed" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="CheckBoxBorderBrushIndeterminateDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="CheckBoxCheckBackgroundStrokeUnchecked" ResourceKey="SystemControlForegroundBaseMediumBrush" />
+    <markup:StaticResource x:Key="CheckBoxCheckBackgroundStrokeUncheckedPointerOver" ResourceKey="SystemControlHighlightBaseMediumHighBrush" />
+    <markup:StaticResource x:Key="CheckBoxCheckBackgroundStrokeUncheckedPressed" ResourceKey="SystemControlHighlightBaseHighBrush" />
+    <markup:StaticResource x:Key="CheckBoxCheckBackgroundStrokeUncheckedDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="CheckBoxCheckBackgroundStrokeChecked" ResourceKey="SystemControlHighlightTransparentBrush" />
+    <markup:StaticResource x:Key="CheckBoxCheckBackgroundStrokeCheckedPointerOver" ResourceKey="SystemAccentColorDark1Brush" />
+    <markup:StaticResource x:Key="CheckBoxCheckBackgroundStrokeCheckedPressed" ResourceKey="SystemAccentColorLight1Brush" />
+    <markup:StaticResource x:Key="CheckBoxCheckBackgroundStrokeCheckedDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="CheckBoxCheckBackgroundStrokeIndeterminate" ResourceKey="SystemControlForegroundAccentBrush" />
+    <markup:StaticResource x:Key="CheckBoxCheckBackgroundStrokeIndeterminatePointerOver" ResourceKey="SystemAccentColorLight1Brush" />
+    <markup:StaticResource x:Key="CheckBoxCheckBackgroundStrokeIndeterminatePressed" ResourceKey="SystemAccentColorDark1Brush" />
+    <markup:StaticResource x:Key="CheckBoxCheckBackgroundStrokeIndeterminateDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="CheckBoxCheckBackgroundFillUnchecked" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="CheckBoxCheckBackgroundFillUncheckedPointerOver" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="CheckBoxCheckBackgroundFillUncheckedPressed" ResourceKey="SystemControlBackgroundBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="CheckBoxCheckBackgroundFillUncheckedDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="CheckBoxCheckBackgroundFillChecked" ResourceKey="SystemControlHighlightAccentBrush" />
+    <markup:StaticResource x:Key="CheckBoxCheckBackgroundFillCheckedPointerOver" ResourceKey="SystemAccentColorLight1Brush" />
+    <markup:StaticResource x:Key="CheckBoxCheckBackgroundFillCheckedPressed" ResourceKey="SystemAccentColorDark1Brush" />
+    <markup:StaticResource x:Key="CheckBoxCheckBackgroundFillCheckedDisabled" ResourceKey="SystemControlBackgroundBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="CheckBoxCheckBackgroundFillIndeterminate" ResourceKey="SystemControlHighlightAccentBrush" />
+    <markup:StaticResource x:Key="CheckBoxCheckBackgroundFillIndeterminatePointerOver" ResourceKey="SystemAccentColorLight1Brush" />
+    <markup:StaticResource x:Key="CheckBoxCheckBackgroundFillIndeterminatePressed" ResourceKey="SystemAccentColorDark1Brush" />
+    <markup:StaticResource x:Key="CheckBoxCheckBackgroundFillIndeterminateDisabled" ResourceKey="SystemControlBackgroundBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="CheckBoxCheckGlyphForegroundUnchecked" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
+    <markup:StaticResource x:Key="CheckBoxCheckGlyphForegroundUncheckedPointerOver" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
+    <markup:StaticResource x:Key="CheckBoxCheckGlyphForegroundUncheckedPressed" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
+    <markup:StaticResource x:Key="CheckBoxCheckGlyphForegroundUncheckedDisabled" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
+    <markup:StaticResource x:Key="CheckBoxCheckGlyphForegroundChecked" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
+    <markup:StaticResource x:Key="CheckBoxCheckGlyphForegroundCheckedPointerOver" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
+    <markup:StaticResource x:Key="CheckBoxCheckGlyphForegroundCheckedPressed" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
+    <markup:StaticResource x:Key="CheckBoxCheckGlyphForegroundCheckedDisabled" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
+    <markup:StaticResource x:Key="CheckBoxCheckGlyphForegroundIndeterminate" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
+    <markup:StaticResource x:Key="CheckBoxCheckGlyphForegroundIndeterminatePointerOver" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
+    <markup:StaticResource x:Key="CheckBoxCheckGlyphForegroundIndeterminatePressed" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
+    <markup:StaticResource x:Key="CheckBoxCheckGlyphForegroundIndeterminateDisabled" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
+    
+    <!-- Resources for ComboBox -->
+    <system:Double x:Key="ComboBoxArrowThemeFontSize">21</system:Double>
+    <system:Double x:Key="ComboBoxThemeMinWidth">64</system:Double>
+    <system:Double x:Key="ComboBoxPopupThemeMinWidth">80</system:Double>
+    <system:Double x:Key="ComboBoxPopupThemeTouchMinWidth">240</system:Double>
+    <Thickness x:Key="ComboBoxBorderThemeThickness">1</Thickness>
+    <Thickness x:Key="ComboBoxDropdownBorderThickness">1</Thickness>
+    <Thickness x:Key="ComboBoxHeaderThemeMargin">0,0,0,4</Thickness>
+    <Thickness x:Key="ComboBoxPopupBorderThemeThickness">2</Thickness>
+    <Thickness x:Key="ComboBoxItemThemePadding">11,5,11,7</Thickness>
+    <Thickness x:Key="ComboBoxItemThemeTouchPadding">11,11,11,13</Thickness>
+    <Thickness x:Key="ComboBoxItemThemeGameControllerPadding">11,11,11,13</Thickness>
+    <FontWeight x:Key="ComboBoxHeaderThemeFontWeight">Normal</FontWeight>
+    <FontWeight x:Key="ComboBoxPlaceholderTextThemeFontWeight">Light</FontWeight>
+    <markup:StaticResource x:Key="ComboBoxItemForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="ComboBoxItemForegroundPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="ComboBoxItemForegroundPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="ComboBoxItemForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="ComboBoxItemForegroundSelected" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="ComboBoxItemForegroundSelectedUnfocused" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="ComboBoxItemForegroundSelectedPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="ComboBoxItemForegroundSelectedPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="ComboBoxItemForegroundSelectedDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="ComboBoxItemBackground" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ComboBoxItemBackgroundPressed" ResourceKey="SystemControlHighlightListMediumBrush" />
+    <markup:StaticResource x:Key="ComboBoxItemBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowBrush" />
+    <markup:StaticResource x:Key="ComboBoxItemBackgroundDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ComboBoxItemBackgroundSelected" ResourceKey="SystemControlHighlightListAccentLowBrush" />
+    <markup:StaticResource x:Key="ComboBoxItemBackgroundSelectedUnfocused" ResourceKey="SystemControlHighlightListAccentLowBrush" />
+    <markup:StaticResource x:Key="ComboBoxItemBackgroundSelectedPressed" ResourceKey="SystemControlHighlightListAccentHighBrush" />
+    <markup:StaticResource x:Key="ComboBoxItemBackgroundSelectedPointerOver" ResourceKey="SystemControlHighlightListAccentMediumBrush" />
+    <markup:StaticResource x:Key="ComboBoxItemBackgroundSelectedDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ComboBoxItemBorderBrush" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ComboBoxItemBorderBrushPressed" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ComboBoxItemBorderBrushPointerOver" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ComboBoxItemBorderBrushDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ComboBoxItemBorderBrushSelected" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ComboBoxItemBorderBrushSelectedUnfocused" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ComboBoxItemBorderBrushSelectedPressed" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ComboBoxItemBorderBrushSelectedPointerOver" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ComboBoxItemBorderBrushSelectedDisabled" ResourceKey="SystemControlTransparentBrush" />
+
+    <markup:StaticResource x:Key="ComboBoxBackground" ResourceKey="SystemControlBackgroundAltMediumLowBrush" />
+    <markup:StaticResource x:Key="ComboBoxBackgroundPointerOver" ResourceKey="SystemControlPageBackgroundAltMediumBrush" />
+    <markup:StaticResource x:Key="ComboBoxBackgroundPressed" ResourceKey="SystemControlBackgroundListMediumBrush" />
+    <markup:StaticResource x:Key="ComboBoxBackgroundDisabled" ResourceKey="SystemControlBackgroundBaseLowBrush" />
+    <markup:StaticResource x:Key="ComboBoxBackgroundUnfocused" ResourceKey="SystemControlHighlightListAccentLowBrush" />
+    <markup:StaticResource x:Key="ComboBoxBackgroundFocused" ResourceKey="ComboBoxBackgroundUnfocused" />
+    <markup:StaticResource x:Key="ComboBoxBackgroundBorderBrushFocused" ResourceKey="SystemControlHighlightTransparentBrush" />
+    <markup:StaticResource x:Key="ComboBoxBackgroundBorderBrushUnfocused" ResourceKey="SystemControlHighlightBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="ComboBoxForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="ComboBoxForegroundPointerOver" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="ComboBoxForegroundPressed" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="ComboBoxForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="ComboBoxForegroundFocused" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="ComboBoxForegroundFocusedPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="ComboBoxHeaderForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="ComboBoxHeaderForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="ComboBoxPlaceHolderForeground" ResourceKey="SystemControlPageTextBaseMediumBrush" />
+    <markup:StaticResource x:Key="ComboBoxPlaceHolderForegroundPointerOver" ResourceKey="SystemControlPageTextBaseMediumBrush" />
+    <markup:StaticResource x:Key="ComboBoxPlaceHolderForegroundPressed" ResourceKey="SystemControlPageTextBaseMediumBrush" />
+    <markup:StaticResource x:Key="ComboBoxPlaceHolderForegroundDisabled" ResourceKey="SystemControlDisabledChromeDisabledLowBrush" />
+    <markup:StaticResource x:Key="ComboBoxPlaceHolderForegroundFocused" ResourceKey="SystemControlPageTextBaseMediumBrush" />
+    <markup:StaticResource x:Key="ComboBoxPlaceHolderForegroundFocusedPressed" ResourceKey="SystemControlPageTextBaseMediumBrush" />
+    <markup:StaticResource x:Key="ComboBoxBorderBrush" ResourceKey="SystemControlForegroundBaseMediumBrush" />
+    <markup:StaticResource x:Key="ComboBoxBorderBrushPointerOver" ResourceKey="SystemControlHighlightBaseMediumHighBrush" />
+    <markup:StaticResource x:Key="ComboBoxBorderBrushPressed" ResourceKey="SystemControlHighlightBaseMediumBrush" />
+    <markup:StaticResource x:Key="ComboBoxBorderBrushDisabled" ResourceKey="SystemControlDisabledBaseLowBrush" />
+    <markup:StaticResource x:Key="ComboBoxDropDownGlyphForeground" ResourceKey="SystemControlForegroundBaseMediumHighBrush" />
+    <markup:StaticResource x:Key="ComboBoxDropDownGlyphForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="ComboBoxDropDownGlyphForegroundFocused" ResourceKey="SystemControlHighlightAltBaseMediumHighBrush" />
+    <markup:StaticResource x:Key="ComboBoxDropDownGlyphForegroundFocusedPressed" ResourceKey="SystemControlHighlightAltBaseMediumHighBrush" />
+    <!--<contract7NotPresent:StaticResource x:Key="ComboBoxDropDownBackground" ResourceKey="SystemControlBackgroundChromeMediumLowBrush" />-->
+    <markup:StaticResource x:Key="ComboBoxDropDownForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <!--<contract7NotPresent:StaticResource x:Key="ComboBoxDropDownBorderBrush" ResourceKey="SystemControlForegroundChromeHighBrush" />-->
+    <markup:StaticResource x:Key="ComboBoxDropDownBackground" ResourceKey="AcrylicBackgroundFillColorDefaultBrush" />
+    <markup:StaticResource x:Key="ComboBoxDropDownBorderBrush" ResourceKey="SystemControlTransientBorderBrush" />
+
+    <Thickness x:Key="ComboBoxDropdownBorderPadding">0</Thickness>
+    <Thickness x:Key="ComboBoxDropdownContentMargin">0,4,0,4</Thickness>
+    <markup:StaticResource x:Key="ComboBoxDropDownBackgroundPointerOver" ResourceKey="SystemControlBackgroundListLowBrush" />
+    <markup:StaticResource x:Key="ComboBoxDropDownBackgroundPointerPressed" ResourceKey="SystemControlBackgroundListMediumBrush" />
+    <markup:StaticResource x:Key="ComboBoxFocusedDropDownBackgroundPointerOver" ResourceKey="SystemControlBackgroundBaseLowBrush" />
+    <markup:StaticResource x:Key="ComboBoxFocusedDropDownBackgroundPointerPressed" ResourceKey="SystemControlBackgroundBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="ComboBoxEditableDropDownGlyphForeground" ResourceKey="SystemControlForegroundBaseMediumHighBrush" />
+    
+    <!-- -->
+    <SolidColorBrush x:Key="InvalidBrush" Color="#FFFF00"/>
+    <SolidColorBrush x:Key="FillerGridLinesBrush" Color="Transparent"/>
+    <markup:StaticResource x:Key="ScrollBarsSeparatorBackground" ResourceKey="SystemControlPageBackgroundChromeLowBrush"/>
+    <markup:StaticResource x:Key="DataGridColumnHeaderForegroundBrush" ResourceKey="SystemControlForegroundBaseMediumBrush"/>
+    <markup:StaticResource x:Key="DataGridColumnHeaderBackgroundColor" ResourceKey="SystemAltHighColor"/>
+    <SolidColorBrush x:Key="DataGridColumnHeaderBackgroundBrush" Color="{StaticResource DataGridColumnHeaderBackgroundColor}"/>
+    <markup:StaticResource x:Key="DataGridColumnHeaderHoveredBackgroundColor" ResourceKey="SystemListLowColor"/>
+    <markup:StaticResource x:Key="DataGridColumnHeaderPressedBackgroundColor" ResourceKey="SystemListMediumColor"/>
+    <markup:StaticResource x:Key="DataGridColumnHeaderDraggedBackgroundBrush" ResourceKey="SystemControlBackgroundChromeMediumLowBrush"/>
+    <markup:StaticResource x:Key="DataGridColumnHeaderPointerOverBrush" ResourceKey="SystemControlHighlightListLowBrush"/>
+    <markup:StaticResource x:Key="DataGridColumnHeaderPressedBrush" ResourceKey="SystemControlHighlightListMediumBrush"/>
+
+    <system:Double x:Key="ListAccentLowOpacity">0.6</system:Double>
+    <system:Double x:Key="ListAccentMediumOpacity">0.8</system:Double>
+
+    <SolidColorBrush x:Key="SystemControlGridLinesBaseMediumLowBrush" Color="{StaticResource SystemBaseMediumLowColor}" Opacity="0.4"/>
+    <SolidColorBrush x:Key="SystemControlRowGroupHeaderBackgroundMediumBrush" Color="{StaticResource SystemChromeMediumColor}"/>
+    <SolidColorBrush x:Key="DataGridCurrencyVisualPrimaryBrush" Color="Transparent"/>
+
+    <markup:StaticResource x:Key="GridLinesBrush" ResourceKey="SystemControlGridLinesBaseMediumLowBrush"/>
+
+    <markup:StaticResource x:Key="DataGridDetailsPresenterBackgroundBrush" ResourceKey="SystemControlBackgroundChromeMediumLowBrush"/>
+    <markup:StaticResource x:Key="DataGridFillerColumnGridLinesBrush" ResourceKey="FillerGridLinesBrush"/>
+    <markup:StaticResource x:Key="DataGridRowSelectedBackgroundColor" ResourceKey="SystemAccentColor"/>
+    <markup:StaticResource x:Key="DataGridRowSelectedBackgroundOpacity" ResourceKey="ListAccentLowOpacity"/>
+    <markup:StaticResource x:Key="DataGridRowSelectedHoveredBackgroundColor" ResourceKey="SystemAccentColor"/>
+    <markup:StaticResource x:Key="DataGridRowSelectedHoveredBackgroundOpacity" ResourceKey="ListAccentMediumOpacity"/>
+    <markup:StaticResource x:Key="DataGridRowSelectedUnfocusedBackgroundColor" ResourceKey="SystemAccentColor"/>
+    <markup:StaticResource x:Key="DataGridRowSelectedUnfocusedBackgroundOpacity" ResourceKey="ListAccentLowOpacity"/>
+    <markup:StaticResource x:Key="DataGridRowSelectedHoveredUnfocusedBackgroundColor" ResourceKey="SystemAccentColor"/>
+    <markup:StaticResource x:Key="DataGridRowSelectedHoveredUnfocusedBackgroundOpacity" ResourceKey="ListAccentMediumOpacity"/>
+    <markup:StaticResource x:Key="DataGridRowHoveredBackgroundColor" ResourceKey="SystemListLowColor"/>
+    <markup:StaticResource x:Key="DataGridRowHeaderForegroundBrush" ResourceKey="SystemControlForegroundBaseMediumBrush"/>
+    <markup:StaticResource x:Key="DataGridRowHeaderBackgroundBrush" ResourceKey="SystemControlBackgroundAltHighBrush"/>
+    <markup:StaticResource x:Key="DataGridRowGroupHeaderBackgroundBrush" ResourceKey="SystemControlBackgroundChromeMediumBrush"/>
+    <markup:StaticResource x:Key="DataGridRowGroupHeaderHoveredBackgroundBrush" ResourceKey="SystemControlBackgroundListLowBrush"/>
+    <markup:StaticResource x:Key="DataGridRowGroupHeaderPressedBackgroundBrush" ResourceKey="SystemControlBackgroundListMediumBrush"/>
+    <markup:StaticResource x:Key="DataGridRowGroupHeaderForegroundBrush" ResourceKey="SystemControlForegroundBaseHighBrush"/>
+    <markup:StaticResource x:Key="DataGridRowInvalidBrush" ResourceKey="InvalidBrush"/>
+    <markup:StaticResource x:Key="DataGridCellBackgroundBrush" ResourceKey="SystemControlTransparentBrush"/>
+    <markup:StaticResource x:Key="DataGridCellFocusVisualPrimaryBrush" ResourceKey="SystemControlFocusVisualPrimaryBrush"/>
+    <markup:StaticResource x:Key="DataGridCellFocusVisualSecondaryBrush" ResourceKey="SystemControlFocusVisualSecondaryBrush"/>
+    <markup:StaticResource x:Key="DataGridCellInvalidBrush" ResourceKey="InvalidBrush"/>
+
+    <!-- Resources for MenuBar -->
+    <markup:StaticResource x:Key="MenuBarBackground" ResourceKey="SystemControlTransparentBrush" />
+
+    <markup:StaticResource x:Key="MenuBarItemBackground" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="MenuBarItemBackgroundPointerOver" ResourceKey="SystemControlBackgroundListLowBrush" />
+    <markup:StaticResource x:Key="MenuBarItemBackgroundPressed" ResourceKey="SystemControlBackgroundListMediumBrush" />
+    <markup:StaticResource x:Key="MenuBarItemBackgroundSelected" ResourceKey="SystemControlBackgroundListMediumBrush" />
+
+    <Thickness x:Key="MenuBarItemBorderThickness">0</Thickness>
+
+    <markup:StaticResource x:Key="MenuBarItemBorderBrush" ResourceKey="SystemControlForegroundBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="MenuBarItemBorderBrushPointerOver" ResourceKey="SystemControlHighlightBaseMediumBrush" />
+    <markup:StaticResource x:Key="MenuBarItemBorderBrushPressed" ResourceKey="SystemControlHighlightBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="MenuBarItemBorderBrushSelected" ResourceKey="SystemControlHighlightBaseMediumLowBrush" />
+
+    <!-- Resources for MenuFlyout -->
+    <Thickness x:Key="MenuFlyoutScrollerMargin">0,4,0,4</Thickness>
+    <system:Double x:Key="MenuFlyoutSeparatorThemeHeight">1</system:Double>
+    <system:Double x:Key="MenuFlyoutThemeMinHeight">32</system:Double>
+    <Thickness x:Key="MenuFlyoutPresenterThemePadding">0,0</Thickness>
+    <Thickness x:Key="MenuFlyoutItemCheckGlyphMargin">12,11,0,13</Thickness>
+    <Thickness x:Key="MenuFlyoutItemChevronMargin">24,0,0,0</Thickness>
+    <Thickness x:Key="MenuFlyoutItemPlaceholderThemeThickness">28,0,0,0</Thickness>
+    <Thickness x:Key="MenuFlyoutSeparatorThemePadding">12,4,12,4</Thickness>
+    <markup:StaticResource x:Key="MenuFlyoutItemBackground" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutItemBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutItemBackgroundPressed" ResourceKey="SystemControlHighlightListMediumBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutItemBackgroundDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutItemForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutItemForegroundPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutItemForegroundPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutItemForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutSubItemBackground" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutSubItemBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutSubItemBackgroundPressed" ResourceKey="SystemControlHighlightListAccentHighBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutSubItemBackgroundSubMenuOpened" ResourceKey="SystemControlHighlightListLowBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutSubItemBackgroundDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutSubItemForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutSubItemForegroundPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutSubItemForegroundPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutSubItemForegroundSubMenuOpened" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutSubItemForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutSubItemChevron" ResourceKey="SystemControlForegroundBaseMediumHighBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutSubItemChevronPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutSubItemChevronPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutSubItemChevronSubMenuOpened" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutSubItemChevronDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutLightDismissOverlayBackground" ResourceKey="SystemControlPageBackgroundMediumAltMediumBrush" />
+    <Thickness x:Key="MenuFlyoutItemDoublePlaceholderThemeThickness">56,0,0,0</Thickness>
+    <markup:StaticResource x:Key="MenuFlyoutItemKeyboardAcceleratorTextForeground" ResourceKey="SystemControlForegroundBaseMediumBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutItemKeyboardAcceleratorTextForegroundPointerOver" ResourceKey="SystemControlHighlightAltBaseMediumBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutItemKeyboardAcceleratorTextForegroundPressed" ResourceKey="SystemControlHighlightAltBaseMediumBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutItemKeyboardAcceleratorTextForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <Thickness x:Key="MenuFlyoutItemThemePadding">11,9,11,10</Thickness>
+    <Thickness x:Key="MenuFlyoutItemThemePaddingNarrow">11,4,11,7</Thickness>
+    <markup:StaticResource x:Key="MenuFlyoutPresenterBackground" ResourceKey="AcrylicBackgroundFillColorDefaultBrush" />
+    <!--<contract7NotPresent:StaticResource x:Key="MenuFlyoutPresenterBackground" ResourceKey="SystemControlBackgroundChromeMediumLowBrush" />-->
+    <markup:StaticResource x:Key="MenuFlyoutPresenterBorderBrush" ResourceKey="SystemControlTransientBorderBrush" />
+    <!--<contract7NotPresent:StaticResource x:Key="MenuFlyoutPresenterBorderBrush" ResourceKey="SystemControlForegroundChromeHighBrush" />-->
+    <Thickness x:Key="MenuFlyoutPresenterBorderThemeThickness">1</Thickness>
+    <!-- Resources for Windows.UI.Xaml.Controls.MenuFlyoutItem -->
+    <markup:StaticResource x:Key="MenuFlyoutItemRevealBackground" ResourceKey="SystemControlTransparentRevealBackgroundBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutItemRevealBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowRevealBackgroundBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutItemRevealBackgroundPressed" ResourceKey="SystemControlHighlightListMediumRevealBackgroundBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutItemRevealBackgroundDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutItemRevealBorderBrush" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutItemRevealBorderBrushPressed" ResourceKey="SystemControlTransparentRevealBorderBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutItemRevealBorderBrushPointerOver" ResourceKey="SystemControlTransparentRevealBorderBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutItemRevealBorderBrushDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <!-- Resources for Windows.UI.Xaml.Controls.ToggleMenuFlyoutItem -->
+    <markup:StaticResource x:Key="ToggleMenuFlyoutItemRevealBackground" ResourceKey="SystemControlTransparentRevealBackgroundBrush" />
+    <markup:StaticResource x:Key="ToggleMenuFlyoutItemRevealBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowRevealBackgroundBrush" />
+    <markup:StaticResource x:Key="ToggleMenuFlyoutItemRevealBackgroundPressed" ResourceKey="SystemControlHighlightListMediumRevealBackgroundBrush" />
+    <markup:StaticResource x:Key="ToggleMenuFlyoutItemRevealBackgroundDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ToggleMenuFlyoutItemRevealBorderBrush" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ToggleMenuFlyoutItemRevealBorderBrushPressed" ResourceKey="SystemControlTransparentRevealBorderBrush" />
+    <markup:StaticResource x:Key="ToggleMenuFlyoutItemRevealBorderBrushPointerOver" ResourceKey="SystemControlTransparentRevealBorderBrush" />
+    <markup:StaticResource x:Key="ToggleMenuFlyoutItemRevealBorderBrushDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <!-- Resources for Windows.UI.Xaml.Controls.MenuFlyoutSubItem -->
+    <markup:StaticResource x:Key="MenuFlyoutSubItemRevealBackground" ResourceKey="SystemControlTransparentRevealBackgroundBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutSubItemRevealBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowRevealBackgroundBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutSubItemRevealBackgroundPressed" ResourceKey="SystemControlHighlightAccentRevealBackgroundBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutSubItemRevealBackgroundSubMenuOpened" ResourceKey="SystemControlHighlightListLowRevealBackgroundBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutSubItemRevealBackgroundDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutSubItemRevealBorderBrush" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutSubItemRevealBorderBrushPressed" ResourceKey="SystemControlTransparentRevealBorderBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutSubItemRevealBorderBrushPointerOver" ResourceKey="SystemControlTransparentRevealBorderBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutSubItemRevealBorderBrushSubMenuOpened" ResourceKey="SystemControlTransparentRevealBorderBrush" />
+    <markup:StaticResource x:Key="MenuFlyoutSubItemRevealBorderBrushDisabled" ResourceKey="SystemControlTransparentBrush" />
+
+    <!-- Resources for ProgressBar -->
+    <system:Double x:Key="ProgressBarIndicatorPauseOpacity">0.6</system:Double>
+    <system:Double x:Key="ProgressBarThemeMinHeight">4</system:Double>
+    <Thickness x:Key="ProgressBarBorderThemeThickness">0</Thickness>
+    <Color x:Key="SystemControlErrorBackgroundColor">#33FFFFFF</Color>
+
+    <!-- Resources for RadioButton -->
+    <system:Double x:Key="RadioButtonBorderThemeThickness">1</system:Double>
+    <markup:StaticResource x:Key="RadioButtonForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="RadioButtonForegroundPointerOver" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="RadioButtonForegroundPressed" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="RadioButtonForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="RadioButtonBackground" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="RadioButtonBackgroundPointerOver" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="RadioButtonBackgroundPressed" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="RadioButtonBackgroundDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="RadioButtonBorderBrush" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="RadioButtonBorderBrushPointerOver" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="RadioButtonBorderBrushPressed" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="RadioButtonBorderBrushDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="RadioButtonOuterEllipseStroke" ResourceKey="SystemControlForegroundBaseMediumBrush" />
+    <markup:StaticResource x:Key="RadioButtonOuterEllipseStrokePointerOver" ResourceKey="SystemControlHighlightBaseMediumHighBrush" />
+    <markup:StaticResource x:Key="RadioButtonOuterEllipseStrokePressed" ResourceKey="SystemControlHighlightBaseHighBrush" />
+    <markup:StaticResource x:Key="RadioButtonOuterEllipseStrokeDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="RadioButtonOuterEllipseFill" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="RadioButtonOuterEllipseFillPointerOver" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="RadioButtonOuterEllipseFillPressed" ResourceKey="SystemControlBackgroundBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="RadioButtonOuterEllipseFillDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="RadioButtonOuterEllipseCheckedStroke" ResourceKey="SystemControlHighlightAccentBrush" />
+    <markup:StaticResource x:Key="RadioButtonOuterEllipseCheckedStrokePointerOver" ResourceKey="SystemAccentColorLight1Brush" />
+    <markup:StaticResource x:Key="RadioButtonOuterEllipseCheckedStrokePressed" ResourceKey="SystemAccentColorDark1Brush" />
+    <markup:StaticResource x:Key="RadioButtonOuterEllipseCheckedStrokeDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="RadioButtonOuterEllipseCheckedFill" ResourceKey="SystemControlHighlightAccentBrush" />
+    <markup:StaticResource x:Key="RadioButtonOuterEllipseCheckedFillPointerOver" ResourceKey="SystemAccentColorLight1Brush" />
+    <markup:StaticResource x:Key="RadioButtonOuterEllipseCheckedFillPressed" ResourceKey="SystemAccentColorDark1Brush" />
+    <markup:StaticResource x:Key="RadioButtonOuterEllipseCheckedFillDisabled" ResourceKey="SystemControlBackgroundBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="RadioButtonCheckGlyphFill" ResourceKey="SystemControlForegroundChromeWhiteBrush" />
+    <markup:StaticResource x:Key="RadioButtonCheckGlyphFillPointerOver" ResourceKey="SystemControlForegroundChromeWhiteBrush" />
+    <markup:StaticResource x:Key="RadioButtonCheckGlyphFillPressed" ResourceKey="SystemControlForegroundChromeWhiteBrush" />
+    <markup:StaticResource x:Key="RadioButtonCheckGlyphFillDisabled" ResourceKey="SystemControlForegroundChromeWhiteBrush" />
+    <markup:StaticResource x:Key="RadioButtonCheckGlyphStroke" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="RadioButtonCheckGlyphStrokePointerOver" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="RadioButtonCheckGlyphStrokePressed" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="RadioButtonCheckGlyphStrokeDisabled" ResourceKey="SystemControlTransparentBrush" />
+
+    <!-- Resources for RepeatButton -->
+    <Thickness x:Key="RepeatButtonBorderThemeThickness">1</Thickness>
+    <markup:StaticResource x:Key="RepeatButtonBackground" ResourceKey="SystemControlBackgroundBaseLowBrush" />
+    <SolidColorBrush x:Key="RepeatButtonBackgroundPointerOver" Color="{StaticResource SystemBaseHighColor}" Opacity="0.1" />
+    <markup:StaticResource x:Key="RepeatButtonBackgroundPressed" ResourceKey="SystemControlBackgroundBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="RepeatButtonBackgroundDisabled" ResourceKey="SystemControlBackgroundBaseLowBrush" />
+    <markup:StaticResource x:Key="RepeatButtonForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="RepeatButtonForegroundPointerOver" ResourceKey="SystemControlHighlightBaseHighBrush" />
+    <markup:StaticResource x:Key="RepeatButtonForegroundPressed" ResourceKey="SystemControlHighlightBaseHighBrush" />
+    <markup:StaticResource x:Key="RepeatButtonForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="RepeatButtonBorderBrush" ResourceKey="SystemControlForegroundTransparentBrush" />
+    <markup:StaticResource x:Key="RepeatButtonBorderBrushPointerOver" ResourceKey="SystemControlForegroundTransparentBrush" />
+    <markup:StaticResource x:Key="RepeatButtonBorderBrushPressed" ResourceKey="SystemControlHighlightTransparentBrush" />
+    <markup:StaticResource x:Key="RepeatButtonBorderBrushDisabled" ResourceKey="SystemControlDisabledTransparentBrush" />
+
+    <!-- Resources for ScrollBar -->
+    <system:Double x:Key="ScrollBarSize">16</system:Double>
+    <system:Double x:Key="SmallScrollThumbScale">0.125</system:Double>
+    <system:Double x:Key="SmallScrollThumbOffset">-2</system:Double>
+    <system:Double x:Key="ScrollBarButtonArrowIconFontSize">8</system:Double>
+    <system:Double x:Key="ScrollBarTrackBorderThemeThickness">0</system:Double>
+    <Thickness x:Key="ScrollBarPanningBorderThemeThickness">1</Thickness>
+    <markup:StaticResource x:Key="ScrollBarBackground" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ScrollBarBackgroundPointerOver" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ScrollBarBackgroundDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ScrollBarForeground" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ScrollBarBorderBrush" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ScrollBarBorderBrushPointerOver" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ScrollBarBorderBrushDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ScrollBarButtonBackground" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ScrollBarButtonBackgroundPointerOver" ResourceKey="SystemControlBackgroundListLowBrush" />
+    <markup:StaticResource x:Key="ScrollBarButtonBackgroundPressed" ResourceKey="SystemControlBackgroundBaseMediumBrush" />
+    <markup:StaticResource x:Key="ScrollBarButtonBackgroundDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ScrollBarButtonBorderBrush" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ScrollBarButtonBorderBrushPointerOver" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ScrollBarButtonBorderBrushPressed" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ScrollBarButtonBorderBrushDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ScrollBarButtonArrowForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="ScrollBarButtonArrowForegroundPointerOver" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="ScrollBarButtonArrowForegroundPressed" ResourceKey="SystemControlForegroundAltHighBrush" />
+    <markup:StaticResource x:Key="ScrollBarButtonArrowForegroundDisabled" ResourceKey="SystemControlForegroundBaseLowBrush" />
+    <markup:StaticResource x:Key="ScrollBarThumbFill" ResourceKey="SystemControlForegroundChromeDisabledLowBrush" />
+    <markup:StaticResource x:Key="ScrollBarThumbFillPointerOver" ResourceKey="SystemControlBackgroundBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="ScrollBarThumbFillPressed" ResourceKey="SystemControlBackgroundBaseMediumBrush" />
+    <markup:StaticResource x:Key="ScrollBarThumbFillDisabled" ResourceKey="SystemControlDisabledTransparentBrush" />
+    <SolidColorBrush x:Key="ScrollBarTrackFill" Color="{StaticResource SystemChromeMediumColor}" Opacity="0.9" />
+    <SolidColorBrush x:Key="ScrollBarTrackFillPointerOver" Color="{StaticResource SystemChromeMediumColor}" Opacity="0.9" />
+    <markup:StaticResource x:Key="ScrollBarTrackFillDisabled" ResourceKey="SystemControlDisabledTransparentBrush" />
+    <markup:StaticResource x:Key="ScrollBarTrackStroke" ResourceKey="SystemControlForegroundTransparentBrush" />
+    <markup:StaticResource x:Key="ScrollBarTrackStrokePointerOver" ResourceKey="SystemControlForegroundTransparentBrush" />
+    <markup:StaticResource x:Key="ScrollBarTrackStrokeDisabled" ResourceKey="SystemControlDisabledTransparentBrush" />
+    <markup:StaticResource x:Key="ScrollBarPanningThumbBackgroundDisabled" ResourceKey="SystemControlDisabledChromeHighBrush" />
+    <markup:StaticResource x:Key="ScrollBarThumbBackgroundColor" ResourceKey="SystemBaseLowColor" />
+    <markup:StaticResource x:Key="ScrollBarPanningThumbBackgroundColor" ResourceKey="SystemChromeDisabledLowColor" />
+    <SolidColorBrush x:Key="ScrollBarThumbBackground" Color="{StaticResource ScrollBarThumbBackgroundColor}" />
+    <SolidColorBrush x:Key="ScrollBarPanningThumbBackground" Color="{StaticResource ScrollBarPanningThumbBackgroundColor}" />
+
+    <!-- Resources for ScrollViewer -->
+    <SolidColorBrush x:Key="ScrollViewScrollBarsSeparatorBackground" Color="{StaticResource SystemChromeMediumColor}" Opacity="0.9" />
+
+    <!-- Resources for Slider -->
+    <system:Double x:Key="SliderOutsideTickBarThemeHeight">4</system:Double>
+    <system:Double x:Key="SliderTrackThemeHeight">2</system:Double>
+    <Thickness x:Key="SliderBorderThemeThickness">0</Thickness>
+    <Thickness x:Key="SliderHeaderThemeMargin">0,0,0,4</Thickness>
+    <FontWeight x:Key="SliderHeaderThemeFontWeight">Normal</FontWeight>
+    <markup:StaticResource x:Key="SliderContainerBackground" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="SliderContainerBackgroundPointerOver" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="SliderContainerBackgroundPressed" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="SliderContainerBackgroundDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="SliderThumbBackground" ResourceKey="SystemControlForegroundAccentBrush" />
+    <markup:StaticResource x:Key="SliderThumbBackgroundPointerOver" ResourceKey="SystemAccentColorLight1Brush" />
+    <markup:StaticResource x:Key="SliderThumbBackgroundPressed" ResourceKey="SystemAccentColorDark1Brush" />
+    <markup:StaticResource x:Key="SliderThumbBackgroundDisabled" ResourceKey="SystemControlDisabledChromeDisabledHighBrush" />
+    <markup:StaticResource x:Key="SliderTrackFill" ResourceKey="SystemControlForegroundBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="SliderTrackFillPointerOver" ResourceKey="SystemControlForegroundBaseMediumBrush" />
+    <markup:StaticResource x:Key="SliderTrackFillPressed" ResourceKey="SystemControlForegroundBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="SliderTrackFillDisabled" ResourceKey="SystemControlDisabledChromeDisabledHighBrush" />
+    <markup:StaticResource x:Key="SliderTrackValueFill" ResourceKey="SystemControlHighlightAccentBrush" />
+    <markup:StaticResource x:Key="SliderTrackValueFillPointerOver" ResourceKey="SystemControlHighlightAccentBrush" />
+    <markup:StaticResource x:Key="SliderTrackValueFillPressed" ResourceKey="SystemControlHighlightAccentBrush" />
+    <markup:StaticResource x:Key="SliderTrackValueFillDisabled" ResourceKey="SystemControlDisabledChromeDisabledHighBrush" />
+    <markup:StaticResource x:Key="SliderHeaderForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="SliderHeaderForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="SliderTickBarFill" ResourceKey="SystemControlForegroundBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="SliderTickBarFillDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="SliderInlineTickBarFill" ResourceKey="SystemControlBackgroundAltHighBrush" />
+
+    <!-- Resources for TabControl -->
+    <markup:StaticResource x:Key="TabViewBackground"                                       ResourceKey="SystemControlBackgroundBaseLowBrush" />
+    <markup:StaticResource x:Key="TabViewItemHeaderBackground"                             ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="TabViewItemHeaderBackgroundSelected"                     ResourceKey="SystemControlBackgroundAltHighBrush" />
+    <markup:StaticResource x:Key="TabViewItemHeaderBackgroundPointerOver"                  ResourceKey="SystemControlBackgroundAltMediumLowBrush" />
+    <markup:StaticResource x:Key="TabViewItemHeaderBackgroundPressed"                      ResourceKey="SystemControlBackgroundAltMediumBrush" />
+    <markup:StaticResource x:Key="TabViewItemHeaderBackgroundDisabled"                     ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="TabViewItemHeaderForeground"                             ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="TabViewItemHeaderForegroundPressed"                      ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="TabViewItemHeaderForegroundSelected"                     ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="TabViewItemHeaderForegroundPointerOver"                  ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="TabViewItemHeaderForegroundDisabled"                     ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="TabViewItemIconForeground"                               ResourceKey="SystemControlForegroundBaseMediumBrush" />
+    <markup:StaticResource x:Key="TabViewItemIconForegroundPressed"                        ResourceKey="SystemControlForegroundBaseMediumBrush" />
+    <markup:StaticResource x:Key="TabViewItemIconForegroundSelected"                       ResourceKey="SystemControlForegroundBaseMediumBrush" />
+    <markup:StaticResource x:Key="TabViewItemIconForegroundPointerOver"                    ResourceKey="SystemControlForegroundBaseMediumBrush" />
+    <markup:StaticResource x:Key="TabViewItemIconForegroundDisabled"                       ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="TabViewButtonBackground"                                 ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="TabViewButtonBackgroundPressed"                          ResourceKey="SystemControlBackgroundAltMediumBrush" />
+    <markup:StaticResource x:Key="TabViewButtonBackgroundPointerOver"                      ResourceKey="SystemControlBackgroundAltMediumLowBrush" />
+    <markup:StaticResource x:Key="TabViewButtonBackgroundDisabled"                         ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="TabViewButtonForeground"                                 ResourceKey="SystemControlBackgroundBaseMediumBrush" />
+    <markup:StaticResource x:Key="TabViewButtonForegroundPressed"                          ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="TabViewButtonForegroundPointerOver"                      ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="TabViewButtonForegroundDisabled"                         ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="TabViewScrollButtonBackground"                           ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="TabViewItemSeparator"                                    ResourceKey="SystemControlForegroundBaseLowBrush" />
+    <markup:StaticResource x:Key="TabViewItemHeaderCloseButtonBackground"                  ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="TabViewItemHeaderCloseButtonBackgroundPressed"           ResourceKey="SystemControlBackgroundListMediumBrush" />
+    <markup:StaticResource x:Key="TabViewItemHeaderCloseButtonBackgroundPointerOver"       ResourceKey="SystemControlBackgroundListLowBrush" />
+    <markup:StaticResource x:Key="TabViewItemHeaderPressedCloseButtonBackground"           ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="TabViewItemHeaderPointerOverCloseButtonBackground"       ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="TabViewItemHeaderSelectedCloseButtonBackground"          ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="TabViewItemHeaderDisabledCloseButtonBackground"          ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="TabViewItemHeaderCloseButtonForeground"                  ResourceKey="SystemControlBackgroundBaseMediumBrush" />
+    <markup:StaticResource x:Key="TabViewItemHeaderCloseButtonForegroundPressed"           ResourceKey="SystemControlForegroundBaseMediumHighBrush" />
+    <markup:StaticResource x:Key="TabViewItemHeaderCloseButtonForegroundPointerOver"       ResourceKey="SystemControlForegroundBaseMediumHighBrush" />
+    <markup:StaticResource x:Key="TabViewItemHeaderPressedCloseButtonForeground"           ResourceKey="SystemControlBackgroundBaseMediumBrush" />
+    <markup:StaticResource x:Key="TabViewItemHeaderPointerOverCloseButtonForeground"       ResourceKey="SystemControlBackgroundBaseMediumBrush" />
+    <markup:StaticResource x:Key="TabViewItemHeaderSelectedCloseButtonForeground"          ResourceKey="SystemControlBackgroundBaseMediumBrush" />
+    <markup:StaticResource x:Key="TabViewItemHeaderDisabledCloseButtonForeground"          ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+
+    <!-- Resources for TabControl -->
+    <FontFamily x:Key="PivotHeaderItemFontFamily">XamlAutoFontFamily</FontFamily>
+    <FontFamily x:Key="PivotTitleFontFamily">XamlAutoFontFamily</FontFamily>
+    <system:Double x:Key="PivotHeaderItemFontSize">24</system:Double>
+    <system:Double x:Key="PivotHeaderItemLockedTranslation">40</system:Double>
+    <system:Double x:Key="PivotTitleFontSize">14</system:Double>
+    <system:Int32 x:Key="PivotHeaderItemCharacterSpacing">-25</system:Int32>
+    <Thickness x:Key="PivotHeaderItemMargin">12,0,12,0</Thickness>
+    <Thickness x:Key="PivotItemMargin">12,0,12,0</Thickness>
+    <Thickness x:Key="PivotLandscapeThemePadding">12,14,0,13</Thickness>
+    <Thickness x:Key="PivotNavButtonBorderThemeThickness">0</Thickness>
+    <Thickness x:Key="PivotNavButtonMargin">0,6,0,0</Thickness>
+    <Thickness x:Key="PivotPortraitThemePadding">12,14,0,13</Thickness>
+    <FontWeight x:Key="PivotHeaderItemThemeFontWeight">Light</FontWeight>
+    <FontWeight x:Key="PivotTitleThemeFontWeight">Bold</FontWeight>
+    <markup:StaticResource x:Key="PivotBackground" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="PivotHeaderBackground" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="PivotNextButtonBackground" ResourceKey="SystemControlBackgroundBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="PivotNextButtonBackgroundPointerOver" ResourceKey="SystemControlHighlightBaseMediumBrush" />
+    <markup:StaticResource x:Key="PivotNextButtonBackgroundPressed" ResourceKey="SystemControlHighlightBaseMediumHighBrush" />
+    <markup:StaticResource x:Key="PivotNextButtonBorderBrush" ResourceKey="SystemControlForegroundTransparentBrush" />
+    <markup:StaticResource x:Key="PivotNextButtonBorderBrushPointerOver" ResourceKey="SystemControlForegroundTransparentBrush" />
+    <markup:StaticResource x:Key="PivotNextButtonBorderBrushPressed" ResourceKey="SystemControlForegroundTransparentBrush" />
+    <markup:StaticResource x:Key="PivotNextButtonForeground" ResourceKey="SystemControlForegroundAltMediumHighBrush" />
+    <markup:StaticResource x:Key="PivotNextButtonForegroundPointerOver" ResourceKey="SystemControlHighlightAltAltMediumHighBrush" />
+    <markup:StaticResource x:Key="PivotNextButtonForegroundPressed" ResourceKey="SystemControlHighlightAltAltMediumHighBrush" />
+    <markup:StaticResource x:Key="PivotPreviousButtonBackground" ResourceKey="SystemControlBackgroundBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="PivotPreviousButtonBackgroundPointerOver" ResourceKey="SystemControlHighlightBaseMediumBrush" />
+    <markup:StaticResource x:Key="PivotPreviousButtonBackgroundPressed" ResourceKey="SystemControlHighlightBaseMediumHighBrush" />
+    <markup:StaticResource x:Key="PivotPreviousButtonBorderBrush" ResourceKey="SystemControlForegroundTransparentBrush" />
+    <markup:StaticResource x:Key="PivotPreviousButtonBorderBrushPointerOver" ResourceKey="SystemControlForegroundTransparentBrush" />
+    <markup:StaticResource x:Key="PivotPreviousButtonBorderBrushPressed" ResourceKey="SystemControlForegroundTransparentBrush" />
+    <markup:StaticResource x:Key="PivotPreviousButtonForeground" ResourceKey="SystemControlForegroundAltMediumHighBrush" />
+    <markup:StaticResource x:Key="PivotPreviousButtonForegroundPointerOver" ResourceKey="SystemControlHighlightAltAltMediumHighBrush" />
+    <markup:StaticResource x:Key="PivotPreviousButtonForegroundPressed" ResourceKey="SystemControlHighlightAltAltMediumHighBrush" />
+    <markup:StaticResource x:Key="PivotItemBackground" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="PivotHeaderItemBackgroundUnselected" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="PivotHeaderItemBackgroundUnselectedPointerOver" ResourceKey="SystemControlHighlightTransparentBrush" />
+    <markup:StaticResource x:Key="PivotHeaderItemBackgroundUnselectedPressed" ResourceKey="SystemControlHighlightTransparentBrush" />
+    <markup:StaticResource x:Key="PivotHeaderItemBackgroundSelected" ResourceKey="SystemControlHighlightTransparentBrush" />
+    <markup:StaticResource x:Key="PivotHeaderItemBackgroundSelectedPointerOver" ResourceKey="SystemControlHighlightTransparentBrush" />
+    <markup:StaticResource x:Key="PivotHeaderItemBackgroundSelectedPressed" ResourceKey="SystemControlHighlightTransparentBrush" />
+    <markup:StaticResource x:Key="PivotHeaderItemBackgroundDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="PivotHeaderItemForegroundUnselected" ResourceKey="SystemControlForegroundBaseMediumBrush" />
+    <markup:StaticResource x:Key="PivotHeaderItemForegroundUnselectedPointerOver" ResourceKey="SystemControlHighlightAltBaseMediumHighBrush" />
+    <markup:StaticResource x:Key="PivotHeaderItemForegroundUnselectedPressed" ResourceKey="SystemControlHighlightAltBaseMediumHighBrush" />
+    <markup:StaticResource x:Key="PivotHeaderItemForegroundSelected" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="PivotHeaderItemForegroundSelectedPointerOver" ResourceKey="SystemControlHighlightAltBaseMediumHighBrush" />
+    <markup:StaticResource x:Key="PivotHeaderItemForegroundSelectedPressed" ResourceKey="SystemControlHighlightAltBaseMediumHighBrush" />
+    <markup:StaticResource x:Key="PivotHeaderItemForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="PivotHeaderItemFocusPipeFill" ResourceKey="SystemControlHighlightAltAccentBrush" />
+    <markup:StaticResource x:Key="PivotHeaderItemSelectedPipeFill" ResourceKey="SystemControlHighlightAltAccentBrush" />
+
+    <!-- Resources for TextControl -->
+    <markup:StaticResource x:Key="TextControlForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="TextControlForegroundPointerOver" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <!--<markup:StaticResource x:Key="TextControlForegroundFocused" ResourceKey="SystemControlForegroundChromeBlackHighBrush" />-->
+    <markup:StaticResource x:Key="TextControlForegroundDisabled" ResourceKey="SystemControlDisabledChromeDisabledLowBrush" />
+    <markup:StaticResource x:Key="TextControlBackground" ResourceKey="SystemControlBackgroundAltMediumLowBrush" />
+    <markup:StaticResource x:Key="TextControlBackgroundPointerOver" ResourceKey="SystemControlBackgroundAltMediumBrush" />
+    <!--<markup:StaticResource x:Key="TextControlBackgroundFocused" ResourceKey="SystemControlBackgroundChromeWhiteBrush" />-->
+    <markup:StaticResource x:Key="TextControlBackgroundDisabled" ResourceKey="SystemControlBackgroundBaseLowBrush" />
+    <!--<markup:StaticResource x:Key="TextControlBorderBrush" ResourceKey="SystemControlForegroundBaseMediumLowBrush" />-->
+    <!--<markup:StaticResource x:Key="TextControlBorderBrushPointerOver" ResourceKey="SystemControlHighlightBaseMediumBrush" />-->
+    <markup:StaticResource x:Key="TextControlBorderBrushFocused" ResourceKey="SystemControlHighlightAccentBrush" />
+    <markup:StaticResource x:Key="TextControlBorderBrushDisabled" ResourceKey="SystemControlDisabledBaseLowBrush" />
+    <markup:StaticResource x:Key="TextControlPlaceholderForeground" ResourceKey="SystemControlPageTextBaseMediumBrush" />
+    <markup:StaticResource x:Key="TextControlPlaceholderForegroundPointerOver" ResourceKey="SystemControlPageTextBaseMediumBrush" />
+    <!--<markup:StaticResource x:Key="TextControlPlaceholderForegroundFocused" ResourceKey="SystemControlPageTextChromeBlackMediumLowBrush" />-->
+    <markup:StaticResource x:Key="TextControlPlaceholderForegroundDisabled" ResourceKey="SystemControlDisabledChromeDisabledLowBrush" />
+    <markup:StaticResource x:Key="TextControlHeaderForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="TextControlHeaderForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="TextControlSelectionHighlightColor" ResourceKey="SystemControlHighlightAccentBrush" />
+    <markup:StaticResource x:Key="TextControlButtonBackground" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="TextControlButtonBackgroundPointerOver" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="TextControlButtonBackgroundPressed" ResourceKey="SystemControlHighlightAccentBrush" />
+    <markup:StaticResource x:Key="TextControlButtonBorderBrush" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="TextControlButtonBorderBrushPointerOver" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="TextControlButtonBorderBrushPressed" ResourceKey="SystemControlTransparentBrush" />
+    <!--<markup:StaticResource x:Key="TextControlButtonForeground" ResourceKey="SystemControlForegroundChromeBlackMediumBrush" />-->
+    <markup:StaticResource x:Key="TextControlButtonForegroundPointerOver" ResourceKey="SystemControlHighlightAccentBrush" />
+    <markup:StaticResource x:Key="TextControlButtonForegroundPressed" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
+
+    <markup:StaticResource x:Key="TextControlBackgroundFocused" ResourceKey="SystemControlBackgroundAltHighBrush" />
+    <markup:StaticResource x:Key="TextControlBorderBrush" ResourceKey="SystemControlForegroundBaseMediumBrush" />
+    <markup:StaticResource x:Key="TextControlBorderBrushPointerOver" ResourceKey="SystemControlHighlightBaseMediumHighBrush" />
+    <markup:StaticResource x:Key="TextControlButtonForeground" ResourceKey="SystemControlForegroundBaseMediumHighBrush" />
+    <markup:StaticResource x:Key="TextControlForegroundFocused" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="TextControlPlaceholderForegroundFocused" ResourceKey="SystemControlForegroundBaseMediumLowBrush" />
+
+    <!-- Resources for ToggleButton -->
+    <Thickness x:Key="ToggleButtonBorderThemeThickness">1</Thickness>
+    <markup:StaticResource x:Key="ToggleButtonBackground" ResourceKey="SystemControlBackgroundBaseLowBrush" />
+    <SolidColorBrush x:Key="ToggleButtonBackgroundPointerOver" Color="{StaticResource SystemBaseHighColor}" Opacity="0.1" />
+    <markup:StaticResource x:Key="ToggleButtonBackgroundPressed" ResourceKey="SystemControlBackgroundBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="ToggleButtonBackgroundDisabled" ResourceKey="SystemControlBackgroundBaseLowBrush" />
+    <markup:StaticResource x:Key="ToggleButtonBackgroundChecked" ResourceKey="SystemControlHighlightAccentBrush" />
+    <markup:StaticResource x:Key="ToggleButtonBackgroundCheckedPointerOver" ResourceKey="SystemAccentColorDark1Brush" />
+    <markup:StaticResource x:Key="ToggleButtonBackgroundCheckedPressed" ResourceKey="SystemControlHighlightBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="ToggleButtonBackgroundCheckedDisabled" ResourceKey="SystemControlBackgroundBaseLowBrush" />
+    <markup:StaticResource x:Key="ToggleButtonBackgroundIndeterminate" ResourceKey="SystemControlBackgroundBaseLowBrush" />
+    <markup:StaticResource x:Key="ToggleButtonBackgroundIndeterminatePointerOver" ResourceKey="SystemControlBackgroundBaseLowBrush" />
+    <markup:StaticResource x:Key="ToggleButtonBackgroundIndeterminatePressed" ResourceKey="SystemControlBackgroundBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="ToggleButtonBackgroundIndeterminateDisabled" ResourceKey="SystemControlBackgroundBaseLowBrush" />
+    <markup:StaticResource x:Key="ToggleButtonForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="ToggleButtonForegroundPointerOver" ResourceKey="SystemControlHighlightBaseHighBrush" />
+    <markup:StaticResource x:Key="ToggleButtonForegroundPressed" ResourceKey="SystemControlHighlightBaseHighBrush" />
+    <markup:StaticResource x:Key="ToggleButtonForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="ToggleButtonForegroundChecked" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
+    <markup:StaticResource x:Key="ToggleButtonForegroundCheckedPointerOver" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
+    <markup:StaticResource x:Key="ToggleButtonForegroundCheckedPressed" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
+    <markup:StaticResource x:Key="ToggleButtonForegroundCheckedDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="ToggleButtonForegroundIndeterminate" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="ToggleButtonForegroundIndeterminatePointerOver" ResourceKey="SystemControlHighlightBaseHighBrush" />
+    <markup:StaticResource x:Key="ToggleButtonForegroundIndeterminatePressed" ResourceKey="SystemControlHighlightBaseHighBrush" />
+    <markup:StaticResource x:Key="ToggleButtonForegroundIndeterminateDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="ToggleButtonBorderBrush" ResourceKey="SystemControlForegroundTransparentBrush" />
+    <markup:StaticResource x:Key="ToggleButtonBorderBrushPointerOver" ResourceKey="SystemControlForegroundTransparentBrush" />
+    <markup:StaticResource x:Key="ToggleButtonBorderBrushPressed" ResourceKey="SystemControlHighlightTransparentBrush" />
+    <markup:StaticResource x:Key="ToggleButtonBorderBrushDisabled" ResourceKey="SystemControlDisabledTransparentBrush" />
+    <markup:StaticResource x:Key="ToggleButtonBorderBrushChecked" ResourceKey="SystemControlHighlightAltTransparentBrush" />
+    <markup:StaticResource x:Key="ToggleButtonBorderBrushCheckedPointerOver" ResourceKey="SystemControlHighlightAltTransparentBrush" />
+    <markup:StaticResource x:Key="ToggleButtonBorderBrushCheckedPressed" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ToggleButtonBorderBrushCheckedDisabled" ResourceKey="SystemControlDisabledTransparentBrush" />
+    <markup:StaticResource x:Key="ToggleButtonBorderBrushIndeterminate" ResourceKey="SystemControlForegroundTransparentBrush" />
+    <markup:StaticResource x:Key="ToggleButtonBorderBrushIndeterminatePointerOver" ResourceKey="SystemControlHighlightBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="ToggleButtonBorderBrushIndeterminatePressed" ResourceKey="SystemControlHighlightTransparentBrush" />
+    <markup:StaticResource x:Key="ToggleButtonBorderBrushIndeterminateDisabled" ResourceKey="SystemControlDisabledTransparentBrush" />
+
+    <!-- Resources for ToolTip -->
+    <system:Double x:Key="ToolTipContentThemeFontSize">12</system:Double>
+    <Thickness x:Key="ToolTipBorderThemeThickness">1</Thickness>
+    <markup:StaticResource x:Key="ToolTipForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="ToolTipBackground" ResourceKey="SystemControlBackgroundChromeMediumLowBrush" />
+    <markup:StaticResource x:Key="ToolTipBorderBrush" ResourceKey="SystemControlForegroundChromeHighBrush" />
+
+    <!-- Resources for TreeView -->
+    <Thickness x:Key="TreeViewItemBorderThemeThickness">1</Thickness>
+    <system:Double x:Key="TreeViewItemMinHeight">32</system:Double>
+    <markup:StaticResource x:Key="TreeViewItemBackground" ResourceKey="SystemControlTransparentRevealBackgroundBrush" />
+    <markup:StaticResource x:Key="TreeViewItemBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowRevealBackgroundBrush" />
+    <markup:StaticResource x:Key="TreeViewItemBackgroundPressed" ResourceKey="SystemControlHighlightListMediumRevealBackgroundBrush" />
+    <markup:StaticResource x:Key="TreeViewItemBackgroundDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="TreeViewItemBackgroundSelected" ResourceKey="SystemControlHighlightAccent3RevealBackgroundBrush" />
+    <markup:StaticResource x:Key="TreeViewItemBackgroundSelectedPointerOver" ResourceKey="SystemControlHighlightAccent2RevealBackgroundBrush" />
+    <markup:StaticResource x:Key="TreeViewItemBackgroundSelectedPressed" ResourceKey="SystemControlHighlightListMediumRevealBackgroundBrush" />
+    <markup:StaticResource x:Key="TreeViewItemBackgroundSelectedDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="TreeViewItemForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="TreeViewItemForegroundPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="TreeViewItemForegroundPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="TreeViewItemForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="TreeViewItemForegroundSelected" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="TreeViewItemForegroundSelectedPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="TreeViewItemForegroundSelectedPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="TreeViewItemForegroundSelectedDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="TreeViewItemBorderBrush" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="TreeViewItemBorderBrushPointerOver" ResourceKey="SystemControlHighlightAltTransparentRevealBorderBrush" />
+    <markup:StaticResource x:Key="TreeViewItemBorderBrushPressed" ResourceKey="SystemControlHighlightAltTransparentRevealBorderBrush" />
+    <markup:StaticResource x:Key="TreeViewItemBorderBrushDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="TreeViewItemBorderBrushSelected" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="TreeViewItemBorderBrushSelectedPointerOver" ResourceKey="SystemControlBackgroundTransparentRevealBorderBrush" />
+    <markup:StaticResource x:Key="TreeViewItemBorderBrushSelectedPressed" ResourceKey="SystemControlBackgroundTransparentRevealBorderBrush" />
+    <markup:StaticResource x:Key="TreeViewItemBorderBrushSelectedDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="TreeViewItemCheckBoxBackgroundSelected" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="TreeViewItemCheckBoxBorderSelected" ResourceKey="SystemControlForegroundBaseMediumHighBrush" />
+    <markup:StaticResource x:Key="TreeViewItemCheckGlyphSelected" ResourceKey="SystemControlForegroundBaseMediumHighBrush" />
+
+    <!--
+    ******************************************************************
+    -->
+
+    <!-- Resources for AutoSuggestBox -->
+    <system:Double x:Key="AutoSuggestBoxIconFontSize">12</system:Double>
+    <markup:StaticResource x:Key="AutoSuggestBoxSuggestionsListBackground" ResourceKey="AcrylicBackgroundFillColorDefaultBrush" />
+    <markup:StaticResource x:Key="AutoSuggestBoxSuggestionsListBorderBrush" ResourceKey="SystemControlTransientBorderBrush" />
+    <markup:StaticResource x:Key="AutoSuggestBoxLightDismissOverlayBackground" ResourceKey="SystemControlPageBackgroundMediumAltMediumBrush" />
+
+    <!-- Resources for FlyoutPresenter -->
+    <Thickness x:Key="FlyoutBorderThemeThickness">1</Thickness>
+    <Thickness x:Key="FlyoutBorderThemePadding">0</Thickness>
+    <markup:StaticResource x:Key="FlyoutPresenterBackground" ResourceKey="AcrylicBackgroundFillColorDefaultBrush" />
+    <markup:StaticResource x:Key="FlyoutBorderThemeBrush" ResourceKey="SystemControlTransientBorderBrush" />
+
+    <!-- Resources for InfoBar -->
+    <Thickness x:Key="InfoBarBorderThickness">0</Thickness>
+    <SolidColorBrush x:Key="InfoBarErrorSeverityBackgroundBrush" Color="#442726"/>
+    <SolidColorBrush x:Key="InfoBarWarningSeverityBackgroundBrush" Color="#433519"/>
+    <SolidColorBrush x:Key="InfoBarSuccessSeverityBackgroundBrush" Color="#393D1B"/>
+    <SolidColorBrush x:Key="InfoBarInformationalSeverityBackgroundBrush" Color="#2B2B2B"/>
+
+    <markup:StaticResource x:Key="InfoBarErrorSeverityIconForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="InfoBarWarningSeverityIconForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="InfoBarSuccessSeverityIconForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="InfoBarInformationalSeverityIconForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+
+    <markup:StaticResource x:Key="InfoBarTitleForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="InfoBarMessageForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="InfoBarHyperlinkButtonForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+
+    <markup:StaticResource x:Key="InfoBarBorderBrush" ResourceKey="SystemControlTransparentBrush" />
+
+    <!-- Resources for NumberBox -->
+    <Thickness x:Key="NumberBoxPopupBorderThickness">1</Thickness>
+    <Thickness x:Key="NumberBoxPopupSpinButtonBorderThickness">0</Thickness>
+    <markup:StaticResource x:Key="NumberBoxPopupIndicatorForeground" ResourceKey="SystemControlForegroundBaseMediumBrush" />
+    <!-- The following NumberBoxPopup* theme resources resource must be defined at the app level in order to take effect. -->
+    <markup:StaticResource x:Key="NumberBoxPopupBackground" ResourceKey="AcrylicBackgroundFillColorDefaultBrush" />
+    <markup:StaticResource x:Key="NumberBoxPopupBorderBrush" ResourceKey="SystemControlTransientBorderBrush" />
+    <markup:StaticResource x:Key="NumberBoxPopupSpinButtonBackground" ResourceKey="SystemControlTransparentBrush" />
+
+    <!-- Resources for NavigationView -->
+    <markup:StaticResource x:Key="NavigationViewBackButtonBackground" ResourceKey="SystemControlTransparentBrush" />
+
+    <markup:StaticResource x:Key="NavigationViewDefaultPaneBackground" ResourceKey="AcrylicInAppFillColorDefaultBrush" />
+    <SolidColorBrush x:Key="NavigationViewExpandedPaneBackground" Color="{StaticResource SystemChromeMediumColor}" />
+    <markup:StaticResource x:Key="NavigationViewTopPaneBackground" ResourceKey="AcrylicInAppFillColorDefaultBrush" />
+
+    <markup:StaticResource x:Key="NavigationViewItemBackground" ResourceKey="SystemControlTransparentRevealBackgroundBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowRevealBackgroundBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemBackgroundPressed" ResourceKey="SystemControlHighlightListMediumRevealBackgroundBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemBackgroundDisabled" ResourceKey="SystemControlTransparentRevealBackgroundBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemBackgroundChecked" ResourceKey="SystemControlTransparentRevealBackgroundBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemBackgroundCheckedPointerOver" ResourceKey="SystemControlHighlightListLowRevealBackgroundBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemBackgroundCheckedPressed" ResourceKey="SystemControlHighlightListMediumRevealBackgroundBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemBackgroundCheckedDisabled" ResourceKey="SystemControlTransparentRevealBackgroundBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemBackgroundSelected" ResourceKey="SystemControlTransparentRevealBackgroundBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemBackgroundSelectedPointerOver" ResourceKey="SystemControlHighlightListLowRevealBackgroundBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemBackgroundSelectedPressed" ResourceKey="SystemControlHighlightListMediumRevealBackgroundBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemBackgroundSelectedDisabled" ResourceKey="SystemControlTransparentRevealBackgroundBrush" />
+
+    <markup:StaticResource x:Key="NavigationViewItemForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemForegroundPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemForegroundPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemForegroundChecked" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemForegroundCheckedPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemForegroundCheckedPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemForegroundCheckedDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemForegroundSelected" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemForegroundSelectedPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemForegroundSelectedPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemForegroundSelectedDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+
+    <markup:StaticResource x:Key="NavigationViewItemBorderBrush" ResourceKey="SystemControlBackgroundTransparentRevealBorderBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemBorderBrushPointerOver" ResourceKey="SystemControlHighlightAltTransparentRevealBorderBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemBorderBrushPressed" ResourceKey="SystemControlHighlightAltTransparentRevealBorderBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemBorderBrushDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemBorderBrushChecked" ResourceKey="SystemControlBackgroundTransparentRevealBorderBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemBorderBrushCheckedPointerOver" ResourceKey="SystemControlHighlightAltTransparentRevealBorderBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemBorderBrushCheckedPressed" ResourceKey="SystemControlHighlightAltTransparentRevealBorderBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemBorderBrushCheckedDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemBorderBrushSelected" ResourceKey="SystemControlBackgroundTransparentRevealBorderBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemBorderBrushSelectedPointerOver" ResourceKey="SystemControlHighlightAltTransparentRevealBorderBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemBorderBrushSelectedPressed" ResourceKey="SystemControlHighlightAltTransparentRevealBorderBrush" />
+    <markup:StaticResource x:Key="NavigationViewItemBorderBrushSelectedDisabled" ResourceKey="SystemControlTransparentBrush" />
+
+    <markup:StaticResource x:Key="NavigationViewItemSeparatorForeground" ResourceKey="SystemControlForegroundBaseLowBrush" />
+
+    <markup:StaticResource x:Key="NavigationViewSelectionIndicatorForeground" ResourceKey="SystemControlForegroundAccentBrush" />
+
+    <markup:StaticResource x:Key="TopNavigationViewItemForeground" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="TopNavigationViewItemForegroundPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="TopNavigationViewItemForegroundPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="TopNavigationViewItemForegroundSelected" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="TopNavigationViewItemForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="TopNavigationViewItemBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowRevealBackgroundBrush" />
+    <markup:StaticResource x:Key="TopNavigationViewItemBackgroundPressed" ResourceKey="SystemControlHighlightListMediumRevealBackgroundBrush" />
+    <markup:StaticResource x:Key="TopNavigationViewItemBackgroundSelected" ResourceKey="SystemControlTransparentRevealBackgroundBrush" />
+
+    <markup:StaticResource x:Key="TopNavigationViewItemRevealBackgroundFocused" ResourceKey="SystemControlHighlightAccentBrush" />
+    <markup:StaticResource x:Key="TopNavigationViewItemRevealIconForegroundFocused" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
+    <markup:StaticResource x:Key="TopNavigationViewItemRevealContentForegroundFocused" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
+
+    <markup:StaticResource x:Key="TopNavigationViewItemSeparatorForeground" ResourceKey="SystemControlForegroundBaseLowBrush" />
+
+    <markup:StaticResource x:Key="NavigationViewButtonBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowBrush" />
+    <markup:StaticResource x:Key="NavigationViewButtonBackgroundPressed" ResourceKey="SystemControlHighlightListMediumBrush" />
+    <markup:StaticResource x:Key="NavigationViewButtonBackgroundDisabled" ResourceKey="SystemControlBackgroundBaseLowBrush" />
+    <markup:StaticResource x:Key="NavigationViewButtonForegroundPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="NavigationViewButtonForegroundPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
+    <markup:StaticResource x:Key="NavigationViewButtonForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+
+    <!-- Resources for SplitButton -->
+    <Thickness x:Key="SplitButtonBorderThemeThickness">1</Thickness>
+    <markup:StaticResource x:Key="SplitButtonBackground" ResourceKey="SystemControlBackgroundBaseLowBrush" />
+    <SolidColorBrush x:Key="SplitButtonBackgroundPointerOver" Color="{StaticResource SystemBaseHighColor}" Opacity="0.1" />
+    <markup:StaticResource x:Key="SplitButtonBackgroundPressed" ResourceKey="SystemControlBackgroundBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="SplitButtonBackgroundDisabled" ResourceKey="SystemControlBackgroundBaseLowBrush" />
+    <markup:StaticResource x:Key="SplitButtonBackgroundChecked" ResourceKey="SystemControlHighlightAccentBrush" />
+    <markup:StaticResource x:Key="SplitButtonBackgroundCheckedPointerOver" ResourceKey="SystemAccentColorDark1Brush" />
+    <markup:StaticResource x:Key="SplitButtonBackgroundCheckedPressed" ResourceKey="SystemControlHighlightBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="SplitButtonBackgroundCheckedDisabled" ResourceKey="SystemControlBackgroundBaseLowBrush" />
+    <markup:StaticResource x:Key="SplitButtonForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="SplitButtonForegroundPointerOver" ResourceKey="SystemControlHighlightBaseHighBrush" />
+    <markup:StaticResource x:Key="SplitButtonForegroundPressed" ResourceKey="SystemControlHighlightBaseHighBrush" />
+    <markup:StaticResource x:Key="SplitButtonForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="SplitButtonForegroundChecked" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
+    <markup:StaticResource x:Key="SplitButtonForegroundCheckedPointerOver" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
+    <markup:StaticResource x:Key="SplitButtonForegroundCheckedPressed" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
+    <markup:StaticResource x:Key="SplitButtonForegroundCheckedDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="SplitButtonBorderBrush" ResourceKey="SystemControlForegroundTransparentBrush" />
+    <markup:StaticResource x:Key="SplitButtonBorderBrushPointerOver" ResourceKey="SystemControlForegroundTransparentBrush" />
+    <markup:StaticResource x:Key="SplitButtonBorderBrushPressed" ResourceKey="SystemControlHighlightTransparentBrush" />
+    <markup:StaticResource x:Key="SplitButtonBorderBrushDisabled" ResourceKey="SystemControlDisabledTransparentBrush" />
+    <markup:StaticResource x:Key="SplitButtonBorderBrushChecked" ResourceKey="SystemControlHighlightAltTransparentBrush" />
+    <markup:StaticResource x:Key="SplitButtonBorderBrushCheckedPointerOver" ResourceKey="SystemControlHighlightAltTransparentBrush" />
+    <markup:StaticResource x:Key="SplitButtonBorderBrushCheckedPressed" ResourceKey="SystemControlHighlightAltTransparentBrush" />
+    <markup:StaticResource x:Key="SplitButtonBorderBrushCheckedDisabled" ResourceKey="SystemControlDisabledTransparentBrush" />
+
+    <!-- Resources for SplitView -->
+    <markup:StaticResource x:Key="SplitViewLightDismissOverlayBackground" ResourceKey="SystemControlPageBackgroundMediumAltMediumBrush" />
+
+    <!-- Resources for TeachingTip -->
+    <Thickness x:Key="TeachingTipAlternateCloseButtonBorderThickness">0</Thickness>
+    <markup:StaticResource x:Key="TeachingTipBorderBrush" ResourceKey="SystemControlTransientBorderBrush"/>
+    <SolidColorBrush x:Key="TeachingTipTopHighlightBrush" Color="#0DFFFFFF"/>
+    <markup:StaticResource x:Key="TeachingTipTransientBackground" ResourceKey="SystemControlPageBackgroundChromeLowBrush"/>
+    <markup:StaticResource x:Key="TeachingTipForegroundBrush" ResourceKey="SystemControlForegroundBaseHighBrush"/>
+    <markup:StaticResource x:Key="TeachingTipBackgroundBrush" ResourceKey="SystemControlPageBackgroundChromeLowBrush"/>
+    <markup:StaticResource x:Key="TeachingTipTitleForegroundBrush" ResourceKey="SystemControlForegroundBaseHighBrush"/>
+    <markup:StaticResource x:Key="TeachingTipSubtitleForegroundBrush" ResourceKey="SystemControlForegroundBaseHighBrush"/>
+
+    <!-- Resources for ToggleSwitch -->
+    <system:Double x:Key="ToggleSwitchOnStrokeThickness">0</system:Double>
+    <system:Double x:Key="ToggleSwitchOuterBorderStrokeThickness">1</system:Double>
+    <markup:StaticResource x:Key="ToggleSwitchContentForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="ToggleSwitchContentForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="ToggleSwitchHeaderForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="ToggleSwitchHeaderForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="ToggleSwitchContainerBackground" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ToggleSwitchContainerBackgroundPointerOver" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ToggleSwitchContainerBackgroundPressed" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ToggleSwitchContainerBackgroundDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ToggleSwitchFillOff" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ToggleSwitchFillOffPointerOver" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ToggleSwitchFillOffPressed" ResourceKey="SystemControlHighlightBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="ToggleSwitchFillOffDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <markup:StaticResource x:Key="ToggleSwitchStrokeOff" ResourceKey="SystemControlForegroundBaseMediumBrush" />
+    <markup:StaticResource x:Key="ToggleSwitchStrokeOffPointerOver" ResourceKey="SystemControlHighlightBaseMediumHighBrush" />
+    <markup:StaticResource x:Key="ToggleSwitchStrokeOffPressed" ResourceKey="SystemControlForegroundBaseHighBrush" />
+    <markup:StaticResource x:Key="ToggleSwitchStrokeOffDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="ToggleSwitchFillOn" ResourceKey="SystemControlHighlightAccentBrush" />
+    <markup:StaticResource x:Key="ToggleSwitchFillOnPointerOver" ResourceKey="SystemAccentColorLight1Brush" />
+    <markup:StaticResource x:Key="ToggleSwitchFillOnPressed" ResourceKey="SystemAccentColorDark1Brush" />
+    <markup:StaticResource x:Key="ToggleSwitchFillOnDisabled" ResourceKey="SystemControlDisabledBaseLowBrush" />
+    <markup:StaticResource x:Key="ToggleSwitchStrokeOn" ResourceKey="SystemControlHighlightBaseHighBrush" />
+    <markup:StaticResource x:Key="ToggleSwitchStrokeOnPointerOver" ResourceKey="SystemAccentColorLight1Brush" />
+    <markup:StaticResource x:Key="ToggleSwitchStrokeOnPressed" ResourceKey="SystemAccentColorDark1Brush" />
+    <markup:StaticResource x:Key="ToggleSwitchStrokeOnDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="ToggleSwitchKnobFillOff" ResourceKey="SystemControlHighlightBaseHighBrush" />
+    <markup:StaticResource x:Key="ToggleSwitchKnobFillOffPointerOver" ResourceKey="SystemControlHighlightBaseHighBrush" />
+    <markup:StaticResource x:Key="ToggleSwitchKnobFillOffPressed" ResourceKey="SystemControlHighlightBaseHighBrush" />
+    <markup:StaticResource x:Key="ToggleSwitchKnobFillOffDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <markup:StaticResource x:Key="ToggleSwitchKnobFillOn" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
+    <markup:StaticResource x:Key="ToggleSwitchKnobFillOnPointerOver" ResourceKey="SystemControlHighlightChromeWhiteBrush" />
+    <markup:StaticResource x:Key="ToggleSwitchKnobFillOnPressed" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
+    <markup:StaticResource x:Key="ToggleSwitchKnobFillOnDisabled" ResourceKey="SystemControlPageBackgroundBaseLowBrush" />
+
+</ResourceDictionary>

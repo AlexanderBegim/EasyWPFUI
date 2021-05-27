@@ -1,0 +1,29 @@
+﻿<ui:NavigationView x:Name="nvSample"
+                   MenuItemTemplateSelector="{StaticResource nvExample3TemplateSelector}"
+                   MenuItemsSource="{Binding Categories}">
+    <ui:Frame x:Name="contentFrame3" />
+</ui:NavigationView>
+
+<local:MenuItemTemplateSelector x:Key="nvExample3TemplateSelector">
+    <local:MenuItemTemplateSelector.ItemTemplate>
+        <DataTemplate>
+            <ui:NavigationViewItem Content="{Binding Name}">
+                <ui:NavigationViewItem.Icon>
+                    <ui:SymbolIcon Symbol="{Binding Glyph}" />
+                </ui:NavigationViewItem.Icon>
+            </ui:NavigationViewItem>
+        </DataTemplate>
+    </local:MenuItemTemplateSelector.ItemTemplate>
+
+    <local:MenuItemTemplateSelector.HeaderTemplate>
+        <DataTemplate>
+            <ui:NavigationViewItemHeader Content="{Binding Name}" />
+        </DataTemplate>
+    </local:MenuItemTemplateSelector.HeaderTemplate>
+
+    <local:MenuItemTemplateSelector.SeparatorTemplate>
+        <DataTemplate>
+            <ui:NavigationViewItemSeparator />
+        </DataTemplate>
+    </local:MenuItemTemplateSelector.SeparatorTemplate>
+</local:MenuItemTemplateSelector>

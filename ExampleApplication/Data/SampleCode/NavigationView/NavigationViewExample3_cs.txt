@@ -1,0 +1,37 @@
+﻿Categories = new ObservableCollection<CategoryBase>()
+{
+    new Category() { Name = "Category 1", Glyph = Symbol.Home, Tooltip = "This is category 1" },
+    new Category() { Name = "Category 2", Glyph = Symbol.Keyboard, Tooltip = "This is category 2" },
+    new Category() { Name = "Category 3", Glyph = Symbol.Library, Tooltip = "This is category 3" },
+    new Category() { Name = "Category 4", Glyph = Symbol.Mail, Tooltip = "This is category 4" }
+};
+
+
+public class CategoryBase { }
+
+public class Category : CategoryBase
+{
+    public string Name { get; set; }
+    public string Tooltip { get; set; }
+    public Symbol Glyph { get; set; }
+}
+
+public class Header : CategoryBase
+{
+    public string Name { get; set; }
+}
+
+    
+class MenuItemTemplateSelector : DataTemplateSelector
+{
+    public DataTemplate ItemTemplate { get; set; }
+
+    public DataTemplate HeaderTemplate { get; set; }
+
+    public DataTemplate SeparatorTemplate { get; set; }
+
+    public override DataTemplate SelectTemplate(object item, DependencyObject container)
+    {
+        return item is Separator ? SeparatorTemplate : item is Header ? HeaderTemplate : ItemTemplate;
+    }
+}

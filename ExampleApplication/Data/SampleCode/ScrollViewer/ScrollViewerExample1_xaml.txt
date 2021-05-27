@@ -1,0 +1,14 @@
+﻿<ScrollViewer x:Name="scrollViewerExample1"
+              HorizontalScrollBarVisibility="$(HorizontalScrollBarVisibility)"
+              VerticalScrollBarVisibility="$(VerticalScrollBarVisibility)"
+              ui:ScrollViewerHelper.AllowAutoHide="$(AllowAutoHide)"
+              Height="270"
+              IsTabStop="True"
+              VerticalAlignment="Top"
+              HorizontalAlignment="Left">
+              
+        <Image Source="/Assets/SampleMedia/Sky.jpg"
+               Stretch="None"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Top"/>
+</ScrollViewer>

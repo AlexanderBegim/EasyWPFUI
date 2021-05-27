@@ -1,0 +1,23 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:EasyWPFUI.Styles">
+
+    <ControlTemplate x:Key="ValidationErrorTemplate">
+        <Grid SnapsToDevicePixels="True">
+            <AdornedElementPlaceholder />
+            <Border x:Name="ValidationBorder"
+                BorderBrush="{DynamicResource SystemControlErrorTextForegroundBrush}"
+                BorderThickness="{DynamicResource TextControlBorderThemeThicknessFocused}"
+                CornerRadius="{DynamicResource ControlCornerRadius}" />
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="DataGridValidationErrorTemplate">
+        <Grid SnapsToDevicePixels="True">
+            <AdornedElementPlaceholder />
+            <Border x:Name="ValidationBorder"
+                BorderBrush="{DynamicResource SystemControlErrorTextForegroundBrush}"
+                BorderThickness="{DynamicResource TextControlBorderThemeThicknessFocused}" />
+        </Grid>
+    </ControlTemplate>
+</ResourceDictionary>

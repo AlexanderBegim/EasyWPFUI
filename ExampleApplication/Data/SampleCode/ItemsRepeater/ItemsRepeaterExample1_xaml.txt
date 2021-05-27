@@ -1,0 +1,20 @@
+﻿<!-- The ItemsRepeater and ScrollViewer used: -->
+<ui:ItemsRepeaterScrollHost MaxHeight="500" HorizontalAlignment="Left">
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+        <ui:ItemsRepeater x:Name="repeaterExample1"
+                          Layout="{StaticResource $(Layout)}"
+                          ItemsSource="{Binding BarItems}"
+                          ItemTemplate="{StaticResource $(ElementGenerator)}"/>
+        </ScrollViewer>
+</ui:ItemsRepeaterScrollHost>
+
+<!-- The Layout specifications used: -->
+                    
+$(SampleCodeLayout)     
+                    
+<!-- The DataTemplate used: $(ElementGenerator)-->
+                    
+$(SampleCodeDT)    
+
+<!-- The ItemsSource used is a list of custom-class Bar objects called BarItems. Bar objects have
+the following attributes: Height, MaxHeight, Length, MaxLength, Diameter, and MaxDiameter. -->

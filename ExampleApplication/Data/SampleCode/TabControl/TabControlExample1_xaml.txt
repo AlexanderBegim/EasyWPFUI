@@ -1,0 +1,11 @@
+﻿<TabControl TabStripPlacement="$(TabStripPlacement)">
+    <TabItem Header="Document 0">
+        <Frame Source="/SamplePage/SamplePage1.xaml" />
+    </TabItem>
+    <TabItem Header="Document 1">
+        <Frame Source="/SamplePage/SamplePage2.xaml" />
+    </TabItem>
+    <TabItem Header="Document 3">
+        <Frame Source="/SamplePage/SamplePage3.xaml" />
+    </TabItem>
+</TabControl>

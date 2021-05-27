@@ -1,0 +1,37 @@
+﻿<!-- To create this sample, add/change the following properties onto the code for the base example above: -->
+                        
+<ListView 
+    SelectionMode="$(SelectionMode)" 
+    ItemTemplate="{StaticResource ContactListViewTemplate}"/>
+    
+<!-- DataTemplate used: -->
+
+<DataTemplate x:Key="ContactListViewTemplate">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Ellipse x:Name="Ellipse"
+                    Grid.RowSpan="2"
+                    Width ="32"
+                    Height="32"
+                    Margin="6"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Fill="{ThemeResource SystemControlBackgroundBaseMediumBrush}"/>
+        <TextBlock Grid.Column="1"
+                    Text="{Binding Name}"
+                    Style="{ThemeResource BaseTextBlockStyle}"
+                    Margin="12,6,0,0"/>
+        <TextBlock  Grid.Column="1"
+                    Grid.Row="1"
+                    Text="{Binding Company}"
+                    Style="{ThemeResource BodyTextBlockStyle}"
+                    Margin="12,0,0,6"/>
+    </Grid>
+</DataTemplate>

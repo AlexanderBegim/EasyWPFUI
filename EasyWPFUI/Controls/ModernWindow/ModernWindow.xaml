@@ -1,0 +1,341 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:EasyWPFUI.Controls"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <Style x:Key="DefaultWindowBackButton" TargetType="Button">
+        <Setter Property="Background" Value="{DynamicResource ModernWindowTitleBarButtonBackground}" />
+        <Setter Property="Foreground" Value="{DynamicResource SystemControlPageTextBaseHighBrush}" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Width" Value="45" />
+        <Setter Property="Height" Value="30" />
+        <Setter Property="IsTabStop" Value="False" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="PART_LayoutRoot"
+                            Background="{TemplateBinding Background}"
+                            SnapsToDevicePixels="True">
+                        <TextBlock Text="&#xE72B;"
+                                   FontSize="{DynamicResource SymbolThemeFontSize}"
+                                   FontFamily="{DynamicResource SymbolThemeFontFamily}"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center" />
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource ModernWindowTitleBarButtonBackgroundPointerOver}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource ModernWindowTitleBarButtonBackgroundPressed}" />
+                        </Trigger>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="{DynamicResource ModernWindowTitleBarButtonBackgroundDisabled}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DefaultWindowTitleBarButton" TargetType="Button">
+        <Setter Property="Background" Value="{DynamicResource ModernWindowTitleBarButtonBackground}" />
+        <Setter Property="Foreground" Value="{DynamicResource SystemControlPageTextBaseHighBrush}" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Width" Value="45" />
+        <Setter Property="Height" Value="30" />
+        <Setter Property="IsTabStop" Value="False" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="PART_LayoutRoot"
+                            Background="{TemplateBinding Background}"
+                            SnapsToDevicePixels="True">
+                        <ContentPresenter x:Name="Content"
+                                          Content="{TemplateBinding Content}"
+                                          TextElement.Foreground="{TemplateBinding Foreground}"
+                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource ModernWindowTitleBarButtonBackgroundPointerOver}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource ModernWindowTitleBarButtonBackgroundPressed}" />
+                        </Trigger>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="{DynamicResource ModernWindowTitleBarButtonBackgroundDisabled}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DefaultCloseWindowTitleBarButton" TargetType="Button" BasedOn="{StaticResource DefaultWindowTitleBarButton}">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{DynamicResource ModernWindowTitleBarCloseButtonBackgroundPointerOver}" />
+                <Setter Property="Foreground" Value="{DynamicResource ModernWindowTitleBarCloseButtonForegroundPointerOver}" />
+            </Trigger>
+
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Background" Value="{DynamicResource ModernWindowTitleBarCloseButtonBackgroundPressed}" />
+                <Setter Property="Foreground" Value="{DynamicResource ModernWindowTitleBarCloseButtonForegroundPressed}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="local:ModernWindow">
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="Background" Value="{DynamicResource SystemControlPageBackgroundAltHighBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource SystemControlPageTextBaseHighBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource ModernWindowBorderBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="FontFamily" Value="{DynamicResource ContentControlThemeFontFamily}" />
+        <Setter Property="FontSize" Value="{DynamicResource ControlContentThemeFontSize}" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+
+        <Setter Property="BorderBrushInactive" Value="{DynamicResource ModernWindowBorderBrushInactive}" />
+        <Setter Property="ExtendViewIntoTitleBar" Value="False" />
+        <Setter Property="TitleBarHeight" Value="{DynamicResource ModernWindowTitleBarHeight}" />
+        <Setter Property="TitleBarBackground" Value="{DynamicResource ModernWindowTitleBarBackground}" />
+        <Setter Property="TitleBarInactiveBackground" Value="{DynamicResource ModernWindowTitleBarBackgroundInactive}" />
+        <Setter Property="TitleBarForeground" Value="{DynamicResource ModernWindowTitleBarForeground}" />
+        <Setter Property="TitleBarInactiveForeground" Value="{DynamicResource ModernWindowTitleBarForegroundInactive}" />
+        <Setter Property="TitleTextAlign" Value="Left" />
+        <Setter Property="BackButtonStyle" Value="{StaticResource DefaultWindowBackButton}" />
+
+        <Setter Property="WindowChrome.WindowChrome">
+            <Setter.Value>
+                <WindowChrome CaptionHeight="{DynamicResource ModernWindowTitleBarHeight}"
+                              CornerRadius="0"
+                              GlassFrameThickness="0,1,0,0"
+                              ResizeBorderThickness="8"
+                              UseAeroCaptionButtons="False"/>
+            </Setter.Value>
+        </Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:ModernWindow">
+                    <Border x:Name="PART_LayoutRoot"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Padding="{TemplateBinding Padding}"
+                            WindowChrome.IsHitTestVisibleInChrome="False">
+                        <AdornerDecorator>
+                            <Grid x:Name="PART_LayoutGrid"
+                                  LayoutTransform="{TemplateBinding LayoutTransform}"
+                                  RenderTransform="{TemplateBinding RenderTransform}">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+
+                                <!-- TitleBar -->
+                                <Grid x:Name="PART_TitleBar"
+                                      Grid.Row="0"
+                                      Height="{TemplateBinding TitleBarHeight}"
+                                      Background="{TemplateBinding TitleBarBackground}"
+                                      VerticalAlignment="Top">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="{Binding ActualWidth, ElementName=PART_TitleBarControlButtons}" />
+                                    </Grid.ColumnDefinitions>
+                                    
+                                    <!-- BackButton -->
+                                    <Button x:Name="BackButton"
+                                            Grid.Column="0"
+                                            Style="{TemplateBinding BackButtonStyle}"
+                                            Command="{TemplateBinding BackButtonCommand}"
+                                            CommandParameter="{TemplateBinding BackButtonCommandParameter}"
+                                            IsEnabled="{TemplateBinding IsBackButtonEnabled}"
+                                            Visibility="Collapsed"
+                                            WindowChrome.IsHitTestVisibleInChrome="True" />
+
+                                    <!-- Icon --> <!-- TODO Change To ImageSource? -->
+                                    <Image x:Name="TitleBarIcon"
+                                           Grid.Column="1"
+                                           Source="{TemplateBinding Icon}"
+                                           Width="{DynamicResource {x:Static SystemParameters.IconWidth}}"
+                                           Height="{DynamicResource {x:Static SystemParameters.IconHeight}}"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center" />
+
+                                    <!-- TitleBar Content -->
+                                    <ContentPresenter x:Name="TitleBarContent"
+                                                      Grid.Column="2"
+                                                      Content="{TemplateBinding TitleBarContent}"
+                                                      ContentTemplate="{TemplateBinding TitleBarContentTemplate}"
+                                                      TextElement.FontSize="{DynamicResource ModernWindowTitleBarFontSize}"
+                                                      WindowChrome.IsHitTestVisibleInChrome="True"
+                                                      Focusable="True"
+                                                      VerticalAlignment="Center"
+                                                      HorizontalAlignment="Stretch"
+                                                      FocusVisualStyle="{x:Null}" />
+
+                                    <!-- TitleBar Title -->
+                                    <TextBlock x:Name="TitleBarTitle"
+                                               Grid.Column="3"
+                                               Text="{TemplateBinding Title}"
+                                               FontSize="{DynamicResource ModernWindowTitleBarFontSize}"
+                                               Foreground="{TemplateBinding TitleBarForeground}"
+                                               HorizontalAlignment="{TemplateBinding TitleTextAlign}"
+                                               VerticalAlignment="Center"
+                                               Margin="10,0,10,0" />
+
+                                    <!-- TitleBar -->
+                                </Grid>
+
+                                <!-- TitleBar WindowControlButtons -->
+                                <StackPanel x:Name="PART_TitleBarControlButtons"
+                                            Orientation="Horizontal"
+                                            WindowChrome.IsHitTestVisibleInChrome="True"
+                                            Panel.ZIndex="{x:Static system:Int32.MaxValue}"
+                                            VerticalAlignment="Top"
+                                            HorizontalAlignment="Right">
+
+                                    <!-- Minimize Button -->
+                                    <Button x:Name="WindowMinimizeButton"
+                                                Style="{StaticResource DefaultWindowTitleBarButton}"
+                                                Height="{TemplateBinding TitleBarHeight}"
+                                                Command="{x:Static SystemCommands.MinimizeWindowCommand}">
+                                        <Path Data="M0,0L10,0 10,1 10,1 1,1 0,1z"
+                                                  Width="10"
+                                                  Height="10"
+                                                  Fill="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Button}}"
+                                                  SnapsToDevicePixels="True"
+                                                  Stretch="Uniform" />
+                                    </Button>
+
+                                    <!-- Maximize Button -->
+                                    <Button x:Name="WindowMaximizeButton"
+                                                Style="{StaticResource DefaultWindowTitleBarButton}"
+                                                Height="{TemplateBinding TitleBarHeight}"
+                                                Command="{x:Static SystemCommands.MaximizeWindowCommand}">
+                                        <Path Data="M1,1L1,11 11,11 11,1z M0,0L12,0 12,12 0,12z"
+                                                  Width="10"
+                                                  Height="10"
+                                                  Fill="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Button}}"
+                                                  SnapsToDevicePixels="True"
+                                                  Stretch="Uniform" />
+                                    </Button>
+
+                                    <!-- Restore Button -->
+                                    <Button x:Name="WindowRestoreButton"
+                                                Style="{StaticResource DefaultWindowTitleBarButton}"
+                                                Height="{TemplateBinding TitleBarHeight}"
+                                                Command="{x:Static SystemCommands.RestoreWindowCommand}">
+                                        <Path Data="M1,4.56L1,14.56 11,14.56 11,4.56z M4,1L4,3.56 12,3.56 12,11 14,11 14,1z M3,0L15,0 15,12 12,12 12,15.56 0,15.56 0,3.56 3,3.56z"
+                                                  Width="10"
+                                                  Height="10"
+                                                  Fill="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Button}}"
+                                                  SnapsToDevicePixels="True"
+                                                  Stretch="Uniform" />
+                                    </Button>
+
+                                    <!-- Close Button -->
+                                    <Button x:Name="WindowCloseButton"
+                                                Style="{StaticResource DefaultCloseWindowTitleBarButton}"
+                                                Height="{TemplateBinding TitleBarHeight}"
+                                                Command="{x:Static SystemCommands.CloseWindowCommand}">
+                                        <Path Data="F1M8.583,8L13,12.424 12.424,13 8,8.583 3.576,13 3,12.424 7.417,8 3,3.576 3.576,3 8,7.417 12.424,3 13,3.576z"
+                                                  Width="10"
+                                                  Height="10"
+                                                  Fill="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Button}}"
+                                                  SnapsToDevicePixels="True"
+                                                  Stretch="Uniform" />
+                                    </Button>
+                                </StackPanel>
+
+                                <!-- Content -->
+                                <Grid Grid.Row="1">
+                                    <ContentPresenter x:Name="PART_Content" />
+                                </Grid>
+                            </Grid>
+                        </AdornerDecorator>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="ExtendViewIntoTitleBar" Value="True">
+                            <Setter TargetName="PART_TitleBar" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="PART_TitleBarControlButtons" Property="Grid.Row" Value="1" />
+                            <Setter TargetName="BackButton" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="TitleBarIcon" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="TitleBarContent" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="TitleBarTitle" Property="Visibility" Value="Collapsed" />
+                            <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
+                        </Trigger>
+                        
+                        <Trigger Property="IsWindowAccent" Value="True">
+                            <Setter Property="TitleBarBackground" Value="{DynamicResource SystemControlBackgroundAccentBrush}" />
+                            <Setter Property="TitleBarInactiveBackground" Value="{DynamicResource SystemAccentColorDark1Brush}" />
+                            <Setter Property="BorderBrush" Value="{DynamicResource SystemControlBackgroundAccentBrush}" />
+                            <Setter Property="BorderBrushInactive" Value="{DynamicResource SystemAccentColorDark1Brush}" />
+                        </Trigger>
+
+                        <Trigger Property="WindowState" Value="Normal">
+                            <Setter TargetName="WindowMaximizeButton" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="WindowRestoreButton" Property="Visibility" Value="Collapsed" />
+                        </Trigger>
+
+                        <Trigger Property="WindowState" Value="Maximized">
+                            <Setter Property="Padding" Value="{x:Static SystemParameters.WindowResizeBorderThickness}" />
+                            <Setter TargetName="PART_LayoutRoot" Property="BorderThickness" Value="0" />
+                            <Setter TargetName="WindowMaximizeButton" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="WindowRestoreButton" Property="Visibility" Value="Visible" />
+                        </Trigger>
+
+                        <Trigger Property="WindowStyle" Value="None">
+                            <Setter TargetName="PART_TitleBar" Property="Visibility" Value="Collapsed" />
+                            <Setter Property="WindowChrome.CaptionHeight" Value="0" />
+                        </Trigger>
+
+                        <Trigger Property="WindowStyle" Value="ToolWindow">
+                            <Setter TargetName="WindowMinimizeButton" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="WindowMaximizeButton" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="WindowRestoreButton" Property="Visibility" Value="Collapsed" />
+                        </Trigger>
+
+                        <Trigger Property="IsActive" Value="False">
+                            <Setter TargetName="PART_LayoutRoot" Property="BorderBrush" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=BorderBrushInactive}" />
+                            <Setter TargetName="PART_TitleBar" Property="Background" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TitleBarInactiveBackground}" />
+                            <Setter TargetName="TitleBarTitle" Property="Foreground" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TitleBarInactiveForeground}" />
+                        </Trigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="ExtendViewIntoTitleBar" Value="False" />
+                                <Condition Property="IsBackButtonVisible" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="BackButton" Property="Visibility" Value="Visible" />
+                        </MultiTrigger>
+
+                        <Trigger Property="Icon" Value="{x:Null}">
+                            <Setter TargetName="TitleBarIcon" Property="Visibility" Value="Collapsed" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

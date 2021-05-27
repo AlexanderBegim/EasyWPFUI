@@ -1,0 +1,28 @@
+﻿<Button Content="Edit Options">
+    <Button.ContextMenu>
+        <ContextMenu>
+            <MenuItem Header="Share">
+                <MenuItem.Icon>
+                    <ui:FontIcon Glyph="&#xE72D;" />
+                </MenuItem.Icon>
+            </MenuItem>
+
+            <MenuItem Header="Copy">
+                <MenuItem.Icon>
+                    <ui:SymbolIcon Symbol="Copy" />
+                </MenuItem.Icon>
+            </MenuItem>
+
+            <MenuItem Header="Delete">
+                <MenuItem.Icon>
+                    <ui:SymbolIcon Symbol="Delete" />
+                </MenuItem.Icon>
+            </MenuItem>
+
+            <Separator />
+
+            <MenuItem Header="Rename" />
+            <MenuItem Header="Select" />
+        </ContextMenu>
+    </Button.ContextMenu>
+</Button>

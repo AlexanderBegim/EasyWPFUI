@@ -1,0 +1,85 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/FocusVisualStyle.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/ValidationTemplates.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/Button.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/Calendar.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/CheckBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/ComboBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/ContextMenu.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/DataGrid.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/DatePicker.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/Expander.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/GridSplitter.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/GroupBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/Hyperlink.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/Label.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/ListBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/ListView.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/Menu.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/PasswordBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/ProgressBar.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/RadioButton.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/RepeatButton.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/RichTextBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/ScrollBar.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/ScrollViewer.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/Separator.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/Slider.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/TabControl.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/TextBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/TextStyles.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/ToggleButton.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/ToolBar.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/ToolTip.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/TreeView.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/Frame.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/Page.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="{x:Static SystemParameters.FocusVisualStyleKey}" BasedOn="{StaticResource SystemFocusVisualStyle}" />
+    <Style TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}" />
+    <Style TargetType="Calendar" BasedOn="{StaticResource DefaultCalendarStyle}" />
+    <Style TargetType="CalendarItem" BasedOn="{StaticResource DefaultCalendarItemStyle}" />
+    <Style TargetType="CalendarButton" BasedOn="{StaticResource DefaultCalendarButtonStyle}" />
+    <Style TargetType="CalendarDayButton" BasedOn="{StaticResource DefaultCalendarDayButtonStyle}" />
+    <Style TargetType="CheckBox" BasedOn="{StaticResource DefaultCheckBoxStyle}" />
+    <Style TargetType="ComboBox" BasedOn="{StaticResource DefaultComboBoxStyle}" />
+    <Style TargetType="ComboBoxItem" BasedOn="{StaticResource DefaultComboBoxItemStyle}" />
+    <Style TargetType="ContextMenu" BasedOn="{StaticResource DefaultContextMenuStyle}" />
+    <Style TargetType="DataGrid" BasedOn="{StaticResource DefaultDataGridStyle}" />
+    <Style TargetType="DatePicker" BasedOn="{StaticResource DefaultDatePickerStyle}" />
+    <Style TargetType="DatePickerTextBox" BasedOn="{StaticResource DefaultDatePickerTextBoxStyle}" />
+    <Style TargetType="Expander" BasedOn="{StaticResource DefaultExpanderStyle}" />
+    <Style TargetType="GridSplitter" BasedOn="{StaticResource DefaultGridSpliteStyle}" />
+    <Style TargetType="GroupBox" BasedOn="{StaticResource DefaultGroupBoxStyle}" />
+    <Style TargetType="GroupItem" BasedOn="{StaticResource DefaultGroupItemStyle}" />
+    <Style TargetType="Hyperlink" BasedOn="{StaticResource DefaultHyperlinkStyle}" />
+    <Style TargetType="Label" BasedOn="{StaticResource DefaultLabelStyle}" />
+    <Style TargetType="ListBox" BasedOn="{StaticResource DefaultListBoxStyle}" />
+    <Style TargetType="ListBoxItem" BasedOn="{StaticResource DefaultListBoxItemStyle}" />
+    <Style TargetType="ListView" BasedOn="{StaticResource DefaultListViewStyle}" />
+    <Style TargetType="ListViewItem" BasedOn="{StaticResource DefaultListViewItemStyle}" />
+    <Style TargetType="Menu" BasedOn="{StaticResource DefaultMenuStyle}" />
+    <Style TargetType="MenuItem" BasedOn="{StaticResource DefaultMenuItemStyle}" />
+    <Style TargetType="PasswordBox" BasedOn="{StaticResource DefaultPasswordBoxStyle}" />
+    <Style TargetType="ProgressBar" BasedOn="{StaticResource DefaultProgressBarStyle}" />
+    <Style TargetType="RadioButton" BasedOn="{StaticResource DefaultRadioButtonStyle}" />
+    <Style TargetType="RepeatButton" BasedOn="{StaticResource DefaultRepeatButtonStyle}" />
+    <Style TargetType="RichTextBox" BasedOn="{StaticResource DefaultRichTextBoxStyle}" />
+    <Style TargetType="ScrollBar" BasedOn="{StaticResource DefaultScrollBarStyle}" />
+    <Style TargetType="ScrollViewer" BasedOn="{StaticResource DefaultScrollViewStyle}" />
+    <Style TargetType="Separator" BasedOn="{StaticResource DefaultSeparatorStyle}" />
+    <Style TargetType="Slider" BasedOn="{StaticResource DefaultSliderStyle}" />
+    <Style TargetType="TabControl" BasedOn="{StaticResource DefaultTabControlStyle}" />
+    <Style TargetType="TabItem" BasedOn="{StaticResource DefaultTabItemStyle}" />
+    <Style TargetType="TextBox" BasedOn="{StaticResource DefaultTextBoxStyle}" />
+    <Style TargetType="ToggleButton" BasedOn="{StaticResource DefaultToggleButtonStyle}" />
+    <Style TargetType="ToolBarTray" BasedOn="{StaticResource DefaultToolBarTrayStyle}" />
+    <Style TargetType="ToolBar" BasedOn="{StaticResource DefaultToolBarStyle}" />
+    <Style TargetType="ToolTip" BasedOn="{StaticResource DefaultToolTipStyle}" />
+    <Style TargetType="TreeViewItem" BasedOn="{StaticResource DefaultTreeViewItemStyle}" />
+    <Style TargetType="TreeView" BasedOn="{StaticResource DefaultTreeViewStyle}" />
+</ResourceDictionary>

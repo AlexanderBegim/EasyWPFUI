@@ -1,0 +1,12 @@
+﻿<Button Content="Empty cart">
+    <ui:ButtonHelper.Flyout>
+        <ui:Flyout x:Name="flyoutExample1">
+            <StackPanel>
+                <TextBlock Style="{StaticResource BaseTextBlockStyle}"
+                           Text="All items will be removed. Do you want to continue?"
+                           Margin="0,0,0,12" />
+                <Button Content="Yes, empty my cart" />
+            </StackPanel>
+        </ui:Flyout>
+    </ui:ButtonHelper.Flyout>
+</Button>

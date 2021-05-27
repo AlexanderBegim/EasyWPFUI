@@ -1,0 +1,21 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Controls/ModernWindow/ModernWindow.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Controls/DropDownButton/DropDownButton.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Controls/Flyout/FlyoutPresenter.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Controls/ProgressBar/ProgressBar.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Controls/ProgressRing/ProgressRing.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Controls/InfoBar/InfoBar.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Controls/SplitButton/SplitButton.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Controls/ToggleSwitch/ToggleSwitch.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Controls/NumberBox/NumberBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Controls/SplitView/SplitView.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Controls/AutoSuggestBox/AutoSuggestBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Controls/TeachingTip/TeachingTip.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Controls/NavigationView/NavigationView.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Controls/RadioMenuItem/RadioMenuItem.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    
+</ResourceDictionary>

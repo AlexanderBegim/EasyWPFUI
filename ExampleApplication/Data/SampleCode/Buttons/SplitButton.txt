@@ -1,0 +1,8 @@
+﻿<ui:SplitButton x:Name="splitButton" Click="splitButton_Click">
+    <Rectangle x:Name="CurrentColor" Width="32" Height="32" Fill="Black"/>
+    <ui:SplitButton.Flyout>
+        <ui:Flyout Placement="Bottom">
+            <!-- flyout content -->
+        </ui:Flyout>
+    </ui:SplitButton.Flyout>
+</ui:SplitButton>

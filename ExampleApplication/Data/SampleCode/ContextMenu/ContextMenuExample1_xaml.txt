@@ -1,0 +1,10 @@
+﻿<Button Content="ContextMenu Button">
+    <Button.ContextMenu>
+        <ContextMenu>
+            <MenuItem Header="Reset" />
+            <Separator />
+            <MenuItem Header="Repeat" IsCheckable="True" IsChecked="True" />
+            <MenuItem Header="Shuffle" IsCheckable="True" IsChecked="True" />
+        </ContextMenu>
+    </Button.ContextMenu>
+</Button>

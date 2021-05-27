@@ -1,0 +1,58 @@
+﻿<!--
+//*********************************************************
+//
+// Copyright (c) Microsoft. All rights reserved.
+// THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF
+// ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY
+// IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR
+// PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
+//
+//*********************************************************
+-->
+<Page x:Class="ExampleApplication.ControlPages.TeachingTipPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ExampleApplication.ControlPages"
+      xmlns:controls="clr-namespace:ExampleApplication.Controls"
+      xmlns:system="clr-namespace:System;assembly=mscorlib"
+      xmlns:ui="https://easywpfui.com/schemas"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="TeachingTipPage">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto"
+                  HorizontalScrollBarVisibility="Disabled"
+                  Padding="20">
+        <StackPanel>
+            <controls:ControlExample HeaderText="Show a targeted TeachingTip on the Toggle Theme button."
+                                     XamlSource="TeachingTip/TeachingTipExample1_xaml.txt"
+                                     CSharpSource="TeachingTip/TeachingTipExample1_cs.txt">
+                <controls:ControlExample.Example>
+                    <Button x:Name="btn" Content="Show TeachingTip" Click="Button_Click" />
+                </controls:ControlExample.Example>
+            </controls:ControlExample>
+            
+            <!-- -->
+
+            <controls:ControlExample HeaderText="Show a non-targeted TeachingTip with buttons."
+                                     XamlSource="TeachingTip/TeachingTipExample2_xaml.txt"
+                                     CSharpSource="TeachingTip/TeachingTipExample2_cs.txt">
+                <controls:ControlExample.Example>
+                    <Button Content="Show TeachingTip" Click="Button_Click_1" />
+                </controls:ControlExample.Example>
+            </controls:ControlExample>
+            
+            <!-- -->
+
+            <controls:ControlExample HeaderText="Show a targeted TeachingTip with hero content on the Toggle Theme button."
+                                     XamlSource="TeachingTip/TeachingTipExample3_xaml.txt"
+                                     CSharpSource="TeachingTip/TeachingTipExample3_cs.txt">
+                <controls:ControlExample.Example>
+                    <Button Content="Show TeachingTip" Click="Button_Click_2" />
+                </controls:ControlExample.Example>
+            </controls:ControlExample>
+        </StackPanel>
+    </ScrollViewer>
+</Page>
