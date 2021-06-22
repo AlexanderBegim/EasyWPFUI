@@ -1,4 +1,5 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+﻿<!-- Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT License. See LICENSE in the project root for license information. -->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:EasyWPFUI.Controls"
                     xmlns:primitives="clr-namespace:EasyWPFUI.Controls.Primitives"
@@ -13,10 +14,6 @@
     <converters:CornerRadiusFilterConverter x:Key="RightCornerRadiusFilterConverter" Filter="Right" />
     <converters:CornerRadiusFilterConverter x:Key="TopCornerRadiusFilterConverter" Filter="Top" />
     <converters:CornerRadiusFilterConverter x:Key="BottomCornerRadiusFilterConverter" Filter="Bottom" />
-
-    <Thickness x:Key="AutoSuggestBoxTopHeaderMargin">0,0,0,8</Thickness>
-    <system:Double x:Key="AutoSuggestListMaxHeight">374</system:Double>
-    <Thickness x:Key="AutoSuggestListPadding">0</Thickness>
 
     <Style TargetType="TextBox" x:Key="AutoSuggestBoxTextBoxStyle">
         <Setter Property="MinWidth" Value="{DynamicResource TextControlThemeMinWidth}" />
@@ -285,7 +282,6 @@
         <Setter Property="FocusVisualStyle" Value="{DynamicResource {x:Static SystemParameters.FocusVisualStyleKey}}" />
         <Setter Property="helpers:ControlHelper.UseSystemFocusVisuals" Value="{DynamicResource IsApplicationFocusVisualKindReveal}" />
         <Setter Property="helpers:ControlHelper.CornerRadius" Value="{DynamicResource ControlCornerRadius}" />
-        <!--<Setter Property="helpers:AutoSuggestBoxHelper.KeepInteriorCornersSquare" Value="true"/>-->
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="local:AutoSuggestBox">
@@ -355,8 +351,8 @@
                                               ItemTemplate="{TemplateBinding ItemTemplate}"
                                               ItemTemplateSelector="{TemplateBinding ItemTemplateSelector}"
                                               ItemContainerStyle="{TemplateBinding ItemContainerStyle}"
-                                              MaxHeight="{StaticResource AutoSuggestListMaxHeight}"
-                                              Margin="{StaticResource AutoSuggestListPadding}"
+                                              MaxHeight="{DynamicResource AutoSuggestListMaxHeight}"
+                                              Margin="{DynamicResource AutoSuggestListPadding}"
                                               ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                               helpers:ControlHelper.CornerRadius="{Binding ElementName=SuggestionsContainer, Path=CornerRadius}"/>
                                 </Border>

@@ -11,6 +11,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Input;
 using EasyWPFUI;
 using EasyWPFUI.Controls;
+using EasyWPFUI.Controls.Helpers;
 using EasyWPFUI.Common;
 using EasyWPFUI.Extensions;
 
@@ -19,6 +20,7 @@ namespace EasyWPFUI.Controls.Primitives
     public class FlyoutBase : DependencyObject
     {
         private Popup m_popup;
+        private PopupRepositionHelper m_popupRepositioner;
         private Window m_parentWindow;
         private Thickness m_parentWindowBorder;
         private Rect m_currentTargetBoundsInCoreWindowSpace = new Rect(0, 0, 0, 0);
@@ -313,6 +315,9 @@ namespace EasyWPFUI.Controls.Primitives
             m_popup.Opened += OnPopupOpened;
             m_popup.Closed += OnPopupClosed;
             m_popup.PreviewMouseDown += OnPopupPreviewMouseDown;
+
+            m_popupRepositioner = new PopupRepositionHelper(m_popup);
+            m_popupRepositioner.PopupRepositionAttach();
         }
 
 
@@ -537,15 +542,14 @@ namespace EasyWPFUI.Controls.Primitives
 
             m_currentTargetBoundsInCoreWindowSpace = Target.TransformToVisual(m_parentWindow).TransformBounds(new Rect(0, 0, Target.ActualWidth, Target.ActualHeight));
 
-            double windowTop = (m_parentWindow.WindowState == WindowState.Normal) ? m_parentWindow.Top : 0 - m_parentWindowBorder.Top;
-            double windowLeft = (m_parentWindow.WindowState == WindowState.Normal) ? m_parentWindow.Left : 0 - m_parentWindowBorder.Left;
+            Point windowPosition = m_parentWindow.PointToScreen(new Point());
 
             if(m_popup != null)
             {
                 // TODO Get Alternative Placement
 
-                double verticalOffset = windowTop;
-                double horizontalOffset = windowLeft;
+                double verticalOffset = windowPosition.Y;
+                double horizontalOffset = windowPosition.X;
 
                 switch (Placement)
                 {

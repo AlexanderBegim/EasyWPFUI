@@ -528,8 +528,8 @@ namespace EasyWPFUI.Controls
         {
             base.OnApplyTemplate();
 
-            string spinDownName = "";
-            string spinUpName = "";
+            string spinUpName = Properties.Resources.Strings.Resources.NumberBoxUpSpinButtonName;
+            string spinDownName = Properties.Resources.Strings.Resources.NumberBoxDownSpinButtonName;
 
             RepeatButton spinDown = GetTemplateChild(c_numberBoxDownButtonName) as RepeatButton;
 

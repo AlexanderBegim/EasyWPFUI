@@ -169,6 +169,24 @@ namespace EasyWPFUI.Properties.Resources.Strings {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Decrease.
+        /// </summary>
+        internal static string NumberBoxDownSpinButtonName {
+            get {
+                return ResourceManager.GetString("NumberBoxDownSpinButtonName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Increase.
+        /// </summary>
+        internal static string NumberBoxUpSpinButtonName {
+            get {
+                return ResourceManager.GetString("NumberBoxUpSpinButtonName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Settings.
         /// </summary>
         internal static string SettingsButtonName {

@@ -195,33 +195,57 @@ namespace EasyWPFUI.Controls.Primitives
         {
             Thickness margin = new Thickness(ShadowDepth);
 
-            if (Parent is Popup popup && popup.Child is FrameworkElement popupChild)
+            FrameworkElement element = null;
+
+            if (VisualParent is ToolTip toolTip)
             {
-                popupChild.Margin = margin;
+                element = toolTip;
             }
             else if (VisualParent is ContextMenu contextMenu)
             {
-                contextMenu.Margin = margin; ;
-            }
-            else if (VisualParent is ToolTip toolTip)
-            {
-                toolTip.Margin = margin;
-
-                if (shadowTransform != null)
-                {
-                    shadowTransform.Y = 0;
-                }
+                element = contextMenu;
             }
             else if (VisualParent is FlyoutPresenter flyoutPresenter)
             {
-                flyoutPresenter.Margin = margin;
+                element = flyoutPresenter;
             }
             else if (VisualParent is TeachingTip teachingTip)
             {
+                element = teachingTip;
+            }
+            else if (FindParentPopup(this) is Popup popup)
+            {
+                element = popup.Child as FrameworkElement;
+            }
 
+            if (element != null)
+            {
+                element.Margin = margin;
             }
 
             base.OnVisualParentChanged(oldParent);
+        }
+
+        private Popup FindParentPopup(FrameworkElement element)
+        {
+            DependencyObject parent = element.Parent;
+
+            if (parent is Popup popup)
+            {
+                return popup;
+            }
+            else if (parent is FrameworkElement fe)
+            {
+                return FindParentPopup(fe);
+            }
+            else if (VisualTreeHelper.GetParent(element) is FrameworkElement pe)
+            {
+                return FindParentPopup(pe);
+            }
+            else
+            {
+                return null;
+            }
         }
 
         private void ChangeIsShadowVisible()

@@ -176,13 +176,12 @@
     <SolidColorBrush x:Key="SystemControlTransparentBrush" Color="Transparent" />
     <SolidColorBrush x:Key="SystemControlErrorTextForegroundBrush" Color="{x:Static SystemColors.WindowTextColor}" />
     <markup:StaticResource x:Key="SystemControlTransientBorderBrush" ResourceKey="SystemControlForegroundChromeHighBrush" />
-    <!--<markup:StaticResource x:Key="SystemControlTransientBackgroundBrush" ResourceKey="SystemChromeMediumLowColor" />-->
     <markup:StaticResource x:Key="SystemControlDescriptionTextForegroundBrush" ResourceKey="SystemControlPageTextBaseMediumBrush" />
     <system:Boolean x:Key="IsApplicationFocusVisualKindReveal">False</system:Boolean>
 
     <!-- WPF Default Colors Override -->
-    <!--<SolidColorBrush x:Key="{x:Static SystemColors.WindowBrushKey}" Color="{StaticResource SystemAltHighColor}" />
-    <SolidColorBrush x:Key="{x:Static SystemColors.ControlTextBrushKey}" Color="{StaticResource SystemBaseHighColor}" />-->
+    <SolidColorBrush x:Key="{x:Static SystemColors.WindowBrushKey}" Color="{StaticResource SystemAltHighColor}" />
+    <SolidColorBrush x:Key="{x:Static SystemColors.ControlTextBrushKey}" Color="{StaticResource SystemBaseHighColor}" />
 
     <!--
     Acrylic Brushes
@@ -226,7 +225,6 @@
     <SolidColorBrush x:Key="SystemControlAltMediumLowAcrylicElementMediumBrush" Color="{x:Static SystemColors.WindowColor}" />
     <SolidColorBrush x:Key="SystemControlAltHighAcrylicWindowBrush" Color="{x:Static SystemColors.WindowColor}" />
     <SolidColorBrush x:Key="SystemControlAltHighAcrylicElementBrush" Color="{x:Static SystemColors.WindowColor}" />
-    <!--<SolidColorBrush x:Key="SystemControlTransientBorderBrush" Color="{x:Static SystemColors.WindowTextColor}" />-->
     <SolidColorBrush x:Key="AcrylicBackgroundFillColorDefaultBrush" Color="{x:Static SystemColors.WindowColor}"/>
     <SolidColorBrush x:Key="AcrylicInAppFillColorDefaultBrush" Color="{x:Static SystemColors.WindowColor}"/>
     <SolidColorBrush x:Key="AcrylicBackgroundFillColorDefaultInverseBrush" Color="{x:Static SystemColors.WindowTextColor}" />
@@ -346,9 +344,7 @@
     <markup:StaticResource x:Key="AccentButtonBorderBrushPointerOver" ResourceKey="SystemControlHighlightBaseMediumLowBrush" />
     <markup:StaticResource x:Key="AccentButtonBorderBrushPressed" ResourceKey="SystemControlHighlightTransparentBrush" />
     <markup:StaticResource x:Key="AccentButtonBorderBrushDisabled" ResourceKey="SystemControlDisabledTransparentBrush" />
-
     <Thickness x:Key="ButtonBorderThemeThickness">1</Thickness>
-    
     <markup:StaticResource x:Key="ButtonBackground" ResourceKey="SystemControlBackgroundBaseLowBrush" />
     <markup:StaticResource x:Key="ButtonBackgroundPointerOver" ResourceKey="SystemControlBackgroundBaseLowBrush" />
     <markup:StaticResource x:Key="ButtonBackgroundPressed" ResourceKey="SystemControlBackgroundBaseMediumLowBrush" />
@@ -410,12 +406,6 @@
     <markup:StaticResource x:Key="CalendarDatePickerBorderBrushPressed" ResourceKey="SystemControlHighlightBaseMediumBrush" />
     <markup:StaticResource x:Key="CalendarDatePickerBorderBrushDisabled" ResourceKey="SystemControlDisabledBaseLowBrush" />
     <markup:StaticResource x:Key="CalendarDatePickerLightDismissOverlayBackground" ResourceKey="SystemControlPageBackgroundMediumAltMediumBrush" />
-
-    <!-- Resources for Expander -->
-    <markup:StaticResource x:Key="ExpanderHeaderBackground" ResourceKey="SystemControlTransparentBrush" />
-    <markup:StaticResource x:Key="ExpanderHeaderForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
-    <markup:StaticResource x:Key="ExpanderChevronBackground" ResourceKey="SystemControlTransparentBrush" />
-    <markup:StaticResource x:Key="ExpanderChevronForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
 
     <!-- Resources for ListBox -->
     <Thickness x:Key="ListBoxBorderThemeThickness">2</Thickness>
@@ -572,7 +562,6 @@
     <markup:StaticResource x:Key="ComboBoxItemBorderBrushSelectedPressed" ResourceKey="SystemControlTransparentBrush" />
     <markup:StaticResource x:Key="ComboBoxItemBorderBrushSelectedPointerOver" ResourceKey="SystemControlTransparentBrush" />
     <markup:StaticResource x:Key="ComboBoxItemBorderBrushSelectedDisabled" ResourceKey="SystemControlTransparentBrush" />
-
     <markup:StaticResource x:Key="ComboBoxBackground" ResourceKey="SystemControlBackgroundAltMediumLowBrush" />
     <markup:StaticResource x:Key="ComboBoxBackgroundPointerOver" ResourceKey="SystemControlPageBackgroundAltMediumBrush" />
     <markup:StaticResource x:Key="ComboBoxBackgroundPressed" ResourceKey="SystemControlBackgroundListMediumBrush" />
@@ -603,12 +592,9 @@
     <markup:StaticResource x:Key="ComboBoxDropDownGlyphForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
     <markup:StaticResource x:Key="ComboBoxDropDownGlyphForegroundFocused" ResourceKey="SystemControlHighlightAltBaseMediumHighBrush" />
     <markup:StaticResource x:Key="ComboBoxDropDownGlyphForegroundFocusedPressed" ResourceKey="SystemControlHighlightAltBaseMediumHighBrush" />
-    <!--<contract7NotPresent:StaticResource x:Key="ComboBoxDropDownBackground" ResourceKey="SystemControlBackgroundChromeMediumLowBrush" />-->
     <markup:StaticResource x:Key="ComboBoxDropDownForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
-    <!--<contract7NotPresent:StaticResource x:Key="ComboBoxDropDownBorderBrush" ResourceKey="SystemControlForegroundChromeHighBrush" />-->
     <markup:StaticResource x:Key="ComboBoxDropDownBackground" ResourceKey="SystemControlBackgroundChromeMediumLowBrush" />
     <markup:StaticResource x:Key="ComboBoxDropDownBorderBrush" ResourceKey="SystemControlForegroundChromeHighBrush" />
-
     <Thickness x:Key="ComboBoxDropdownBorderPadding">0</Thickness>
     <Thickness x:Key="ComboBoxDropdownContentMargin">0,4,0,4</Thickness>
     <markup:StaticResource x:Key="ComboBoxDropDownBackgroundPointerOver" ResourceKey="SystemControlPageBackgroundAltMediumBrush" />
@@ -617,28 +603,24 @@
     <markup:StaticResource x:Key="ComboBoxFocusedDropDownBackgroundPointerPressed" ResourceKey="SystemControlBackgroundListMediumBrush" />
     <markup:StaticResource x:Key="ComboBoxEditableDropDownGlyphForeground" ResourceKey="SystemControlForegroundBaseMediumHighBrush" />
     
-    <!-- -->
+    <!-- DataGrid -->
+    <system:Double x:Key="ListAccentLowOpacity">0.6</system:Double>
+    <system:Double x:Key="ListAccentMediumOpacity">0.8</system:Double>
     <SolidColorBrush x:Key="InvalidBrush" Color="#FFFF00"/>
     <SolidColorBrush x:Key="FillerGridLinesBrush" Color="Transparent"/>
+    <SolidColorBrush x:Key="DataGridColumnHeaderBackgroundBrush" Color="{StaticResource DataGridColumnHeaderBackgroundColor}"/>
+    <SolidColorBrush x:Key="SystemControlGridLinesBaseMediumLowBrush" Color="{StaticResource SystemBaseMediumLowColor}" Opacity="0.4"/>
+    <SolidColorBrush x:Key="SystemControlRowGroupHeaderBackgroundMediumBrush" Color="{StaticResource SystemChromeMediumColor}"/>
+    <SolidColorBrush x:Key="DataGridCurrencyVisualPrimaryBrush" Color="Transparent"/>
     <markup:StaticResource x:Key="ScrollBarsSeparatorBackground" ResourceKey="SystemControlPageBackgroundChromeLowBrush"/>
     <markup:StaticResource x:Key="DataGridColumnHeaderForegroundBrush" ResourceKey="SystemControlForegroundBaseMediumBrush"/>
     <markup:StaticResource x:Key="DataGridColumnHeaderBackgroundColor" ResourceKey="SystemAltHighColor"/>
-    <SolidColorBrush x:Key="DataGridColumnHeaderBackgroundBrush" Color="{StaticResource DataGridColumnHeaderBackgroundColor}"/>
     <markup:StaticResource x:Key="DataGridColumnHeaderHoveredBackgroundColor" ResourceKey="SystemListLowColor"/>
     <markup:StaticResource x:Key="DataGridColumnHeaderPressedBackgroundColor" ResourceKey="SystemListMediumColor"/>
     <markup:StaticResource x:Key="DataGridColumnHeaderDraggedBackgroundBrush" ResourceKey="SystemControlBackgroundChromeMediumLowBrush"/>
     <markup:StaticResource x:Key="DataGridColumnHeaderPointerOverBrush" ResourceKey="SystemControlHighlightListLowBrush"/>
     <markup:StaticResource x:Key="DataGridColumnHeaderPressedBrush" ResourceKey="SystemControlHighlightListMediumBrush"/>
-
-    <system:Double x:Key="ListAccentLowOpacity">0.6</system:Double>
-    <system:Double x:Key="ListAccentMediumOpacity">0.8</system:Double>
-
-    <SolidColorBrush x:Key="SystemControlGridLinesBaseMediumLowBrush" Color="{StaticResource SystemBaseMediumLowColor}" Opacity="0.4"/>
-    <SolidColorBrush x:Key="SystemControlRowGroupHeaderBackgroundMediumBrush" Color="{StaticResource SystemChromeMediumColor}"/>
-    <SolidColorBrush x:Key="DataGridCurrencyVisualPrimaryBrush" Color="Transparent"/>
-
     <markup:StaticResource x:Key="GridLinesBrush" ResourceKey="SystemControlGridLinesBaseMediumLowBrush"/>
-
     <markup:StaticResource x:Key="DataGridDetailsPresenterBackgroundBrush" ResourceKey="SystemControlBackgroundChromeMediumLowBrush"/>
     <markup:StaticResource x:Key="DataGridFillerColumnGridLinesBrush" ResourceKey="FillerGridLinesBrush"/>
     <markup:StaticResource x:Key="DataGridRowSelectedBackgroundColor" ResourceKey="SystemAccentColor"/>
@@ -663,15 +645,12 @@
     <markup:StaticResource x:Key="DataGridCellInvalidBrush" ResourceKey="InvalidBrush"/>
 
     <!-- Resources for MenuBar -->
+    <Thickness x:Key="MenuBarItemBorderThickness">2</Thickness>
     <markup:StaticResource x:Key="MenuBarBackground" ResourceKey="SystemControlTransparentBrush" />
-
     <markup:StaticResource x:Key="MenuBarItemBackground" ResourceKey="SystemControlTransparentBrush" />
     <markup:StaticResource x:Key="MenuBarItemBackgroundPointerOver" ResourceKey="SystemControlBackgroundListLowBrush" />
     <markup:StaticResource x:Key="MenuBarItemBackgroundPressed" ResourceKey="SystemControlBackgroundListMediumBrush" />
     <markup:StaticResource x:Key="MenuBarItemBackgroundSelected" ResourceKey="SystemControlBackgroundListMediumBrush" />
-
-    <Thickness x:Key="MenuBarItemBorderThickness">2</Thickness>
-
     <markup:StaticResource x:Key="MenuBarItemBorderBrush" ResourceKey="SystemControlForegroundBaseMediumLowBrush" />
     <markup:StaticResource x:Key="MenuBarItemBorderBrushPointerOver" ResourceKey="SystemControlHighlightBaseMediumBrush" />
     <markup:StaticResource x:Key="MenuBarItemBorderBrushPressed" ResourceKey="SystemControlHighlightBaseMediumLowBrush" />
@@ -716,13 +695,11 @@
     <markup:StaticResource x:Key="MenuFlyoutItemKeyboardAcceleratorTextForegroundPressed" ResourceKey="SystemControlHighlightAltBaseMediumBrush" />
     <markup:StaticResource x:Key="MenuFlyoutItemKeyboardAcceleratorTextForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
     <markup:StaticResource x:Key="MenuFlyoutPresenterBackground" ResourceKey="SystemControlBackgroundBaseHighBrush" />
-    <!--<contract7NotPresent:StaticResource x:Key="MenuFlyoutPresenterBackground" ResourceKey="SystemControlBackgroundChromeMediumLowBrush" />-->
     <markup:StaticResource x:Key="MenuFlyoutPresenterBorderBrush" ResourceKey="SystemControlTransientBorderBrush" />
-    <!--<contract7NotPresent:StaticResource x:Key="MenuFlyoutPresenterBorderBrush" ResourceKey="SystemControlForegroundChromeHighBrush" />-->
     <Thickness x:Key="MenuFlyoutPresenterBorderThemeThickness">1</Thickness>
     <Thickness x:Key="MenuFlyoutItemThemePadding">11,9,11,10</Thickness>
     <Thickness x:Key="MenuFlyoutItemThemePaddingNarrow">11,4,11,7</Thickness>
-    <!-- Resources for Windows.UI.Xaml.Controls.MenuFlyoutItem -->
+    <!-- Resources for MenuFlyoutItem -->
     <markup:StaticResource x:Key="MenuFlyoutItemRevealBackground" ResourceKey="SystemControlTransparentRevealBackgroundBrush" />
     <markup:StaticResource x:Key="MenuFlyoutItemRevealBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowRevealBackgroundBrush" />
     <markup:StaticResource x:Key="MenuFlyoutItemRevealBackgroundPressed" ResourceKey="SystemControlHighlightListMediumRevealBackgroundBrush" />
@@ -731,7 +708,7 @@
     <markup:StaticResource x:Key="MenuFlyoutItemRevealBorderBrushPressed" ResourceKey="SystemControlTransparentRevealBorderBrush" />
     <markup:StaticResource x:Key="MenuFlyoutItemRevealBorderBrushPointerOver" ResourceKey="SystemControlTransparentRevealBorderBrush" />
     <markup:StaticResource x:Key="MenuFlyoutItemRevealBorderBrushDisabled" ResourceKey="SystemControlTransparentBrush" />
-    <!-- Resources for Windows.UI.Xaml.Controls.ToggleMenuFlyoutItem -->
+    <!-- Resources for ToggleMenuFlyoutItem -->
     <markup:StaticResource x:Key="ToggleMenuFlyoutItemRevealBackground" ResourceKey="SystemControlTransparentRevealBackgroundBrush" />
     <markup:StaticResource x:Key="ToggleMenuFlyoutItemRevealBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowRevealBackgroundBrush" />
     <markup:StaticResource x:Key="ToggleMenuFlyoutItemRevealBackgroundPressed" ResourceKey="SystemControlHighlightListMediumRevealBackgroundBrush" />
@@ -740,7 +717,7 @@
     <markup:StaticResource x:Key="ToggleMenuFlyoutItemRevealBorderBrushPressed" ResourceKey="SystemControlTransparentRevealBorderBrush" />
     <markup:StaticResource x:Key="ToggleMenuFlyoutItemRevealBorderBrushPointerOver" ResourceKey="SystemControlTransparentRevealBorderBrush" />
     <markup:StaticResource x:Key="ToggleMenuFlyoutItemRevealBorderBrushDisabled" ResourceKey="SystemControlTransparentBrush" />
-    <!-- Resources for Windows.UI.Xaml.Controls.MenuFlyoutSubItem -->
+    <!-- Resources for MenuFlyoutSubItem -->
     <markup:StaticResource x:Key="MenuFlyoutSubItemRevealBackground" ResourceKey="SystemControlTransparentRevealBackgroundBrush" />
     <markup:StaticResource x:Key="MenuFlyoutSubItemRevealBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowRevealBackgroundBrush" />
     <markup:StaticResource x:Key="MenuFlyoutSubItemRevealBackgroundPressed" ResourceKey="SystemControlHighlightAccentRevealBackgroundBrush" />
@@ -983,19 +960,14 @@
     <!-- Resources for TextControl -->
     <markup:StaticResource x:Key="TextControlForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
     <markup:StaticResource x:Key="TextControlForegroundPointerOver" ResourceKey="SystemControlForegroundBaseHighBrush" />
-    <!--<markup:StaticResource x:Key="TextControlForegroundFocused" ResourceKey="SystemControlForegroundChromeBlackHighBrush" />-->
     <markup:StaticResource x:Key="TextControlForegroundDisabled" ResourceKey="SystemControlDisabledChromeDisabledLowBrush" />
     <markup:StaticResource x:Key="TextControlBackground" ResourceKey="SystemControlBackgroundAltMediumLowBrush" />
     <markup:StaticResource x:Key="TextControlBackgroundPointerOver" ResourceKey="SystemControlBackgroundAltMediumBrush" />
-    <!--<markup:StaticResource x:Key="TextControlBackgroundFocused" ResourceKey="SystemControlBackgroundChromeWhiteBrush" />-->
     <markup:StaticResource x:Key="TextControlBackgroundDisabled" ResourceKey="SystemControlBackgroundBaseLowBrush" />
-    <!--<markup:StaticResource x:Key="TextControlBorderBrush" ResourceKey="SystemControlForegroundBaseMediumLowBrush" />-->
-    <!--<markup:StaticResource x:Key="TextControlBorderBrushPointerOver" ResourceKey="SystemControlHighlightBaseMediumBrush" />-->
     <markup:StaticResource x:Key="TextControlBorderBrushFocused" ResourceKey="SystemControlHighlightAccentBrush" />
     <markup:StaticResource x:Key="TextControlBorderBrushDisabled" ResourceKey="SystemControlDisabledBaseLowBrush" />
     <markup:StaticResource x:Key="TextControlPlaceholderForeground" ResourceKey="SystemControlPageTextBaseMediumBrush" />
     <markup:StaticResource x:Key="TextControlPlaceholderForegroundPointerOver" ResourceKey="SystemControlPageTextBaseMediumBrush" />
-    <!--<markup:StaticResource x:Key="TextControlPlaceholderForegroundFocused" ResourceKey="SystemControlPageTextChromeBlackMediumLowBrush" />-->
     <markup:StaticResource x:Key="TextControlPlaceholderForegroundDisabled" ResourceKey="SystemControlDisabledChromeDisabledLowBrush" />
     <markup:StaticResource x:Key="TextControlHeaderForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
     <markup:StaticResource x:Key="TextControlHeaderForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
@@ -1006,10 +978,8 @@
     <markup:StaticResource x:Key="TextControlButtonBorderBrush" ResourceKey="SystemControlTransparentBrush" />
     <markup:StaticResource x:Key="TextControlButtonBorderBrushPointerOver" ResourceKey="SystemControlTransparentBrush" />
     <markup:StaticResource x:Key="TextControlButtonBorderBrushPressed" ResourceKey="SystemControlTransparentBrush" />
-    <!--<markup:StaticResource x:Key="TextControlButtonForeground" ResourceKey="SystemControlForegroundChromeBlackMediumBrush" />-->
     <markup:StaticResource x:Key="TextControlButtonForegroundPointerOver" ResourceKey="SystemControlHighlightAccentBrush" />
     <markup:StaticResource x:Key="TextControlButtonForegroundPressed" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
-
     <markup:StaticResource x:Key="TextControlBackgroundFocused" ResourceKey="SystemControlBackgroundAltHighBrush" />
     <markup:StaticResource x:Key="TextControlBorderBrush" ResourceKey="SystemControlForegroundBaseMediumBrush" />
     <markup:StaticResource x:Key="TextControlBorderBrushPointerOver" ResourceKey="SystemControlHighlightBaseMediumHighBrush" />
@@ -1100,6 +1070,9 @@
 
     <!-- Resources for AutoSuggestBox -->
     <system:Double x:Key="AutoSuggestBoxIconFontSize">12</system:Double>
+    <system:Double x:Key="AutoSuggestListMaxHeight">374</system:Double>
+    <Thickness x:Key="AutoSuggestBoxTopHeaderMargin">0,0,0,8</Thickness>
+    <Thickness x:Key="AutoSuggestListPadding">0</Thickness>
     <markup:StaticResource x:Key="AutoSuggestBoxSuggestionsListBackground" ResourceKey="SystemControlBackgroundChromeMediumLowBrush" />
     <markup:StaticResource x:Key="AutoSuggestBoxSuggestionsListBorderBrush" ResourceKey="SystemControlTransientBorderBrush" />
     <markup:StaticResource x:Key="AutoSuggestBoxLightDismissOverlayBackground" ResourceKey="SystemControlPageBackgroundMediumAltMediumBrush" />
@@ -1116,25 +1089,20 @@
     <SolidColorBrush x:Key="InfoBarWarningSeverityBackgroundBrush" Color="{x:Static SystemColors.WindowColor}"/>
     <SolidColorBrush x:Key="InfoBarSuccessSeverityBackgroundBrush" Color="{x:Static SystemColors.WindowColor}"/>
     <SolidColorBrush x:Key="InfoBarInformationalSeverityBackgroundBrush" Color="{x:Static SystemColors.WindowColor}"/>
-
     <markup:StaticResource x:Key="InfoBarErrorSeverityIconForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
     <markup:StaticResource x:Key="InfoBarWarningSeverityIconForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
     <markup:StaticResource x:Key="InfoBarSuccessSeverityIconForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
     <markup:StaticResource x:Key="InfoBarInformationalSeverityIconForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
-
     <markup:StaticResource x:Key="InfoBarTitleForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
     <markup:StaticResource x:Key="InfoBarMessageForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
     <markup:StaticResource x:Key="InfoBarHyperlinkButtonForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
-
     <markup:StaticResource x:Key="InfoBarBorderBrush" ResourceKey="SystemControlTransientBorderBrush" />
 
     <!-- Resources for NavigationView -->
     <markup:StaticResource x:Key="NavigationViewBackButtonBackground" ResourceKey="SystemControlBackgroundBaseLowBrush" />
-
     <markup:StaticResource x:Key="NavigationViewDefaultPaneBackground" ResourceKey="AcrylicInAppFillColorDefaultBrush" />
     <SolidColorBrush x:Key="NavigationViewExpandedPaneBackground" Color="{x:Static SystemColors.WindowColor}" />
     <markup:StaticResource x:Key="NavigationViewTopPaneBackground" ResourceKey="AcrylicInAppFillColorDefaultBrush" />
-
     <markup:StaticResource x:Key="NavigationViewItemBackground" ResourceKey="SystemControlBackgroundBaseLowBrush" />
     <markup:StaticResource x:Key="NavigationViewItemBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowRevealBackgroundBrush" />
     <markup:StaticResource x:Key="NavigationViewItemBackgroundPressed" ResourceKey="SystemControlHighlightListMediumRevealBackgroundBrush" />
@@ -1147,7 +1115,6 @@
     <markup:StaticResource x:Key="NavigationViewItemBackgroundSelectedPointerOver" ResourceKey="SystemControlHighlightListLowRevealBackgroundBrush" />
     <markup:StaticResource x:Key="NavigationViewItemBackgroundSelectedPressed" ResourceKey="SystemControlHighlightListMediumRevealBackgroundBrush" />
     <markup:StaticResource x:Key="NavigationViewItemBackgroundSelectedDisabled" ResourceKey="SystemControlTransparentRevealBackgroundBrush" />
-
     <markup:StaticResource x:Key="NavigationViewItemForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
     <markup:StaticResource x:Key="NavigationViewItemForegroundPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
     <markup:StaticResource x:Key="NavigationViewItemForegroundPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
@@ -1160,7 +1127,6 @@
     <markup:StaticResource x:Key="NavigationViewItemForegroundSelectedPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
     <markup:StaticResource x:Key="NavigationViewItemForegroundSelectedPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
     <markup:StaticResource x:Key="NavigationViewItemForegroundSelectedDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
-
     <markup:StaticResource x:Key="NavigationViewItemBorderBrush" ResourceKey="SystemControlTransparentBrush" />
     <markup:StaticResource x:Key="NavigationViewItemBorderBrushPointerOver" ResourceKey="SystemControlHighlightAltTransparentRevealBorderBrush" />
     <markup:StaticResource x:Key="NavigationViewItemBorderBrushPressed" ResourceKey="SystemControlHighlightAltTransparentRevealBorderBrush" />
@@ -1173,11 +1139,8 @@
     <markup:StaticResource x:Key="NavigationViewItemBorderBrushSelectedPointerOver" ResourceKey="SystemControlHighlightAltTransparentRevealBorderBrush" />
     <markup:StaticResource x:Key="NavigationViewItemBorderBrushSelectedPressed" ResourceKey="SystemControlHighlightAltTransparentRevealBorderBrush" />
     <markup:StaticResource x:Key="NavigationViewItemBorderBrushSelectedDisabled" ResourceKey="SystemControlTransparentBrush" />
-
     <markup:StaticResource x:Key="NavigationViewItemSeparatorForeground" ResourceKey="SystemControlForegroundBaseLowBrush" />
-
     <markup:StaticResource x:Key="NavigationViewSelectionIndicatorForeground" ResourceKey="{x:Static SystemColors.HighlightTextColor}" />
-
     <markup:StaticResource x:Key="TopNavigationViewItemForeground" ResourceKey="NavigationViewItemForeground" />
     <markup:StaticResource x:Key="TopNavigationViewItemForegroundPointerOver" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
     <markup:StaticResource x:Key="TopNavigationViewItemForegroundPressed" ResourceKey="SystemControlHighlightAltBaseHighBrush" />
@@ -1186,13 +1149,10 @@
     <markup:StaticResource x:Key="TopNavigationViewItemBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowRevealBackgroundBrush" />
     <markup:StaticResource x:Key="TopNavigationViewItemBackgroundPressed" ResourceKey="SystemControlHighlightListMediumRevealBackgroundBrush" />
     <markup:StaticResource x:Key="TopNavigationViewItemBackgroundSelected" ResourceKey="SystemControlHighlightListLowRevealBackgroundBrush" />
-
     <markup:StaticResource x:Key="TopNavigationViewItemRevealBackgroundFocused" ResourceKey="SystemControlHighlightAccentBrush" />
     <markup:StaticResource x:Key="TopNavigationViewItemRevealIconForegroundFocused" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
     <markup:StaticResource x:Key="TopNavigationViewItemRevealContentForegroundFocused" ResourceKey="SystemControlHighlightAltChromeWhiteBrush" />
-
     <markup:StaticResource x:Key="TopNavigationViewItemSeparatorForeground" ResourceKey="SystemControlForegroundBaseLowBrush" />
-
     <markup:StaticResource x:Key="NavigationViewButtonBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowBrush" />
     <markup:StaticResource x:Key="NavigationViewButtonBackgroundPressed" ResourceKey="SystemControlHighlightListMediumBrush" />
     <markup:StaticResource x:Key="NavigationViewButtonBackgroundDisabled" ResourceKey="SystemControlBackgroundBaseLowBrush" />
@@ -1203,6 +1163,11 @@
     <!-- Resources for NumberBox -->
     <Thickness x:Key="NumberBoxPopupBorderThickness">1</Thickness>
     <Thickness x:Key="NumberBoxPopupSpinButtonBorderThickness">2</Thickness>
+    <Thickness x:Key="NumberBoxSpinButtonBorderThickness">0,1,1,1</Thickness>
+    <system:Double x:Key="NumberBoxPopupHorizonalOffset">-20</system:Double>
+    <system:Double x:Key="NumberBoxPopupVerticalOffset">-16</system:Double>
+    <system:Double x:Key="NumberBoxPopupShadowDepth">16</system:Double>
+    <Thickness x:Key="NumberBoxPopupIndicatorMargin">0,0,8,0</Thickness>
     <markup:StaticResource x:Key="NumberBoxPopupIndicatorForeground" ResourceKey="SystemControlForegroundBaseMediumBrush" />
     <!-- The following NumberBoxPopup* theme resources resource must be defined at the app level in order to take effect. -->
     <markup:StaticResource x:Key="NumberBoxPopupBackground" ResourceKey="SystemControlBackgroundBaseHighBrush" />

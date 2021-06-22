@@ -1,25 +1,18 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+﻿<!-- Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT License. See LICENSE in the project root for license information. -->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:controls="clr-namespace:EasyWPFUI.Controls"
                     xmlns:system="clr-namespace:System;assembly=mscorlib"
                     xmlns:helpers="clr-namespace:EasyWPFUI.Controls.Helpers"
                     xmlns:converters="clr-namespace:EasyWPFUI.Converters"
                     xmlns:markup="clr-namespace:EasyWPFUI.Markup"
+                    xmlns:primitives="clr-namespace:EasyWPFUI.Controls.Primitives"
                     xmlns:root="clr-namespace:EasyWPFUI">
 
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/RepeatButton.xaml" />
         <ResourceDictionary Source="pack://application:,,,/EasyWPFUI;component/Styles/TextBox.xaml" />
     </ResourceDictionary.MergedDictionaries>
-
-    <Thickness x:Key="NumberBoxSpinButtonBorderThickness">0,1,1,1</Thickness>
-    <Thickness x:Key="NumberBoxIconMargin">10,0,0,0</Thickness>
-
-    <system:Double x:Key="NumberBoxPopupHorizonalOffset">-20</system:Double>
-    <system:Double x:Key="NumberBoxPopupVerticalOffset">-16</system:Double>
-    <system:Double x:Key="NumberBoxPopupShadowDepth">16</system:Double>
-
-    <Thickness x:Key="NumberBoxPopupIndicatorMargin">0,0,8,0</Thickness>
 
     <converters:CornerRadiusFilterConverter x:Key="LeftCornerRadiusFilterConverter" Filter="Left" />
     <converters:CornerRadiusFilterConverter x:Key="RightCornerRadiusFilterConverter" Filter="Right" />
@@ -31,7 +24,7 @@
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="Background" Value="{DynamicResource TextControlBackground}"/>
         <Setter Property="BorderBrush" Value="{DynamicResource TextControlBorderBrush}"/>
-        <Setter Property="BorderThickness" Value="{StaticResource NumberBoxSpinButtonBorderThickness}"/>
+        <Setter Property="BorderThickness" Value="{DynamicResource NumberBoxSpinButtonBorderThickness}"/>
         <Setter Property="FontFamily" Value="{DynamicResource SymbolThemeFontFamily}"/>
     </Style>
 
@@ -177,7 +170,7 @@
 
                         <TextBlock Grid.Row="1"
                                    Grid.Column="2"
-                                   Margin="{StaticResource NumberBoxPopupIndicatorMargin}"
+                                   Margin="{DynamicResource NumberBoxPopupIndicatorMargin}"
                                    Foreground="{DynamicResource NumberBoxPopupIndicatorForeground}"
                                    VerticalAlignment="Center"
                                    HorizontalAlignment="Center"
@@ -385,31 +378,33 @@
                                AllowsTransparency="True"
                                PlacementTarget="{Binding ElementName=InputBox}"
                                Placement="Right"
-                               VerticalOffset="{StaticResource NumberBoxPopupVerticalOffset}"
-                               HorizontalOffset="{StaticResource NumberBoxPopupHorizonalOffset}"
+                               VerticalOffset="{DynamicResource NumberBoxPopupVerticalOffset}"
+                               HorizontalOffset="{DynamicResource NumberBoxPopupHorizonalOffset}"
                                HorizontalAlignment="Left">
 
-                            <Border x:Name="PopupContentRoot"
-                                    Background="{DynamicResource NumberBoxPopupBackground}"
-                                    BorderBrush="{DynamicResource NumberBoxPopupBorderBrush}"
-                                    BorderThickness="{DynamicResource NumberBoxPopupBorderThickness}"
-                                    CornerRadius="{DynamicResource OverlayCornerRadius}">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="*"/>
-                                        <RowDefinition Height="*"/>
-                                    </Grid.RowDefinitions>
+                            <primitives:ThemeShadow ShadowDepth="{DynamicResource NumberBoxPopupShadowDepth}">
+                                <Border x:Name="PopupContentRoot"
+                                        Background="{DynamicResource NumberBoxPopupBackground}"
+                                        BorderBrush="{DynamicResource NumberBoxPopupBorderBrush}"
+                                        BorderThickness="{DynamicResource NumberBoxPopupBorderThickness}"
+                                        CornerRadius="{DynamicResource OverlayCornerRadius}">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
 
-                                    <RepeatButton x:Name="PopupUpSpinButton"
-                                                  Style="{StaticResource NumberBoxPopupSpinButtonStyle}"
-                                                  Content="&#xE70E;" />
+                                        <RepeatButton x:Name="PopupUpSpinButton"
+                                                      Style="{StaticResource NumberBoxPopupSpinButtonStyle}"
+                                                      Content="&#xE70E;" />
 
-                                    <RepeatButton x:Name="PopupDownSpinButton"
-                                                  Style="{StaticResource NumberBoxPopupSpinButtonStyle}"
-                                                  Grid.Row="1"
-                                                  Content="&#xE70D;" />
-                                </Grid>
-                            </Border>
+                                        <RepeatButton x:Name="PopupDownSpinButton"
+                                                      Style="{StaticResource NumberBoxPopupSpinButtonStyle}"
+                                                      Grid.Row="1"
+                                                      Content="&#xE70D;" />
+                                    </Grid>
+                                </Border>
+                            </primitives:ThemeShadow>
                         </Popup>
 
                         <RepeatButton x:Name="UpSpinButton"

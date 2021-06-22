@@ -1016,7 +1016,6 @@
         <Setter Property="ColumnHeaderStyle" Value="{StaticResource DefaultDataGridColumnHeaderStyle}" />
         <Setter Property="RowStyle" Value="{StaticResource DefaultDataGridRowStyle}" />
         <Setter Property="RowHeaderStyle" Value="{StaticResource DefaultDataGridRowHeaderStyle}" />
-        <!--<Setter Property="Validation.ErrorTemplate" Value="{DynamicResource DataGridValidationErrorTemplate}" />-->
         <Setter Property="helpers:DataGridHelper.IsHelperEnabled" Value="True" />
         <Setter Property="helpers:DataGridHelper.TextColumnStyle" Value="{StaticResource DefaultDataGridTextColumnStyle}" />
         <Setter Property="helpers:DataGridHelper.TextColumnEditingStyle" Value="{StaticResource DefaultDataGridTextColumnEditingStyle}" />

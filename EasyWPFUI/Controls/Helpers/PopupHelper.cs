@@ -70,7 +70,6 @@ namespace EasyWPFUI.Controls.Helpers
         private FrameworkElement popupRoot;
         private UIElement target;
         private Window window;
-        private HwndSource hwndSource;
         private const double Tolerance = 1.0e-2; // allow errors in double calculations
         private PositionInfo _positionInfo;
 
@@ -111,7 +110,8 @@ namespace EasyWPFUI.Controls.Helpers
             popup.Closed += OnPopupClosed;
 
             target = popup.PlacementTarget;
-            window = Window.GetWindow(target);
+
+            window = (target != null) ? Window.GetWindow(target) : Application.Current.MainWindow;
         }
 
         public void PopupRepositionDetach()
@@ -140,8 +140,9 @@ namespace EasyWPFUI.Controls.Helpers
             if(popup.Child is UIElement child && PresentationSource.FromVisual(child) is HwndSource hwnd)
             {
                 popupRoot = hwnd.RootVisual as FrameworkElement;
-                hwndSource = hwnd;
             }
+
+            UpdatePopupPosition();
         }
 
         private void OnPopupClosed(object sender, EventArgs e)
@@ -155,8 +156,6 @@ namespace EasyWPFUI.Controls.Helpers
             {
                 window.LocationChanged -= OnWindowLocationChanged;
             }
-
-            hwndSource = null;
         }
 
         private void OnWindowLocationChanged(object sender, EventArgs e)

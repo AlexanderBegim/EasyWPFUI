@@ -3,7 +3,8 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:EasyWPFUI.Styles"
                     xmlns:system="clr-namespace:System;assembly=mscorlib"
-                    xmlns:controls="clr-namespace:EasyWPFUI.Controls">
+                    xmlns:controls="clr-namespace:EasyWPFUI.Controls"
+                    xmlns:primitives="clr-namespace:EasyWPFUI.Controls.Primitives">
 
     <system:Double x:Key="MenuBarHeight">40</system:Double>
     <Thickness x:Key="MenuFlyoutItemRevealBorderThickness">1</Thickness>
@@ -85,28 +86,30 @@
                    IsOpen="{Binding IsSubmenuOpen, RelativeSource={RelativeSource Mode=TemplatedParent}}"
                    PopupAnimation="Slide"
                    Placement="Bottom">
-                <Border x:Name="SubMenuBorder"
-                        Background="{DynamicResource MenuFlyoutPresenterBackground}"
-                        CornerRadius="{DynamicResource OverlayCornerRadius}">
-                    <Grid>
-                        <ScrollViewer x:Name="SubMenuScrollViewer"
-                                      MinWidth="{DynamicResource FlyoutThemeMinWidth}"
-                                      Margin="{DynamicResource MenuFlyoutPresenterThemePadding}"
-                                      Style="{DynamicResource {ComponentResourceKey ResourceId=MenuScrollViewer, TypeInTargetAssembly={x:Type FrameworkElement}}}">
-                            <ItemsPresenter x:Name="ItemsPresenter"
-                                            Margin="{DynamicResource MenuFlyoutScrollerMargin}"
-                                            KeyboardNavigation.DirectionalNavigation="Cycle"
-                                            Grid.IsSharedSizeScope="True"
-                                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                                            KeyboardNavigation.TabNavigation="Cycle"/>
-                        </ScrollViewer>
+                <primitives:ThemeShadow>
+                    <Border x:Name="SubMenuBorder"
+                            Background="{DynamicResource MenuFlyoutPresenterBackground}"
+                            CornerRadius="{DynamicResource OverlayCornerRadius}">
+                        <Grid>
+                            <ScrollViewer x:Name="SubMenuScrollViewer"
+                                          MinWidth="{DynamicResource FlyoutThemeMinWidth}"
+                                          Margin="{DynamicResource MenuFlyoutPresenterThemePadding}"
+                                          Style="{DynamicResource {ComponentResourceKey ResourceId=MenuScrollViewer, TypeInTargetAssembly={x:Type FrameworkElement}}}">
+                                <ItemsPresenter x:Name="ItemsPresenter"
+                                                Margin="{DynamicResource MenuFlyoutScrollerMargin}"
+                                                KeyboardNavigation.DirectionalNavigation="Cycle"
+                                                Grid.IsSharedSizeScope="True"
+                                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                KeyboardNavigation.TabNavigation="Cycle"/>
+                            </ScrollViewer>
 
-                        <Border x:Name="MenuFlyoutPresenterBorder"
-                                BorderBrush="{DynamicResource MenuFlyoutPresenterBorderBrush}"
-                                BorderThickness="{DynamicResource MenuFlyoutPresenterBorderThemeThickness}"
-                                CornerRadius="{DynamicResource OverlayCornerRadius}" />
-                    </Grid>
-                </Border>
+                            <Border x:Name="MenuFlyoutPresenterBorder"
+                                    BorderBrush="{DynamicResource MenuFlyoutPresenterBorderBrush}"
+                                    BorderThickness="{DynamicResource MenuFlyoutPresenterBorderThemeThickness}"
+                                    CornerRadius="{DynamicResource OverlayCornerRadius}" />
+                        </Grid>
+                    </Border>
+                </primitives:ThemeShadow>
             </Popup>
         </Grid>
 
@@ -147,7 +150,7 @@
 
     <ControlTemplate x:Key="{ComponentResourceKey TypeInTargetAssembly={x:Type MenuItem}, ResourceId=TopLevelItemTemplateKey}" TargetType="MenuItem">
         <Grid x:Name="LayoutRoot"
-                SnapsToDevicePixels="True">
+              SnapsToDevicePixels="True">
 
             <Border x:Name="BorderBackground"
                     Background="{TemplateBinding Background}"
@@ -309,28 +312,30 @@
                        PlacementTarget="{Binding ElementName=LayoutRoot}"
                        HorizontalOffset="-4"
                        Placement="Right">
-                    <Border x:Name="SubMenuBorder"
-                            Background="{DynamicResource MenuFlyoutPresenterBackground}"
-                            CornerRadius="{DynamicResource OverlayCornerRadius}">
-                        <Grid>
-                            <ScrollViewer x:Name="SubMenuScrollViewer"
-                                          Margin="{DynamicResource MenuFlyoutPresenterThemePadding}"
-                                          MinWidth="{DynamicResource FlyoutThemeMinWidth}"
-                                          Style="{DynamicResource {ComponentResourceKey ResourceId=MenuScrollViewer, TypeInTargetAssembly={x:Type FrameworkElement}}}">
-                                <ItemsPresenter x:Name="ItemsPresenter"
-                                            Margin="{DynamicResource MenuFlyoutScrollerMargin}"
-                                            KeyboardNavigation.DirectionalNavigation="Cycle"
-                                            Grid.IsSharedSizeScope="True"
-                                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                                            KeyboardNavigation.TabNavigation="Cycle"/>
-                            </ScrollViewer>
+                    <primitives:ThemeShadow>
+                        <Border x:Name="SubMenuBorder"
+                                Background="{DynamicResource MenuFlyoutPresenterBackground}"
+                                CornerRadius="{DynamicResource OverlayCornerRadius}">
+                            <Grid>
+                                <ScrollViewer x:Name="SubMenuScrollViewer"
+                                              Margin="{DynamicResource MenuFlyoutPresenterThemePadding}"
+                                              MinWidth="{DynamicResource FlyoutThemeMinWidth}"
+                                              Style="{DynamicResource {ComponentResourceKey ResourceId=MenuScrollViewer, TypeInTargetAssembly={x:Type FrameworkElement}}}">
+                                    <ItemsPresenter x:Name="ItemsPresenter"
+                                                    Margin="{DynamicResource MenuFlyoutScrollerMargin}"
+                                                    KeyboardNavigation.DirectionalNavigation="Cycle"
+                                                    Grid.IsSharedSizeScope="True"
+                                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                    KeyboardNavigation.TabNavigation="Cycle"/>
+                                </ScrollViewer>
 
-                            <Border x:Name="MenuFlyoutPresenterBorder"
-                                    BorderBrush="{DynamicResource MenuFlyoutPresenterBorderBrush}"
-                                    BorderThickness="{DynamicResource MenuFlyoutPresenterBorderThemeThickness}"
-                                    CornerRadius="{DynamicResource OverlayCornerRadius}" />
-                        </Grid>
-                    </Border>
+                                <Border x:Name="MenuFlyoutPresenterBorder"
+                                        BorderBrush="{DynamicResource MenuFlyoutPresenterBorderBrush}"
+                                        BorderThickness="{DynamicResource MenuFlyoutPresenterBorderThemeThickness}"
+                                        CornerRadius="{DynamicResource OverlayCornerRadius}" />
+                            </Grid>
+                        </Border>
+                    </primitives:ThemeShadow>
                 </Popup>
             </Grid>
         </Border>

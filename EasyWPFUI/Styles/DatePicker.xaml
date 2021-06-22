@@ -4,13 +4,35 @@
                     xmlns:local="clr-namespace:EasyWPFUI.Styles"
                     xmlns:converters="clr-namespace:EasyWPFUI.Converters"
                     xmlns:helpers="clr-namespace:EasyWPFUI.Controls.Helpers"
-                    xmlns:controls="clr-namespace:EasyWPFUI.Controls">
+                    xmlns:controls="clr-namespace:EasyWPFUI.Controls"
+                    xmlns:primitives="clr-namespace:EasyWPFUI.Controls.Primitives">
 
     <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Calendar.xaml" />
         <ResourceDictionary Source="TextBox.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <Thickness x:Key="CalendarDatePickerTopHeaderMargin">0,0,0,4</Thickness>
+
+    <Style x:Key="DatePickerCalendarStyle" TargetType="Calendar" BasedOn="{StaticResource DefaultCalendarStyle}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Calendar">
+                    <primitives:ThemeShadow IsShadowVisible="{DynamicResource {x:Static SystemParameters.DropShadowKey}}"
+                                            CornerRadius="{Binding ElementName=PART_CalendarItem, Path=(helpers:ControlHelper.CornerRadius)}">
+                        <Border x:Name="PART_Root">
+                            <CalendarItem x:Name="PART_CalendarItem"
+                                          Background="{TemplateBinding Background}"
+                                          BorderBrush="{TemplateBinding BorderBrush}"
+                                          BorderThickness="{TemplateBinding BorderThickness}"
+                                          Style="{TemplateBinding CalendarItemStyle}"
+                                          helpers:ControlHelper.CornerRadius="{TemplateBinding helpers:ControlHelper.CornerRadius}" />
+                        </Border>
+                    </primitives:ThemeShadow>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
     <Style x:Key="DefaultDatePickerTextBoxStyle" TargetType="DatePickerTextBox">
         <Setter Property="OverridesDefaultStyle" Value="True" />
@@ -89,7 +111,7 @@
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="IsTodayHighlighted" Value="True" />
         <Setter Property="SelectedDateFormat" Value="Short" />
-        <Setter Property="CalendarStyle" Value="{DynamicResource DefaultCalendarStyle}" />
+        <Setter Property="CalendarStyle" Value="{StaticResource DatePickerCalendarStyle}" />
         <Setter Property="Padding" Value="{DynamicResource TextControlThemePadding}" />
         <Setter Property="FocusVisualStyle" Value="{DynamicResource {x:Static SystemParameters.FocusVisualStyleKey}}" />
         <Setter Property="helpers:ControlHelper.UseSystemFocusVisuals" Value="{DynamicResource IsApplicationFocusVisualKindReveal}" />

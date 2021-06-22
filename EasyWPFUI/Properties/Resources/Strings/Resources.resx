@@ -165,6 +165,14 @@
     <value>Click to search</value>
     <comment>Name for the compact view search button</comment>
   </data>
+  <data name="NumberBoxDownSpinButtonName" xml:space="preserve">
+    <value>Decrease</value>
+    <comment>Automation name for the down button</comment>
+  </data>
+  <data name="NumberBoxUpSpinButtonName" xml:space="preserve">
+    <value>Increase</value>
+    <comment>Automation name for the up button</comment>
+  </data>
   <data name="SettingsButtonName" xml:space="preserve">
     <value>Settings</value>
     <comment>Automation name for the settings button</comment>
