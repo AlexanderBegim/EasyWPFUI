@@ -698,7 +698,7 @@
                                 FontSize="{TemplateBinding FontSize}"
                                 MinWidth="34"
                                 VerticalAlignment="Stretch"
-                                helpers:TextBoxHelper.DeleteButtonEnabled="True" />
+                                helpers:TextBoxHelper.IsDeleteButton="True" />
                     </Grid>
 
                     <ControlTemplate.Triggers>

@@ -69,19 +69,19 @@ namespace EasyWPFUI.Controls.Helpers
 
         #region DeleteButtonEnabled Property
 
-        public static readonly DependencyProperty DeleteButtonEnabledProperty = DependencyProperty.RegisterAttached("DeleteButtonEnabled", typeof(bool), typeof(TextBoxHelper), new FrameworkPropertyMetadata(false, OnDeleteButtonEnabledPropertyChanged));
+        public static readonly DependencyProperty IsDeleteButtonProperty = DependencyProperty.RegisterAttached("IsDeleteButton", typeof(bool), typeof(TextBoxHelper), new FrameworkPropertyMetadata(false, OnIsDeleteButtonPropertyChanged));
 
-        public static bool GetDeleteButtonEnabled(UIElement ui)
+        public static bool GetIsDeleteButton(UIElement ui)
         {
-            return (bool)ui.GetValue(DeleteButtonEnabledProperty);
+            return (bool)ui.GetValue(IsDeleteButtonProperty);
         }
 
-        public static void SetDeleteButtonEnabled(UIElement ui, bool value)
+        public static void SetIsDeleteButton(UIElement ui, bool value)
         {
-            ui.SetValue(DeleteButtonEnabledProperty, value);
+            ui.SetValue(IsDeleteButtonProperty, value);
         }
 
-        private static void OnDeleteButtonEnabledPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        private static void OnIsDeleteButtonPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             Button button = d as Button;
 

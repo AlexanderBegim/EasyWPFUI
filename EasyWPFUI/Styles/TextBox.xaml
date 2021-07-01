@@ -215,7 +215,7 @@
                                 FontSize="{TemplateBinding FontSize}"
                                 MinWidth="34"
                                 VerticalAlignment="Stretch"
-                                helpers:TextBoxHelper.DeleteButtonEnabled="True"/>
+                                helpers:TextBoxHelper.IsDeleteButton="True"/>
                         
                         <ContentPresenter x:Name="DescriptionPresenter"
                                           Grid.Row="2"
@@ -226,11 +226,6 @@
                     </Grid>
 
                     <ControlTemplate.Triggers>
-                        <Trigger Property="Validation.HasError" Value="True">
-                            <Setter TargetName="BorderElement" Property="Validation.ErrorTemplate" Value="{x:Null}" />
-                            <Setter TargetName="BorderElement" Property="Validation.ValidationAdornerSiteFor" Value="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=TextBox}}" />
-                        </Trigger>
-                        
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
                                 <Condition Property="helpers:TextBoxHelper.HasText" Value="True" />

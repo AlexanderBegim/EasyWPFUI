@@ -185,6 +185,14 @@
                     <ui:ProgressBar UseMetroIndeterminateStyle="True"
                                     IsIndeterminate="True"
                                     Margin="0,0,0,25" />
+
+                    <!-- -->
+
+                    <TextBlock Text="Calendar"
+                               FontSize="18"
+                               Margin="0,0,0,15" />
+
+                    <Calendar />
                 </StackPanel>
             </Grid>
         </Grid>

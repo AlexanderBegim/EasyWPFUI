@@ -159,7 +159,7 @@
                                 FontSize="{TemplateBinding FontSize}"
                                 MinWidth="34"
                                 VerticalAlignment="Stretch"
-                                helpers:TextBoxHelper.DeleteButtonEnabled="True" />
+                                helpers:TextBoxHelper.IsDeleteButton="True" />
 
                         <ContentPresenter x:Name="DescriptionPresenter"
                                           Grid.Row="2"
@@ -188,6 +188,7 @@
                             <MultiTrigger.Conditions>
                                 <Condition Property="helpers:TextBoxHelper.HasText" Value="True" />
                                 <Condition Property="IsReadOnly" Value="False" />
+                                <Condition Property="IsSelectionActive" Value="True" />
                             </MultiTrigger.Conditions>
                             <Setter TargetName="DeleteButton" Property="Visibility" Value="Visible" />
                         </MultiTrigger>

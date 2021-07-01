@@ -608,13 +608,13 @@
     <system:Double x:Key="ListAccentMediumOpacity">0.8</system:Double>
     <SolidColorBrush x:Key="InvalidBrush" Color="#FFFF00"/>
     <SolidColorBrush x:Key="FillerGridLinesBrush" Color="Transparent"/>
-    <SolidColorBrush x:Key="DataGridColumnHeaderBackgroundBrush" Color="{StaticResource DataGridColumnHeaderBackgroundColor}"/>
     <SolidColorBrush x:Key="SystemControlGridLinesBaseMediumLowBrush" Color="{StaticResource SystemBaseMediumLowColor}" Opacity="0.4"/>
     <SolidColorBrush x:Key="SystemControlRowGroupHeaderBackgroundMediumBrush" Color="{StaticResource SystemChromeMediumColor}"/>
     <SolidColorBrush x:Key="DataGridCurrencyVisualPrimaryBrush" Color="Transparent"/>
     <markup:StaticResource x:Key="ScrollBarsSeparatorBackground" ResourceKey="SystemControlPageBackgroundChromeLowBrush"/>
     <markup:StaticResource x:Key="DataGridColumnHeaderForegroundBrush" ResourceKey="SystemControlForegroundBaseMediumBrush"/>
     <markup:StaticResource x:Key="DataGridColumnHeaderBackgroundColor" ResourceKey="SystemAltHighColor"/>
+    <SolidColorBrush x:Key="DataGridColumnHeaderBackgroundBrush" Color="{StaticResource DataGridColumnHeaderBackgroundColor}"/>
     <markup:StaticResource x:Key="DataGridColumnHeaderHoveredBackgroundColor" ResourceKey="SystemListLowColor"/>
     <markup:StaticResource x:Key="DataGridColumnHeaderPressedBackgroundColor" ResourceKey="SystemListMediumColor"/>
     <markup:StaticResource x:Key="DataGridColumnHeaderDraggedBackgroundBrush" ResourceKey="SystemControlBackgroundChromeMediumLowBrush"/>
