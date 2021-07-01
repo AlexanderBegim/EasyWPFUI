@@ -12,8 +12,8 @@ using System.Resources;
 )]
 
 [assembly: NeutralResourcesLanguage("en", UltimateResourceFallbackLocation.MainAssembly)]
-[assembly: XmlnsDefinition("https://easywpfui.com/schemas", "EasyWPFUI")]
-[assembly: XmlnsDefinition("https://easywpfui.com/schemas", "EasyWPFUI.Controls")]
-[assembly: XmlnsDefinition("https://easywpfui.com/schemas", "EasyWPFUI.Controls.Helpers")]
-[assembly: XmlnsDefinition("https://easywpfui.com/schemas", "EasyWPFUI.Controls.Primitives")]
-[assembly: XmlnsDefinition("https://easywpfui.com/schemas", "EasyWPFUI.Media")]
+[assembly: XmlnsDefinition("http://easywpfui.com/schemas", "EasyWPFUI")]
+[assembly: XmlnsDefinition("http://easywpfui.com/schemas", "EasyWPFUI.Controls")]
+[assembly: XmlnsDefinition("http://easywpfui.com/schemas", "EasyWPFUI.Controls.Helpers")]
+[assembly: XmlnsDefinition("http://easywpfui.com/schemas", "EasyWPFUI.Controls.Primitives")]
+[assembly: XmlnsDefinition("http://easywpfui.com/schemas", "EasyWPFUI.Media")]

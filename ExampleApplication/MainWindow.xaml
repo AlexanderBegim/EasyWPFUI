@@ -5,7 +5,7 @@
                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                  xmlns:local="clr-namespace:ExampleApplication"
                  xmlns:controls="clr-namespace:ExampleApplication.Controls"
-                 xmlns:ui="https://easywpfui.com/schemas"
+                 xmlns:ui="http://easywpfui.com/schemas"
                  xmlns:system="clr-namespace:System;assembly=mscorlib"
                  mc:Ignorable="d"
                  DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"

@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:ExampleApplication.ControlPages"
       xmlns:controls="clr-namespace:ExampleApplication.Controls"
       xmlns:system="clr-namespace:System;assembly=mscorlib"
-      xmlns:ui="https://easywpfui.com/schemas"
+      xmlns:ui="http://easywpfui.com/schemas"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="DatePickerPage">
